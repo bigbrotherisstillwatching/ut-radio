@@ -1,6 +1,5 @@
 import QtQuick 2.7
-import Ubuntu.Components 1.3
-//import QtQuick.Controls 2.2
+import Lomiri.Components 1.3
 import QtQuick.Layouts 1.3
 import Qt.labs.settings 1.0
 import QtQuick.Window 2.2
@@ -16,9 +15,6 @@ MainView {
    Notification {
       notificationId: "notification"
    }
-
-   width: units.gu(45)
-   height: units.gu(75)
 
    PageStack {
       id: pageStack
