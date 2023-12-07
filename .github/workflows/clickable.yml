@@ -1,0 +1,41 @@
+ame: Build Artifacts
+
+on:
+  push:
+    branches: [ test ]
+#  create: 
+#    tags: releases/[1-9]+.[0-9]+.[0-9]+
+  pull_request:
+    branches: [ test ]
+  workflow_dispatch:
+
+jobs:
+  ubuntu-touch:
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [arm64]
+        build: [Release]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+#        with:
+#          submodules: recursive
+      - name: Install Dependencies
+        run: |
+          python3 -m pip install clickable-ut
+#        env:
+#          BUILD_TYPE: ${{ (matrix.build == 'Debug') && '--debug' || '' }}
+#          CLICKABLE_FRAMEWORK: ubuntu-sdk-20.04
+      - name: Build
+        run: |
+         CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable build --verbose  --arch ${{ matrix.arch }}
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: "ut-radio-${{ matrix.arch }}--${{ matrix.build }}--click"
+          path: "build/*/app/*.click"
+          if-no-files-found: ignore
+#          retention-days: 20
