@@ -3,7 +3,7 @@
 #include <QQuickView>
 #include <QString>
 #include <QUrl>
-#include <QQml>
+#include <QtQml>
 #include "fileio.h"
 
 int main(int argc, char* argv[])
