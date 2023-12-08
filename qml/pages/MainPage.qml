@@ -88,13 +88,13 @@ Rectangle {
    }
 
    Rectangle {
-      function getMetaData(metaData) {
+/*      function getMetaData(metaData) {
          var text = ""
 
-         text += "genre: " + metaData.genre + "\n"
+         text += "title: " + metaData.title + "\n"
 
          return text
-      }
+*/      }
 //      width: 360
 //      height: 360
       anchors.top: audioPlayer.bottom
@@ -103,7 +103,7 @@ Rectangle {
       anchors.bottom: playerControls.top
       Text {
          id: myText
-         text: "Hello World"
+         text: "audioPlayer.metaData.title"
          anchors.centerIn: parent
       }
 
@@ -114,7 +114,7 @@ Rectangle {
       }
 
       Component.onCompleted: {
-         console.log( "WRITE"+ myFile.write(getMetaData(audioPlayer.metaData)));
+         console.log( "WRITE"+ myFile.write(audioPlayer.metaData()));
          myText.text =  myFile.read();
       }
    }
