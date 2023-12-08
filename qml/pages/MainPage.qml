@@ -87,17 +87,6 @@ Rectangle {
       }
    }
 
-   FileIO {
-        id: myFile
-        source: "file:///home/phablet/.config/radio.s710/metadata.txt"
-        onError: console.log(msg)
-    }
-
-    Component.onCompleted: {
-        console.log( "WRITE"+ myFile.write("TEST"));
-//        myText.text =  myFile.read();
-    }
-
    Column {
       id: playerControls
       anchors.top: parent.top
