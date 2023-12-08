@@ -92,8 +92,12 @@ Rectangle {
     }
 
     Rectangle {
-        width: 360
-        height: 360
+        anchors.top: l2.bottom
+        anchors.left: parent.left
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+//        width: 360
+//        height: 360
         Text {
             id: myText
             text: "Hello World"
@@ -102,7 +106,7 @@ Rectangle {
 
         FileIO {
             id: myFile
-            source: "file:///home/phablet/.config/radio.s710/metadata.txt"
+            source: "/home/phablet/.config/radio.s710/metadata.txt"
             onError: console.log(msg)
         }
 
