@@ -80,14 +80,6 @@ Rectangle {
          }
       }
 
-      onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
-      onStatusChanged: mainPage.onStatusChanged(status)
-      onError: {
-         Notify.error(i18n.tr("Error"), audioPlayer.errorString)
-      }
-   }
-
-   Rectangle {
       function getMetaData(metaData) {
          var text = ""
 
@@ -96,6 +88,14 @@ Rectangle {
          return text
       }
 
+      onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
+      onStatusChanged: mainPage.onStatusChanged(status)
+      onError: {
+         Notify.error(i18n.tr("Error"), audioPlayer.errorString)
+      }
+   }
+
+   Rectangle {
 //      width: 360
 //      height: 360
       anchors.top: audioPlayer.bottom
@@ -115,7 +115,7 @@ Rectangle {
       }
 
       Component.onCompleted: {
-         console.log( "WRITE"+ myFile.write(getMetaData(audioPlayer.metaData)));
+         console.log( "WRITE"+ myFile.write(audioPlayer.getMetaData(audioPlayer.metaData)));
          myText.text =  myFile.read();
       }
    }
