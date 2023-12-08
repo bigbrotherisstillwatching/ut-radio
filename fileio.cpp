@@ -66,7 +66,7 @@ bool FileIO::write(const QString& data)
 
     QFile file(mSource);
     //"append" allows adding a new line instead of rewriting the file
-     if (!file.open(QFile::WriteOnly | QIODevice::Text | QFile::Append))
+     if (!file.open(QFile::WriteOnly | QIODevice::Text )) //| QFile::Append))
           return false;
 
     QTextStream out(&file);
