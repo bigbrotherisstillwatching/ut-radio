@@ -1,7 +1,6 @@
 #include "fileio.h"
 #include <QFile>
 #include <QTextStream>
-#include "qdeclarativemediametadata_p.h"
 
 FileIO::FileIO(QObject *parent) :
     QObject(parent)
