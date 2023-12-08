@@ -107,7 +107,7 @@ Rectangle {
       }
 
       Component.onCompleted: {
-         console.log( "WRITE"+ myFile.write(metaData.title));
+         console.log( "WRITE"+ myFile.write(audioPlayer.metaData.onMetaDataChanged(audioPlayer.metaData)));
          myText.text =  myFile.read();
       }
    }
