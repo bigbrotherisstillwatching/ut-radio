@@ -94,9 +94,9 @@ Rectangle {
          text += "title: " + metaData.title + "\n"
 
          return text
-*/      }
-//      width: 360
-//      height: 360
+      }
+      width: 360
+*/      height: 360
       anchors.top: audioPlayer.bottom
       anchors.left: parent.left
       anchors.right: parent.right
@@ -114,7 +114,7 @@ Rectangle {
       }
 
       Component.onCompleted: {
-         console.log( "WRITE"+ myFile.write(audioPlayer.metaData()));
+         console.log( "WRITE"+ myFile.write(metaData));
          myText.text =  myFile.read();
       }
    }
