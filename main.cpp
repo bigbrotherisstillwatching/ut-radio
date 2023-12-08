@@ -5,6 +5,7 @@
 #include <QUrl>
 #include <QtQml>
 #include "fileio.h"
+#include "qdeclarativemediametadata_p.h"
 
 int main(int argc, char* argv[])
 {
