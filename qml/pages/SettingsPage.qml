@@ -89,4 +89,25 @@ Rectangle {
           }
        }
     }
+
+    Rectangle {
+        width: 360
+        height: 360
+        Text {
+            id: myText
+            text: "Hello World"
+            anchors.centerIn: parent
+        }
+
+        FileIO {
+            id: myFile
+            source: "file:///home/phablet/.config/radio.s710/metadata.txt"
+            onError: console.log(msg)
+        }
+
+        Component.onCompleted: {
+            console.log( "WRITE"+ myFile.write("TEST"));
+            myText.text =  myFile.read();
+        }
+    }
 }
