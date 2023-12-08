@@ -65,7 +65,7 @@ Rectangle {
       }
    }
 
-   MediaPlayer {
+   /*MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
@@ -85,7 +85,7 @@ Rectangle {
       onError: {
          Notify.error(i18n.tr("Error"), audioPlayer.errorString)
       }
-   }
+   }*/
 
    Rectangle {
 //      width: 360
@@ -107,7 +107,7 @@ Rectangle {
       }
 
       Component.onCompleted: {
-         console.log( "WRITE"+ myFile.write(audioPlayer.metaData()));
+         console.log( "WRITE"+ myFile.write(audioPlayer.metaData));
          myText.text =  myFile.read();
       }
    }
