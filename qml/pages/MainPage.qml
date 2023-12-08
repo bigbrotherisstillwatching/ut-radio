@@ -91,7 +91,7 @@ Rectangle {
       function getMetaData(metaData) {
          var text = ""
 
-         text += "title: " + metaData.title + "\n"
+         text += "title: " + metaData.genre + "\n"
 
          return text
       }
