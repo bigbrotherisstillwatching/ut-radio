@@ -103,7 +103,7 @@ Rectangle {
       anchors.bottom: playerControls.top
       Text {
          id: myText
-         text: "Hello World!"
+         text: audioPlayer.metaData.title
          anchors.centerIn: parent
       }
 
