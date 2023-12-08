@@ -96,7 +96,7 @@ Rectangle {
          return text
       }
       width: 360
-*/      height: 360
+      height: 360*/
       anchors.top: audioPlayer.bottom
       anchors.left: parent.left
       anchors.right: parent.right
