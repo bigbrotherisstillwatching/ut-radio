@@ -87,15 +87,29 @@ Rectangle {
       }
    }
 
-   FileIO {
-      id: myFile
-      source: "/home/phablet/.config/radio.s710/metadata.txt"
-      onError: console.log(msg)
-   }
+   Rectangle {
+//      width: 360
+//      height: 360
+      anchors.top: audioPlayer.bottom
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: playerControls.top
+      Text {
+         id: myText
+         text: "Hello World"
+         anchors.centerIn: parent
+      }
 
-   Component.onCompleted: {
-      console.log( "WRITE"+ myFile.write("TEST"));
-//      myText.text =  myFile.read();
+      FileIO {
+         id: myFile
+         source: "/home/phablet/.config/radio.s710/metadata.txt"
+         onError: console.log(msg)
+      }
+
+      Component.onCompleted: {
+         console.log( "WRITE"+ myFile.write("TEST"));
+         myText.text =  myFile.read();
+      }
    }
 
    Column {
