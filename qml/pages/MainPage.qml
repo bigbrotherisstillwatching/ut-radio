@@ -4,6 +4,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
+import FileIO 1.0
 
 import "../net"
 import "../util"
@@ -84,6 +85,17 @@ Rectangle {
       onError: {
          Notify.error(i18n.tr("Error"), audioPlayer.errorString)
       }
+   }
+
+   FileIO {
+      id: myFile
+      source: "/home/phablet/.config/radio.s710/metadata.txt"
+      onError: console.log(msg)
+   }
+
+   Component.onCompleted: {
+      console.log( "WRITE"+ myFile.write("TEST"));
+//      myText.text =  myFile.read();
    }
 
    Column {
