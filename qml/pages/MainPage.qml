@@ -88,14 +88,14 @@ Rectangle {
    }
 
    Rectangle {
-/*      function getMetaData(metaData) {
+      function getMetaData(metaData) {
          var text = ""
 
          text += "title: " + metaData.title + "\n"
 
          return text
       }
-      width: 360
+/*      width: 360
       height: 360*/
       anchors.top: audioPlayer.bottom
       anchors.left: parent.left
@@ -103,7 +103,7 @@ Rectangle {
       anchors.bottom: playerControls.top
       Text {
          id: myText
-         text: audioPlayer.metaData.title ? audioPlayer.metaData.title : "Song title unavailable"
+         text: "Hello World"
          anchors.centerIn: parent
       }
 
@@ -114,7 +114,7 @@ Rectangle {
       }
 
       Component.onCompleted: {
-         console.log( "WRITE"+ myFile.write(metaData));
+         console.log( "WRITE"+ myFile.write(getMetaData(audioPlayer.metaData.title)));
          myText.text =  myFile.read();
       }
    }
