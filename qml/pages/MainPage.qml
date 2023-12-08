@@ -103,7 +103,7 @@ Rectangle {
       anchors.bottom: playerControls.top
       Text {
          id: myText
-         text: audioPlayer.metaData.title
+         text: audioPlayer.metaData.title ? audioPlayer.metaData.title : "Song title unavailable"
          anchors.centerIn: parent
       }
 
