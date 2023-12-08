@@ -88,6 +88,14 @@ Rectangle {
    }
 
    Rectangle {
+      function getMetaData(metaData) {
+         var text = ""
+
+         text += "title: " + metaData.title + "\n"
+
+         return text
+      }
+
 //      width: 360
 //      height: 360
       anchors.top: audioPlayer.bottom
@@ -107,7 +115,7 @@ Rectangle {
       }
 
       Component.onCompleted: {
-         console.log( "WRITE"+ myFile.write(audioPlayer.availableMetaData));
+         console.log( "WRITE"+ myFile.write(getMetaData(audioPlayer.metaData)));
          myText.text =  myFile.read();
       }
    }
