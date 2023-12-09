@@ -119,7 +119,7 @@ Rectangle {
       }*/
 
       onStatusChanged: {
-         if(status == MediaPlayer.Loaded) {
+         if(status == audioPlayer.Loaded) {
             console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
             myText.text =  myFile.read();
          }
