@@ -113,9 +113,16 @@ Rectangle {
          onError: console.log(msg)
       }
 
-      Component.onCompleted: {
+/*      Component.onCompleted: {
          console.log( "WRITE"+ myFile.write(audioPlayer.metaData));
          myText.text =  myFile.read();
+      }*/
+
+      onStatusChanged: {
+         if(status == MediaPlayer.Loaded) {
+            console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
+            myText.text =  myFile.read();
+         }
       }
    }
 
