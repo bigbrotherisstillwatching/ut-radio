@@ -87,7 +87,7 @@ Rectangle {
       }*/
 
       onPlaying: {
-         console.log( "WRITE"+ myFile.write(metaData.title));
+         console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
