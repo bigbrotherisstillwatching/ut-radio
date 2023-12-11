@@ -77,10 +77,10 @@ Rectangle {
       source: lastStation && lastStation.url || ""
 
       metaData.onMetaDataChanged: {
+         myFile.write(metaData.title);
          if (metaData.title) {
             stationTitleText.displayText = metaData.title
             stationTitleText.color = Colors.accentText
-            myFile.write(metaData);
          } else {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
