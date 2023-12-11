@@ -77,13 +77,11 @@ Rectangle {
       source: lastStation && lastStation.url || ""
 
       metaData.onMetaDataChanged: {
-         console.log( "WRITE"+ myFile.write("Hello World"));
-      }
-
-/*      metaData.onMetaDataChanged: {
          if (metaData.title) {
-            stationTitleText.displayText = metaData.title
-            stationTitleText.color = Colors.accentText
+//            stationTitleText.displayText = metaData.title
+//            stationTitleText.color = Colors.accentText
+         console.log( "WRITE"+ myFile.write("Hello World"));
+         myText.text =  myFile.read();
          } else {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
