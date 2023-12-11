@@ -2,7 +2,7 @@ import Lomiri.Components 1.3
 import Lomiri.Components.ListItems 1.3
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
-import QtMultimedia 5.15
+import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import FileIO 1.0
 
@@ -71,6 +71,14 @@ Rectangle {
       onError: console.log(msg)
    }
 
+   function getMetaData(metaData) {
+      var text = ""
+
+      text += "title: " + metaData.title + "\n"
+
+      return text
+   }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -87,7 +95,7 @@ Rectangle {
       }*/
 
       onPlaying: {
-         myFile.write(metaData.title);
+         myFile.write(getMetaData(metaData));
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
