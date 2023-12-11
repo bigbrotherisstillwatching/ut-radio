@@ -77,8 +77,8 @@ Rectangle {
       source: lastStation && lastStation.url || ""
 
       metaData.onMetaDataChanged: {
-         console.log( "WRITE"+ myFile.write("Hello World"));
          if (metaData.title) {
+            console.log( "WRITE"+ myFile.write("Hello World"));
             stationTitleText.displayText = metaData.title
             stationTitleText.color = Colors.accentText
          } else {
