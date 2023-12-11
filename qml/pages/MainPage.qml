@@ -129,7 +129,7 @@ Rectangle {
       }*/
 
       audioPlayer.metaData.onMetaDataChanged: {
-         console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
+         console.log( "WRITE"+ myFile.write("Hello World"));
          myText.text =  myFile.read();
       }
    }
