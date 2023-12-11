@@ -70,7 +70,15 @@ Rectangle {
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
 
+      FileIO {
+         id: myFile
+         source: "/home/phablet/.config/radio.s710/metadata.txt"
+         onError: console.log(msg)
+      }
+
       metaData.onMetaDataChanged: {
+         console.log( "WRITE"+ myFile.write(metaData.title));
+         myText.text =  myFile.read();
          if (metaData.title) {
             stationTitleText.displayText = metaData.title
             stationTitleText.color = Colors.accentText
@@ -87,8 +95,8 @@ Rectangle {
       }
    }
 
-   Rectangle {
-/*      function getMetaData(metaData) {
+/*   Rectangle {
+      function getMetaData(metaData) {
          var text = ""
 
          text += "title: " + metaData.title + "\n"
@@ -96,7 +104,7 @@ Rectangle {
          return text
       }
       width: 360
-      height: 360*/
+      height: 360
       anchors.top: audioPlayer.bottom
       anchors.left: parent.left
       anchors.right: parent.right
@@ -121,13 +129,13 @@ Rectangle {
             }
       }
 
-/*      onStatusChanged: {
+      onStatusChanged: {
          if(status == audioPlayer.Loaded) {
             console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
             myText.text =  myFile.read();
          }
-      }*/
-   }
+      }
+   }*/
 
    Column {
       id: playerControls
