@@ -65,13 +65,18 @@ Rectangle {
       }
    }
 
+   FileIO {
+         id: myFile
+         source: "/home/phablet/.config/radio.s710/metadata.txt"
+         onError: console.log(msg)
+   }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
 
-      onPlaying: {
-//      metaData.onMetaDataChanged: {
+/*      metaData.onMetaDataChanged: {
          if (metaData.title) {
             stationTitleText.displayText = metaData.title
             stationTitleText.color = Colors.accentText
@@ -79,6 +84,10 @@ Rectangle {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
          }
+      }*/
+
+      onPlaying: {
+         console.log( "WRITE"+ myFile.write("Hallo"));
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
