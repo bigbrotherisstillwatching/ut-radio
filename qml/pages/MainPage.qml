@@ -84,10 +84,9 @@ Rectangle {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
          }
-      }
-
-      metaData.onMetaDataChanged: {
+         
          console.log( "WRITE"+ myFile.write("Hello World"));
+      
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
