@@ -132,7 +132,6 @@ Rectangle {
          console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
          myText.text =  myFile.read();
       }
-
    }
 
    Column {
