@@ -113,25 +113,22 @@ Rectangle {
          onError: console.log(msg)
       }
 
-/*      Component.onCompleted: {
-         audioPlayer.metaData.onMetaDataChanged:
-            {
-               console.log( "WRITE"+ myFile.write(audioPlayer.metaData));
-               myText.text =  myFile.read();
-            }
+      Component.onCompleted: {
+         console.log( "WRITE"+ myFile.write("Hallo"));
+         myText.text =  myFile.read();
       }
 
-      onStatusChanged: {
+/*      onStatusChanged: {
          if(status == audioPlayer.Loaded) {
             console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
             myText.text =  myFile.read();
          }
       }*/
 
-      audioPlayer.metaData.onMetaDataChanged: {
+ /*     audioPlayer.metaData.onMetaDataChanged: {
          console.log( "WRITE"+ myFile.write("Hello World"));
          myText.text =  myFile.read();
-      }
+      }*/
    }
 
    Column {
