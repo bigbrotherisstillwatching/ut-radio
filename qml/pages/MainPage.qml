@@ -113,8 +113,8 @@ Rectangle {
          onError: console.log(msg)
       }
 
-      Component.onCompleted: {
-         console.log( "WRITE"+ myFile.write(MediaPlayer.metaData));
+      metaData.onMetaDataChanged: {
+         console.log( "WRITE"+ myFile.write("Hallo"));
          myText.text =  myFile.read();
       }
 
