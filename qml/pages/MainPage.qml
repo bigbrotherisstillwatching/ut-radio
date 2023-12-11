@@ -87,8 +87,8 @@ Rectangle {
       }*/
 
       onPlaying: {
-         if (status == MediaPlayer.Buffering) {
-            myFile.write(metaData.title);
+         if (status == MediaPlayer.Loaded) {
+            myFile.write("Hallo");
          }
       }
 
