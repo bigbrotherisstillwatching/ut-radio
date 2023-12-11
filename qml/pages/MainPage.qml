@@ -113,7 +113,7 @@ Rectangle {
          onError: console.log(msg)
       }
 
-      audioPlayer.onMetaDataChanged: {
+      MediaPlayer.onMetaDataChanged: {
          console.log( "WRITE"+ myFile.write("Hallo"));
          myText.text =  myFile.read();
       }
