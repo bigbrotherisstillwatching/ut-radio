@@ -87,7 +87,9 @@ Rectangle {
       }*/
 
       onPlaying: {
-         myFile.write(audioPlayer.metaData.title);
+         if (status === MediaPlayer.Buffered) {
+            myFile.write(audioPlayer.metaData.title);
+         }
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
