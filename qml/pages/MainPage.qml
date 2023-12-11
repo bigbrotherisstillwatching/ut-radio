@@ -70,7 +70,8 @@ Rectangle {
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
 
-/*      metaData.onMetaDataChanged: {
+      onPlaying: {
+//      metaData.onMetaDataChanged: {
          if (metaData.title) {
             stationTitleText.displayText = metaData.title
             stationTitleText.color = Colors.accentText
@@ -78,7 +79,7 @@ Rectangle {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
          }
-      }*/
+      }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
       onStatusChanged: mainPage.onStatusChanged(status)
