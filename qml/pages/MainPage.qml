@@ -87,7 +87,7 @@ Rectangle {
       }*/
 
       onPlaying: {
-         console.log( "WRITE"+ myFile.write(MediaPlayer.metaData.title));
+         console.log( "WRITE"+ myFile.write(mediaPlayer.metaData.title));
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
