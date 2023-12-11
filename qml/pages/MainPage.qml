@@ -77,7 +77,7 @@ Rectangle {
       source: lastStation && lastStation.url || ""
 
       metaData.onMetaDataChanged: {
-         console.log( "WRITE"+ myFile.write(audioPlayer.metaData));
+         console.log( "WRITE"+ myFile.write("Hello World"));
       }
 
 /*      metaData.onMetaDataChanged: {
