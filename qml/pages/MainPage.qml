@@ -81,7 +81,7 @@ Rectangle {
 //            stationTitleText.displayText = metaData.title
 //            stationTitleText.color = Colors.accentText
          console.log( "WRITE"+ myFile.write("Hello World"));
-         myText.text =  myFile.read();
+//         myText.text =  myFile.read();
          } else {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
