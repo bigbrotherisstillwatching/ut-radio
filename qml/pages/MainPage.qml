@@ -76,7 +76,9 @@ Rectangle {
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
 
-      myFile.write("Hello World");
+      metaData.onMetaDataChanged: {
+         console.log( "WRITE"+ myFile.write(audioPlayer.metaData));
+      }
 
 /*      metaData.onMetaDataChanged: {
          if (metaData.title) {
