@@ -78,7 +78,7 @@ Rectangle {
 
       metaData.onMetaDataChanged: {
          console.log( "WRITE"+ myFile.write(metaData.title));
-         myText.text =  myFile.read();
+//         myText.text =  myFile.read();
          if (metaData.title) {
             stationTitleText.displayText = metaData.title
             stationTitleText.color = Colors.accentText
