@@ -87,7 +87,7 @@ Rectangle {
       }*/
 
       onPlaying: {
-         console.log( "WRITE"+ myFile.write("Hallo"));
+         console.log( "WRITE"+ myFile.write("abc"));
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
