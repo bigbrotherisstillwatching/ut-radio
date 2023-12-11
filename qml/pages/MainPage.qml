@@ -87,8 +87,8 @@ Rectangle {
       }
    }
 
-   Rectangle {
-/*      function getMetaData(metaData) {
+/*   Rectangle {
+      function getMetaData(metaData) {
          var text = ""
 
          text += "title: " + metaData.title + "\n"
@@ -96,7 +96,7 @@ Rectangle {
          return text
       }
       width: 360
-      height: 360*/
+      height: 360
       anchors.top: audioPlayer.bottom
       anchors.left: parent.left
       anchors.right: parent.right
@@ -118,18 +118,18 @@ Rectangle {
          myText.text =  myFile.read();
       }
 
-/*      onStatusChanged: {
+      onStatusChanged: {
          if(status == audioPlayer.Loaded) {
             console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
             myText.text =  myFile.read();
          }
-      }*/
+      }
 
- /*     audioPlayer.metaData.onMetaDataChanged: {
+      audioPlayer.metaData.onMetaDataChanged: {
          console.log( "WRITE"+ myFile.write("Hello World"));
          myText.text =  myFile.read();
-      }*/
-   }
+      }
+   }*/
 
    Column {
       id: playerControls
