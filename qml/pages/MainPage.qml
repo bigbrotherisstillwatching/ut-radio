@@ -72,7 +72,7 @@ Rectangle {
 
       metaData.onMetaDataChanged: {
          if (metaData.title) {
-            stationTitleText.displayText = metaData.title
+            stationTitleText.displayText = "Hallo"
             stationTitleText.color = Colors.accentText
          } else {
             stationTitleText.displayText = textForStatus()
