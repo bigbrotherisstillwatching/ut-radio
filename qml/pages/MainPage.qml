@@ -66,7 +66,7 @@ Rectangle {
    }
 
    FileIO {
-      id: myFile
+      id: meineDatei
       source: "/home/phablet/.config/radio.s710/metadata.txt"
       onError: console.log(msg)
    }
@@ -78,9 +78,9 @@ Rectangle {
 
       metaData.onMetaDataChanged: {
          if (metaData.title) {
-            console.log( "WRITE"+ myFile.write("Hello World"));
             stationTitleText.displayText = metaData.title
             stationTitleText.color = Colors.accentText
+            console.log( "WRITE"+ meineDatei.write("Hello World"))
          } else {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
