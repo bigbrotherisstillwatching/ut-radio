@@ -65,16 +65,16 @@ Rectangle {
       }
    }
 
+   FileIO {
+      id: myFile
+      source: "/home/phablet/.config/radio.s710/metadata.txt"
+      onError: console.log(msg)
+   }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
-
-      FileIO {
-         id: myFile
-         source: "/home/phablet/.config/radio.s710/metadata.txt"
-         onError: console.log(msg)
-      }
 
       metaData.onMetaDataChanged: {
          console.log( "WRITE"+ myFile.write(metaData.title));
