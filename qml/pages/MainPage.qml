@@ -84,7 +84,7 @@ Rectangle {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
          }*/
-         console.log( "WRITE"+ myFile.write("Hello World"));
+         myFile.write("Hello World");
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
