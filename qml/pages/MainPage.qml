@@ -65,12 +65,6 @@ Rectangle {
       }
    }
 
-   FileIO {
-      id: myFile
-      source: "/home/phablet/.config/radio.s710/metadata.txt"
-      onError: console.log(msg)
-   }
-
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -78,10 +72,8 @@ Rectangle {
 
       metaData.onMetaDataChanged: {
          if (metaData.title) {
-//            stationTitleText.displayText = metaData.title
-//            stationTitleText.color = Colors.accentText
-         console.log( "WRITE"+ myFile.write("Hello World"));
-//         myText.text =  myFile.read();
+            stationTitleText.displayText = metaData.title
+            stationTitleText.color = Colors.accentText
          } else {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
@@ -95,8 +87,8 @@ Rectangle {
       }
    }
 
-/*   Rectangle {
-      function getMetaData(metaData) {
+   Rectangle {
+/*      function getMetaData(metaData) {
          var text = ""
 
          text += "title: " + metaData.title + "\n"
@@ -104,7 +96,7 @@ Rectangle {
          return text
       }
       width: 360
-      height: 360
+      height: 360*/
       anchors.top: audioPlayer.bottom
       anchors.left: parent.left
       anchors.right: parent.right
@@ -121,7 +113,7 @@ Rectangle {
          onError: console.log(msg)
       }
 
-      Component.onCompleted: {
+/*      Component.onCompleted: {
          audioPlayer.metaData.onMetaDataChanged:
             {
                console.log( "WRITE"+ myFile.write(audioPlayer.metaData));
@@ -134,8 +126,14 @@ Rectangle {
             console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
             myText.text =  myFile.read();
          }
+      }*/
+
+      audioPlayer.metaData.onMetaDataChanged: {
+         console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
+         myText.text =  myFile.read();
       }
-   }*/
+
+   }
 
    Column {
       id: playerControls
