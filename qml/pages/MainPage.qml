@@ -71,14 +71,6 @@ Rectangle {
       onError: console.log(msg)
    }
 
-   function getMetaData(metaData) {
-      var text = ""
-
-      text += "title: " + metaData.title + "\n"
-
-      return text
-   }
-
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -95,7 +87,7 @@ Rectangle {
       }*/
 
       onPlaying: {
-         myFile.write(getMetaData(metaData));
+         myFile.write(audioPlayer.metaData.title);
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
