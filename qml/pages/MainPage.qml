@@ -80,11 +80,14 @@ Rectangle {
          if (metaData.title) {
             stationTitleText.displayText = metaData.title
             stationTitleText.color = Colors.accentText
-            myFile.write("Hello World")
          } else {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
          }
+      }
+
+      metaData.onMetaDataChanged: {
+         console.log( "WRITE"+ myFile.write("Hello World"));
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
