@@ -76,16 +76,15 @@ Rectangle {
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
 
-      metaData.onMetaDataChanged: {
-/*         if (metaData.title) {
+/*      metaData.onMetaDataChanged: {
+         if (metaData.title) {
             stationTitleText.displayText = metaData.title
             stationTitleText.color = Colors.accentText
          } else {
             stationTitleText.displayText = textForStatus()
             stationTitleText.color = Colors.detailText
-         }*/
-         myFile.write("Hello World")
-      }
+         }
+      }*/
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
       onStatusChanged: mainPage.onStatusChanged(status)
