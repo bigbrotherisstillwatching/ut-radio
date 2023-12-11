@@ -76,6 +76,8 @@ Rectangle {
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
 
+      myFile.write("Hello World");
+
 /*      metaData.onMetaDataChanged: {
          if (metaData.title) {
             stationTitleText.displayText = metaData.title
