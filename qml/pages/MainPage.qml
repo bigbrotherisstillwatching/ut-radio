@@ -87,7 +87,7 @@ Rectangle {
       }*/
 
       onPlaying: {
-         myFile.write(metaData.title));
+         myFile.write(metaData.title);
       }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
