@@ -80,7 +80,7 @@ Rectangle {
          if (metaData.title) {
 //            stationTitleText.displayText = metaData.title
 //            stationTitleText.color = Colors.accentText
-         myFile.write("Hello World");
+         myFile.write("Hello World")
 //         myText.text =  myFile.read();
          } else {
             stationTitleText.displayText = textForStatus()
