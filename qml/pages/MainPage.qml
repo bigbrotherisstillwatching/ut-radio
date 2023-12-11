@@ -66,9 +66,9 @@ Rectangle {
    }
 
    FileIO {
-         id: myFile
-         source: "/home/phablet/.config/radio.s710/metadata.txt"
-         onError: console.log(msg)
+      id: myFile
+      source: "/home/phablet/.config/radio.s710/metadata.txt"
+      onError: console.log(msg)
    }
 
    MediaPlayer {
