@@ -71,7 +71,7 @@ Rectangle {
       onError: console.log(msg)
    }*/
 
-   function setText(url) {
+/*   function setText(url) {
       var doc = new XMLHttpRequest();
       doc.onreadystatechange = function() {
          if (doc.readyState == XMLHttpRequest.DONE) {
@@ -81,7 +81,7 @@ Rectangle {
       doc.open("get", url);
       doc.setRequestHeader("Content-Encoding", "UTF-8");
       doc.send();
-   }
+   }*/
 
    MediaPlayer {
       id: audioPlayer
@@ -131,6 +131,19 @@ Rectangle {
       anchors.left: parent.left
       anchors.right: parent.right
       anchors.bottom: playerControls.top
+      
+      function setText(url) {
+         var doc = new XMLHttpRequest();
+         doc.onreadystatechange = function() {
+            if (doc.readyState == XMLHttpRequest.DONE) {
+               mainText.text = doc.responseText;
+            }
+         }
+         doc.open("get", url);
+         doc.setRequestHeader("Content-Encoding", "UTF-8");
+         doc.send();
+      }
+
       Text {
          id: myText
          text: setText("http://fr1.1mix.co.uk:8016/7.html");
