@@ -106,7 +106,7 @@ Rectangle {
 
       onPlaying: {
          if (status == MediaPlayer.Loaded) {
-            myFile.write(setText("http://chicago.discovertrance.com/7.html"));
+            myFile.write( setText("http://chicago.discovertrance.com/7.html"); );
          }
       }
 
