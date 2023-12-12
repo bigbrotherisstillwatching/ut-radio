@@ -188,7 +188,7 @@ Rectangle {
                color: Colors.mainText
                width: playerTitles.width
 
-               displayText: setText("http://fr1.1mix.co.uk:8016/7.html") || i18n.tr("No station")
+               displayText: setText("http://fr1.1mix.co.uk:8016/7.html");// || i18n.tr("No station")
             }
          ScrollableText {
             id: stationTitleText
