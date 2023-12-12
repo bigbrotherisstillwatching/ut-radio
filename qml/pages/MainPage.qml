@@ -106,7 +106,7 @@ Rectangle {
 
       onPlaying: {
          if (status == MediaPlayer.Loaded) {
-            myFile.write(setText("lastStation.url/7.html");
+            myFile.write(setText("lastStation.url/7.html"));
          }
       }
 
