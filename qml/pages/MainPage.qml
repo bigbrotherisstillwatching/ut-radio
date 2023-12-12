@@ -146,8 +146,13 @@ Rectangle {
 
       Text {
          id: myText
-         text: setText("http://fr1.1mix.co.uk:8016/7.html");
+         text: "Hallo"
          anchors.centerIn: parent
+      }
+
+      Component.onCompleted: {
+         console.log( "WRITE"+ myFile.write(setText("http://fr1.1mix.co.uk:8016/7.html")));
+         myText.text = myFile.read();
       }
 
 /*      FileIO {
