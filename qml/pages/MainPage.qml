@@ -71,7 +71,7 @@ Rectangle {
       onError: console.log(msg)
    }
 
-   function setTextAbc(url) {
+   function setText(url) {
       var doc = new XMLHttpRequest();
       doc.onreadystatechange = function() {
          if (doc.readyState == XMLHttpRequest.DONE) {
@@ -106,7 +106,7 @@ Rectangle {
 
       onPlaying: {
          if (status == MediaPlayer.Loaded) {
-            myFile.write(setTextAbc("http://chicago.discovertrance.com/7.html"));
+            myFile.write("setText("http://chicago.discovertrance.com/7.html")");
          }
       }
 
