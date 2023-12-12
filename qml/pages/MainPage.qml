@@ -117,8 +117,8 @@ Rectangle {
       }
    }
 
-   Rectangle {
-      /*function getMetaData(metaData) {
+/*   Rectangle {
+      function getMetaData(metaData) {
          var text = ""
 
          text += "title: " + metaData.title + "\n"
@@ -126,7 +126,7 @@ Rectangle {
          return text
       }
       width: 360
-      height: 360*/
+      height: 360
       anchors.top: audioPlayer.bottom
       anchors.left: parent.left
       anchors.right: parent.right
@@ -137,7 +137,7 @@ Rectangle {
          anchors.centerIn: parent
       }
 
-      /*FileIO {
+      FileIO {
          id: myFile
          source: "/home/phablet/.config/radio.s710/metadata.txt"
          onError: console.log(msg)
@@ -158,7 +158,7 @@ Rectangle {
       audioPlayer.metaData.onMetaDataChanged: {
          console.log( "WRITE"+ myFile.write("Hello World"));
          myText.text =  myFile.read();
-      }*/
+      }
 
       MouseArea {
          anchors.fill: parent
@@ -166,7 +166,7 @@ Rectangle {
             setText("http://fr1.1mix.co.uk:8016/7.html");
          }
       }
-   }
+   }*/
 
    Column {
       id: playerControls
@@ -188,7 +188,7 @@ Rectangle {
                color: Colors.mainText
                width: playerTitles.width
 
-               displayText: lastStation && lastStation.name || i18n.tr("No station")
+               displayText: setText("http://fr1.1mix.co.uk:8016/7.html") || i18n.tr("No station")
             }
          ScrollableText {
             id: stationTitleText
