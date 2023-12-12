@@ -160,8 +160,11 @@ Rectangle {
          myText.text =  myFile.read();
       }*/
 
-      Component.onCompleted: {
-         setText("http://fr1.1mix.co.uk:8016/7.html");
+      MouseArea {
+         anchors.fill: parent
+         onClicked: {
+            setText("http://fr1.1mix.co.uk:8016/7.html");
+         }
       }
    }
 
