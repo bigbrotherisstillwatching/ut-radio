@@ -106,7 +106,7 @@ Rectangle {
 
       onPlaying: {
          if (status == MediaPlayer.Loaded) {
-            myFile.write(setText("http://fr1.1mix.co.uk:8016/7.html"););
+            myFile.write(setText("http://fr1.1mix.co.uk:8016/7.html"));
          }
       }
 
