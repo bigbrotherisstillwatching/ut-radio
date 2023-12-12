@@ -65,13 +65,13 @@ Rectangle {
       }
    }
 
-   /*FileIO {
+   FileIO {
       id: myFile
       source: "/home/phablet/.config/radio.s710/metadata.txt"
       onError: console.log(msg)
-   }*/
+   }
 
-/*   function setText(url) {
+   function setText(url) {
       var doc = new XMLHttpRequest();
       doc.onreadystatechange = function() {
          if (doc.readyState == XMLHttpRequest.DONE) {
@@ -81,7 +81,7 @@ Rectangle {
       doc.open("get", url);
       doc.setRequestHeader("Content-Encoding", "UTF-8");
       doc.send();
-   }*/
+   }
 
    MediaPlayer {
       id: audioPlayer
@@ -102,13 +102,13 @@ Rectangle {
          if (status == MediaPlayer.Loaded) {
             myFile.write(metaData.title);
          }
-      }
+      }*/
 
       onPlaying: {
          if (status == MediaPlayer.Loaded) {
-            myFile.write("Hallo");
+            myFile.write(setText("http://fr1.1mix.co.uk:8016/7.html"););
          }
-      }*/
+      }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
       onStatusChanged: mainPage.onStatusChanged(status)
@@ -117,8 +117,8 @@ Rectangle {
       }
    }
 
-   Rectangle {
-/*      function getMetaData(metaData) {
+/*   Rectangle {
+      function getMetaData(metaData) {
          var text = ""
 
          text += "title: " + metaData.title + "\n"
@@ -126,7 +126,7 @@ Rectangle {
          return text
       }
       width: 360
-      height: 360*/
+      height: 360
       anchors.top: audioPlayer.bottom
       anchors.left: parent.left
       anchors.right: parent.right
@@ -150,7 +150,7 @@ Rectangle {
          anchors.centerIn: parent
       }
 
-/*      FileIO {
+      FileIO {
          id: myFile
          source: "/home/phablet/.config/radio.s710/metadata.txt"
          onError: console.log(msg)
@@ -178,8 +178,8 @@ Rectangle {
          onClicked: {
             setText("http://fr1.1mix.co.uk:8016/7.html");
          }
-      }*/
-   }
+      }
+   }*/
 
    Column {
       id: playerControls
