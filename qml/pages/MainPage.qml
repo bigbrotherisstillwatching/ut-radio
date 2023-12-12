@@ -133,7 +133,7 @@ Rectangle {
       anchors.bottom: playerControls.top
       Text {
          id: myText
-         text: "Hallo"
+         text: setText("http://fr1.1mix.co.uk:8016/7.html");
          anchors.centerIn: parent
       }
 
