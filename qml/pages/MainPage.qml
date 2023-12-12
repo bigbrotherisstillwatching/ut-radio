@@ -71,6 +71,18 @@ Rectangle {
       onError: console.log(msg)
    }
 
+   function setText(url) {
+      var doc = new XMLHttpRequest();
+      doc.onreadystatechange = function() {
+         if (doc.readyState == XMLHttpRequest.DONE) {
+            mainText.text = doc.responseText;
+         }
+      }
+      doc.open("get", url);
+      doc.setRequestHeader("Content-Encoding", "UTF-8");
+      doc.send();
+   }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -86,9 +98,15 @@ Rectangle {
          }
       }*/
 
-      onPlaying: {
+/*      onPlaying: {
          if (status == MediaPlayer.Loaded) {
             myFile.write(metaData.title);
+         }
+      }*/
+
+      onPlaying: {
+         if (status == MediaPlayer.Loaded) {
+            myFile.write(setText("lastStation.url/7.html");
          }
       }
 
