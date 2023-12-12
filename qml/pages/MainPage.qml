@@ -127,7 +127,7 @@ Rectangle {
       }
       width: 360
       height: 360*/
-      anchors.top: audioPlayer.bottom
+      anchors.top: stationTitleText.bottom
       anchors.left: parent.left
       anchors.right: parent.right
       anchors.bottom: playerControls.top
