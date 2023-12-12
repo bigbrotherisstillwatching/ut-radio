@@ -78,7 +78,7 @@ Rectangle {
             mainText.text = doc.responseText;
          }
       }
-      doc.open("get", url);
+      doc.open("GET", url);
       doc.setRequestHeader("Content-Encoding", "UTF-8");
       doc.send();
    }
@@ -106,7 +106,7 @@ Rectangle {
 
       onPlaying: {
          if (status == MediaPlayer.Loaded) {
-            myFile.write( setText("http://chicago.discovertrance.com/7.html"); );
+            myFile.write(setText("http://chicago.discovertrance.com/7.html"));
          }
       }
 
