@@ -132,6 +132,10 @@ Rectangle {
       anchors.right: parent.right
       anchors.bottom: playerControls.top
       Text {
+         anchors.top: parent.top
+         anchors.left: parent.left
+         anchors.right: parent.right
+         anchors.bottom: parents.bottom
          id: myText
          text: setText("http://fr1.1mix.co.uk:8016/7.html");
          anchors.centerIn: parent
