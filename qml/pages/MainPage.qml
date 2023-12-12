@@ -71,7 +71,7 @@ Rectangle {
       onError: console.log(msg)
    }
 
-   MediaPlayer {
+   Audio {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
