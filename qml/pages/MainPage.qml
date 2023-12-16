@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import FileIO 1.0
+import Launcher 1.0
 
 import "../net"
 import "../util"
@@ -231,7 +232,7 @@ Rectangle {
 
          Text {
             id: myText
-            text: myFile.read()
+            text: qprocess.launch("playerctl metadata | grep ':title' | sed 's/^.*:title               //'")
             anchors.top: parent.top
          }
       }
