@@ -113,7 +113,7 @@ Rectangle {
 
       onPlaying: {
          if (status == MediaPlayer.Loaded) {
-            myFile.write("Hallo Test");
+            myFile.write(qprocess.launch("which bash"));
          }
       }
 
