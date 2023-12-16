@@ -223,7 +223,7 @@ Rectangle {
       }
 
       Rectangle {
-         anchors.top: stationTitleText.bottom
+         anchors.top: playerTitles.bottom
          anchors.left: parent.left
          anchors.right: parent.right
 //         anchors.bottom: playerControls.top
