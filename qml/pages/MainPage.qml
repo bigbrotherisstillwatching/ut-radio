@@ -212,7 +212,7 @@ Rectangle {
                color: Colors.mainText
                width: playerTitles.width
 
-               displayText: lastStation && lastStation.name && myFile.read() || i18n.tr("No station")
+               displayText: lastStation.name && myFile.read() || i18n.tr("No station")
             }
          ScrollableText {
             id: stationTitleText
