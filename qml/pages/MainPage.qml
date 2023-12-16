@@ -230,10 +230,15 @@ Rectangle {
 //         anchors.centerIn: playerTitles.bottom
 //         anchors.bottom: playerControls.top
 
+         Launcher {
+            id: qprocess
+         }
+
          Text {
-            id: myText
-            text: qprocess.launch("playerctl metadata | grep ':title' | sed 's/^.*:title               //'")
-            anchors.top: parent.top
+//            id: myText
+            text: qprocess.launch("which bash")
+//            anchors.top: parent.top
+            anchors.centerIn: parent
          }
       }
 
