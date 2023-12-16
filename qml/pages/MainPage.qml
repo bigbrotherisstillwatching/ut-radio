@@ -226,7 +226,7 @@ Rectangle {
          anchors.top: playerTitles.bottom
          anchors.left: parent.left
          anchors.right: parent.right
-         anchors.horizontalCenter: parent.horizontalCenter
+         anchors.horizontalCenter: playerTitles.horizontalCenter
 //         anchors.bottom: playerControls.top
 
          Text {
