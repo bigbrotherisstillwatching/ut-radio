@@ -223,7 +223,7 @@ Rectangle {
       }
 
       Rectangle {
-         anchors.top: playerControls.bottom
+         anchors.top: audioPlayer.bottom
          anchors.left: parent.left
          anchors.right: parent.right
 //         anchors.bottom: playerControls.top
