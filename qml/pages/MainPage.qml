@@ -212,13 +212,26 @@ Rectangle {
                color: Colors.mainText
                width: playerTitles.width
 
-               displayText: lastStation.name && myFile.read() || i18n.tr("No station")
+               displayText: lastStation && lastStation.name || i18n.tr("No station")
             }
          ScrollableText {
             id: stationTitleText
             width: playerTitles.width
 
             displayText: mainPage.textForStatus()
+         }
+      }
+
+      Rectangle {
+         anchors.top: playerControls.bottom
+         anchors.left: parent.left
+         anchors.right: parent.right
+//         anchors.bottom: playerControls.top
+
+         Text {
+            id: myText
+            text: myFile.read()
+            anchors.top: parent.top
          }
       }
 
