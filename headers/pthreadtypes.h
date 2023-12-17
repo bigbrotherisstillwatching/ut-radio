@@ -20,7 +20,7 @@
 # define _BITS_PTHREADTYPES_COMMON_H	1
 
 /* For internal mutex and condition variable definitions.  */
-#include <bits/thread-shared-types.h>
+#include "thread-shared-types.h"
 
 /* Thread identifiers.  The structure of the attribute type is not
    exposed on purpose.  */
