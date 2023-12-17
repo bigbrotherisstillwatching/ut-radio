@@ -18,10 +18,10 @@
 #ifndef	_ENDIAN_H
 #define	_ENDIAN_H	1
 
-#include <features.h>
+#include "features.h"
 
 /* Get the definitions of __*_ENDIAN, __BYTE_ORDER, and __FLOAT_WORD_ORDER.  */
-#include <bits/endian.h>
+#include "bits/endian.h"
 
 #ifdef __USE_MISC
 # define LITTLE_ENDIAN	__LITTLE_ENDIAN
@@ -32,8 +32,8 @@
 
 #if defined __USE_MISC && !defined __ASSEMBLER__
 /* Conversion interfaces.  */
-# include <bits/byteswap.h>
-# include <bits/uintn-identity.h>
+# include "byteswap.h"
+# include "uintn-identity.h"
 
 # if __BYTE_ORDER == __LITTLE_ENDIAN
 #  define htobe16(x) __bswap_16 (x)
