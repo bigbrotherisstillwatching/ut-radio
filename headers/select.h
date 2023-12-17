@@ -21,22 +21,22 @@
 #ifndef _SYS_SELECT_H
 #define _SYS_SELECT_H	1
 
-#include <features.h>
+#include "features.h"
 
 /* Get definition of needed basic types.  */
-#include <bits/types.h>
+#include "types.h"
 
 /* Get __FD_* definitions.  */
-#include <bits/select.h>
+#include "select.h"
 
 /* Get sigset_t.  */
-#include <bits/types/sigset_t.h>
+#include "sigset_t.h"
 
 /* Get definition of timer specification structures.  */
-#include <bits/types/time_t.h>
-#include <bits/types/struct_timeval.h>
+#include "time_t.h"
+#include "struct_timeval.h"
 #ifdef __USE_XOPEN2K
-# include <bits/types/struct_timespec.h>
+# include "struct_timespec.h"
 #endif
 
 #ifndef __suseconds_t_defined
@@ -120,7 +120,7 @@ extern int pselect (int __nfds, fd_set *__restrict __readfds,
 
 /* Define some inlines helping to catch common problems.  */
 #if __USE_FORTIFY_LEVEL > 0 && defined __GNUC__
-# include <bits/select2.h>
+# include "select2.h"
 #endif
 
 __END_DECLS
