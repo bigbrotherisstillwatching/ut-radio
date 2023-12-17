@@ -20,8 +20,8 @@
 #ifndef _BITS_FLOATN_COMMON_H
 #define _BITS_FLOATN_COMMON_H
 
-#include <features.h>
-#include <bits/long-double.h>
+#include "features.h"
+#include "long-double.h"
 
 /* This header should be included at the bottom of each bits/floatn.h.
    It defines the following macros for each _FloatN and _FloatNx type,
