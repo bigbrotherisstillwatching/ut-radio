@@ -22,11 +22,11 @@
 #ifndef	_SYS_TYPES_H
 #define	_SYS_TYPES_H	1
 
-#include <features.h>
+#include "features.h"
 
 __BEGIN_DECLS
 
-#include <bits/types.h>
+#include "types.h"
 
 #ifdef	__USE_MISC
 # ifndef __u_char_defined
@@ -123,11 +123,11 @@ typedef __key_t key_t;
 #endif
 
 #if defined __USE_XOPEN || defined __USE_XOPEN2K8
-# include <bits/types/clock_t.h>
+# include "clock_t.h"
 #endif
-#include <bits/types/clockid_t.h>
-#include <bits/types/time_t.h>
-#include <bits/types/timer_t.h>
+#include "clockid_t.h"
+#include "time_t.h"
+#include "timer_t.h"
 
 #ifdef __USE_XOPEN
 # ifndef __useconds_t_defined
@@ -141,7 +141,7 @@ typedef __suseconds_t suseconds_t;
 #endif
 
 #define	__need_size_t
-#include <stddef.h>
+#include "stddef.h"
 
 #ifdef __USE_MISC
 /* Old compatibility names for C types.  */
@@ -152,7 +152,7 @@ typedef unsigned int uint;
 
 /* These size-specific names are used by some of the inet code.  */
 
-#include <bits/stdint-intn.h>
+#include "stdint-intn.h"
 
 /* These were defined by ISO C without the first `_'.  */
 typedef __uint8_t u_int8_t;
@@ -173,10 +173,10 @@ typedef int register_t;
 
 #ifdef	__USE_MISC
 /* In BSD <sys/types.h> is expected to define BYTE_ORDER.  */
-# include <endian.h>
+# include "endian.h"
 
 /* It also defines `fd_set' and the FD_* macros for `select'.  */
-# include <sys/select.h>
+# include "select.h"
 #endif /* Use misc.  */
 
 
@@ -224,7 +224,7 @@ typedef __fsfilcnt64_t fsfilcnt64_t; /* Type to count file system inodes.  */
 
 /* Now add the thread types.  */
 #if defined __USE_POSIX199506 || defined __USE_UNIX98
-# include <bits/pthreadtypes.h>
+# include "pthreadtypes.h"
 #endif
 
 __END_DECLS
