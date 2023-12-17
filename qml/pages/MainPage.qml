@@ -66,11 +66,11 @@ Rectangle {
       }
    }
 
-/*   FileIO {
+   FileIO {
       id: myFile
       source: "/home/phablet/.config/radio.s710/metadata.txt"
       onError: console.log(msg)
-   }*/
+   }
 
    /*function setText(url) {
       var doc = new XMLHttpRequest();
@@ -84,9 +84,9 @@ Rectangle {
       doc.send();
    }*/
 
-   MyObject {
+/*   MyObject {
       id: myobject
-   }
+   }*/
 
    MediaPlayer {
       id: audioPlayer
@@ -115,11 +115,11 @@ Rectangle {
          }
       }*/
 
-      onPlaying: {
+/*      onPlaying: {
          if (status == MediaPlayer.Loaded) {
             console.log(myobject.mymetadata())
          }
-      }
+      }*/
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
       onStatusChanged: mainPage.onStatusChanged(status)
@@ -234,17 +234,23 @@ Rectangle {
 //         anchors.centerIn: playerTitles.bottom
 //         anchors.bottom: playerControls.top
 
-/*         MyObject {
+         MyObject {
             id: myobject
-         }*/
+         }
 
          Text {
             id: myText
 //            text: qprocess.launch("which bash")
 //            anchors.top: parent.top
 //            anchors.centerIn: parent
-            text: "TEST"
+            text: myFile.read();
          }
+
+         Component.onCompleted: {
+            console.log( "WRITE"+ myobject.mymetadata());
+//            myText.text = myFile.read();
+         }
+
       }
 
       Rectangle {
