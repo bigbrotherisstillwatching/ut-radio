@@ -243,11 +243,12 @@ Rectangle {
 //            text: qprocess.launch("which bash")
 //            anchors.top: parent.top
 //            anchors.centerIn: parent
-            text: myFile.read();
+            text: "TEST"
          }
 
          Component.onCompleted: {
-            console.log( "WRITE"+ myFile.write(myobject.mymetadata()));
+//            console.log( "WRITE"+ myFile.write(myobject.mymetadata()));
+            myobject.mymetadata();
 //            myText.text = myFile.read();
          }
 
