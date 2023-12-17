@@ -30,7 +30,7 @@
 
 #undef __GLIBC_INTERNAL_STARTING_HEADER_IMPLEMENTATION
 
-#include <features.h>
+#include "features.h"
 
 /* ISO/IEC TR 24731-2:2010 defines the __STDC_WANT_LIB_EXT2__
    macro.  */
