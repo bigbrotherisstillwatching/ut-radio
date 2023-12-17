@@ -23,8 +23,8 @@
 #ifndef _BITS_BYTESWAP_H
 #define _BITS_BYTESWAP_H 1
 
-#include <features.h>
-#include <bits/types.h>
+#include "features.h"
+#include "types.h"
 
 /* Swap bytes in 16-bit value.  */
 #define __bswap_constant_16(x)					\
