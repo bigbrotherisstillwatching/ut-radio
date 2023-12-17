@@ -10,7 +10,7 @@ public:
     explicit MyObject (QObject* parent = 0) : QObject(parent) {}
     Q_INVOKABLE int mymetadata(){
     system("which bash");
-    return 0;
+    return 1;
     }
 };
 
