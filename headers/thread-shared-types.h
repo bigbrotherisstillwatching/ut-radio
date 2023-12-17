@@ -41,7 +41,7 @@
 
    __ONCE_ALIGNMENT - for pthread_once_t/once_flag definition.  */
 
-#include <bits/pthreadtypes-arch.h>
+#include "pthreadtypes-arch.h"
 
 
 /* Common definition of pthread_mutex_t. */
@@ -71,7 +71,7 @@ typedef struct __pthread_internal_slist
    3. The macro __PTHREAD_MUTEX_INITIALIZER used for static initialization.
       It should initialize the mutex internal flag.  */
 
-#include <bits/struct_mutex.h>
+#include "struct_mutex.h"
 
 /* Arch-sepecific read-write lock definitions.  A generic implementation is
    provided by struct_rwlock.h.  If required, an architecture can override it
@@ -84,7 +84,7 @@ typedef struct __pthread_internal_slist
    2. The macro __PTHREAD_RWLOCK_INITIALIZER used for static initialization.
       It should initialize the rwlock internal type.  */
 
-#include <bits/struct_rwlock.h>
+#include "struct_rwlock.h"
 
 
 /* Common definition of pthread_cond_t. */
