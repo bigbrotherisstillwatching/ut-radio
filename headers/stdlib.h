@@ -22,13 +22,13 @@
 #ifndef	_STDLIB_H
 
 #define __GLIBC_INTERNAL_STARTING_HEADER_IMPLEMENTATION
-#include <bits/libc-header-start.h>
+#include "libc-header-start.h"
 
 /* Get size_t, wchar_t and NULL from <stddef.h>.  */
 #define __need_size_t
 #define __need_wchar_t
 #define __need_NULL
-#include <stddef.h>
+#include "stddef.h"
 
 __BEGIN_DECLS
 
@@ -36,8 +36,8 @@ __BEGIN_DECLS
 
 #if (defined __USE_XOPEN || defined __USE_XOPEN2K8) && !defined _SYS_WAIT_H
 /* XPG requires a few symbols from <sys/wait.h> being defined.  */
-# include <bits/waitflags.h>
-# include <bits/waitstatus.h>
+# include "waitflags.h"
+# include "waitstatus.h"
 
 /* Define the macros <sys/wait.h> also would define this way.  */
 # define WEXITSTATUS(status)	__WEXITSTATUS (status)
@@ -52,7 +52,7 @@ __BEGIN_DECLS
 #endif	/* X/Open or XPG7 and <sys/wait.h> not included.  */
 
 /* _FloatN API tests for enablement.  */
-#include <bits/floatn.h>
+#include "floatn.h"
 
 /* Returned by `div'.  */
 typedef struct
@@ -269,7 +269,7 @@ extern int strfromf128x (char *__dest, size_t __size, const char * __format,
 /* Parallel versions of the functions above which take the locale to
    use as an additional parameter.  These are GNU extensions inspired
    by the POSIX.1-2008 extended locale API.  */
-# include <bits/types/locale_t.h>
+# include "locale_t.h"
 
 extern long int strtol_l (const char *__restrict __nptr,
 			  char **__restrict __endptr, int __base,
@@ -391,7 +391,7 @@ extern long int a64l (const char *__s)
 #endif	/* Use misc || extended X/Open.  */
 
 #if defined __USE_MISC || defined __USE_XOPEN_EXTENDED
-# include <sys/types.h>	/* we need int32_t... */
+# include "types.h"	/* we need int32_t... */
 
 /* These are the functions that actually do things.  The `random', `srandom',
    `initstate' and `setstate' functions are those from BSD Unices.
@@ -565,7 +565,7 @@ extern void *reallocarray (void *__ptr, size_t __nmemb, size_t __size)
 extern void free (void *__ptr) __THROW;
 
 #ifdef __USE_MISC
-# include <alloca.h>
+# include "alloca.h"
 #endif /* Use misc.  */
 
 #if (defined __USE_XOPEN_EXTENDED && !defined __USE_XOPEN2K) \
@@ -822,7 +822,7 @@ extern void *bsearch (const void *__key, const void *__base,
      __nonnull ((1, 2, 5)) __wur;
 
 #ifdef __USE_EXTERN_INLINES
-# include <bits/stdlib-bsearch.h>
+# include "stdlib-bsearch.h"
 #endif
 
 /* Sort NMEMB elements of BASE, of SIZE bytes each,
@@ -1010,14 +1010,14 @@ extern int getloadavg (double __loadavg[], int __nelem)
 extern int ttyslot (void) __THROW;
 #endif
 
-#include <bits/stdlib-float.h>
+#include "stdlib-float.h"
 
 /* Define some macros helping to catch buffer overflows.  */
 #if __USE_FORTIFY_LEVEL > 0 && defined __fortify_function
-# include <bits/stdlib.h>
+# include "bits/stdlib.h"
 #endif
 #ifdef __LDBL_COMPAT
-# include <bits/stdlib-ldbl.h>
+# include "stdlib-ldbl.h"
 #endif
 
 __END_DECLS
