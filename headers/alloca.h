@@ -18,10 +18,10 @@
 #ifndef	_ALLOCA_H
 #define	_ALLOCA_H	1
 
-#include <features.h>
+#include "features.h"
 
 #define	__need_size_t
-#include <stddef.h>
+#include "stddef.h"
 
 __BEGIN_DECLS
 
