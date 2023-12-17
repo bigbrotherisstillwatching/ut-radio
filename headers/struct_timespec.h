@@ -2,8 +2,8 @@
 #ifndef _STRUCT_TIMESPEC
 #define _STRUCT_TIMESPEC 1
 
-#include <bits/types.h>
-#include <bits/endian.h>
+#include "types.h"
+#include "bits/endian.h"
 
 /* POSIX.1b structure for a time value.  This is like a `struct timeval' but
    has nanoseconds instead of microseconds.  */
