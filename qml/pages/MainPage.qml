@@ -242,7 +242,7 @@ Rectangle {
             id: myText
 //            text: qprocess.launch("which bash")
 //            anchors.top: parent.top
-            anchors.centerIn: parent
+//            anchors.centerIn: parent
             text: "TEST"
          }
       }
