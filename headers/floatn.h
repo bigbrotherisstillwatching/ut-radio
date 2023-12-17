@@ -19,8 +19,8 @@
 #ifndef _BITS_FLOATN_H
 #define _BITS_FLOATN_H
 
-#include <features.h>
-#include <bits/long-double.h>
+#include "features.h"
+#include "long-double.h"
 
 /* Defined to 1 if the current compiler invocation provides a
    floating-point type with the IEEE 754 binary128 format, and this
@@ -92,6 +92,6 @@ typedef long double _Float128;
 
 #endif /* !__ASSEMBLER__.  */
 
-#include <bits/floatn-common.h>
+#include "floatn-common.h"
 
 #endif /* _BITS_FLOATN_H */
