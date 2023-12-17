@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import FileIO 1.0
-import Launcher 1.0
+import com.myself 1.0
 
 import "../net"
 import "../util"
@@ -84,6 +84,10 @@ Rectangle {
       doc.send();
    }*/
 
+   MyObject {
+      id: myobject
+   }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -111,11 +115,11 @@ Rectangle {
          }
       }*/
 
-/*      onPlaying: {
+      onPlaying: {
          if (status == MediaPlayer.Loaded) {
-            myFile.write(qprocess.launch("which bash"));
+            console.log(myobject.main())
          }
-      }*/
+      }
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
       onStatusChanged: mainPage.onStatusChanged(status)
@@ -230,16 +234,16 @@ Rectangle {
 //         anchors.centerIn: playerTitles.bottom
 //         anchors.bottom: playerControls.top
 
-         Launcher {
-            id: qprocess
-         }
+/*         MyObject {
+            id: myobject
+         }*/
 
          Text {
-//            id: myText
+            id: myText
 //            text: qprocess.launch("which bash")
 //            anchors.top: parent.top
             anchors.centerIn: parent
-            text: qprocess.launch("which bash")
+            text: "TEST"
          }
       }
 
