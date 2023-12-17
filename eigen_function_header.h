@@ -8,7 +8,7 @@ class MyObject : public QObject{
    Q_OBJECT
 public:
     explicit MyObject (QObject* parent = 0) : QObject(parent) {}
-    Q_INVOKABLE int main(){
+    Q_INVOKABLE int mymetadata(){
     system("playerctl metadata | grep ':title' | sed 's/^.*:title               //' > /home/phablet/.config/radio.s710/metadata.txt");
     return 0;
     }
