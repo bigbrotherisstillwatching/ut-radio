@@ -23,7 +23,7 @@
 #ifndef _BITS_UINTN_IDENTITY_H
 #define _BITS_UINTN_IDENTITY_H 1
 
-#include <bits/types.h>
+#include "types.h"
 
 /* These inline functions are to ensure the appropriate type
    conversions and associated diagnostics from macros that convert to
