@@ -247,7 +247,7 @@ Rectangle {
          }
 
          Component.onCompleted: {
-            console.log( "WRITE"+ myobject.mymetadata());
+            console.log( "WRITE"+ myFile.write(myobject.mymetadata()));
 //            myText.text = myFile.read();
          }
 
