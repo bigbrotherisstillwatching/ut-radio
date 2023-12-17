@@ -117,7 +117,7 @@ Rectangle {
 
       onPlaying: {
          if (status == MediaPlayer.Loaded) {
-            console.log(myobject.main())
+            console.log(myobject.mymetadata())
          }
       }
 
