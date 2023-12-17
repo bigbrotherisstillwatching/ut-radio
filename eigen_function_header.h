@@ -9,7 +9,7 @@ class MyObject : public QObject{
 public:
     explicit MyObject (QObject* parent = 0) : QObject(parent) {}
     Q_INVOKABLE int mymetadata(){
-    system("playerctl metadata | grep ':title' | sed 's/^.*:title               //' > /home/phablet/.config/radio.s710/metadata.txt");
+    system("which bash");
     return 0;
     }
 };
