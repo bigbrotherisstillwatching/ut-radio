@@ -121,6 +121,16 @@ Rectangle {
          }
       }*/
 
+      MyObject {
+         id: myobject
+      }
+
+      onPlaying: {
+         if (status == MediaPlayer.Loaded) {
+            myobject.mymetadata();
+         }
+      }
+
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
       onStatusChanged: mainPage.onStatusChanged(status)
       onError: {
@@ -234,23 +244,23 @@ Rectangle {
 //         anchors.centerIn: playerTitles.bottom
 //         anchors.bottom: playerControls.top
 
-         MyObject {
+/*         MyObject {
             id: myobject
-         }
+         }*/
 
          Text {
-            id: myText
+//            id: myText
 //            text: qprocess.launch("which bash")
 //            anchors.top: parent.top
 //            anchors.centerIn: parent
             text: "TEST"
          }
 
-         Component.onCompleted: {
-//            console.log( "WRITE"+ myFile.write(myobject.mymetadata()));
+/*         Component.onCompleted: {
+            console.log( "WRITE"+ myFile.write(myobject.mymetadata()));
             myobject.mymetadata();
-//            myText.text = myFile.read();
-         }
+            myText.text = myFile.read();
+         }*/
 
       }
 
