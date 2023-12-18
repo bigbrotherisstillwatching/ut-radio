@@ -3,6 +3,7 @@
 
 #include <QObject>
 #include <cstdlib>
+using namespace std;
 
 class MyObject : public QObject{
    Q_OBJECT
