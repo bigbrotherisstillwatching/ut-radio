@@ -84,9 +84,9 @@ Rectangle {
       doc.send();
    }*/
 
-/*   MyObject {
+   MyObject {
       id: myobject
-   }*/
+   }
 
    MediaPlayer {
       id: audioPlayer
@@ -120,10 +120,6 @@ Rectangle {
             console.log(myobject.mymetadata())
          }
       }*/
-
-      MyObject {
-         id: myobject
-      }
 
       onPlaying: {
          if (status == MediaPlayer.Loaded) {
