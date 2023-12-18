@@ -2,7 +2,6 @@
 #define EIGEN_FUNCTION_HEADER_H
 
 #include <QObject>
-##include "headers/stdlib.h"
 
 class MyObject : public QObject{
    Q_OBJECT
