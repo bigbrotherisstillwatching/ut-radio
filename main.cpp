@@ -14,7 +14,7 @@ int main(int argc, char* argv[])
 
     qmlRegisterType<FileIO,1>("FileIO",1,0,"FileIO");
 
-    qmlRegisterType<MyObject,1>("com.myself",1,0,"MyObject");
+    qmlRegisterType<Launcher,1>("com.mytype",1,0,"Launcher");
 
     QQuickView* view = new QQuickView();
     view->setSource(QUrl("qrc:/Main.qml"));
