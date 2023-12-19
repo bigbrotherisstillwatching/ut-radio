@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import FileIO 1.0
-import Launcher 1.0
+import Process 1.0
 
 import "../net"
 import "../util"
@@ -237,7 +237,7 @@ Rectangle {
          }
       }
 
-      Rectangle {
+      Column {
          anchors.top: playerTitles.bottom
          anchors.left: parent.left
          anchors.right: parent.right
@@ -248,16 +248,33 @@ Rectangle {
             id: myobject
          }*/
 
-         Launcher {
-            id: qprocess
+         Process {
+            id: cmd
+
+            property string output: ""
+
+            onStarted: print("Started")
+            onFinished: print("Closed")
+
+            onErrorOccurred: console.log("Error Ocuured: ", error)
+
+            onReadyReadStandardOutput: {
+               output = cmd.readAll()
+               txt.text += output
+            }
          }
 
-         Text {
-//            id: myText
+         TextArea {
+            id: txt
 //            text: qprocess.launch("which bash")
 //            anchors.top: parent.top
 //            anchors.centerIn: parent
-            text: qprocess.launch("echo TEST")
+            text: ""
+         }
+
+         Button {
+            text: "Run!"
+            onClicked: cmd.start("/home/phablet/.config/radio.s710/metadata.sh")
          }
 
 /*         Component.onCompleted: {
