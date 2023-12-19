@@ -88,9 +88,9 @@ Rectangle {
       id: myobject
    }*/
 
-   Launcher {
+/*   Launcher {
       id: qprocess
-   }
+   }*/
 
    MediaPlayer {
       id: audioPlayer
@@ -125,11 +125,11 @@ Rectangle {
          }
       }*/
 
-      onPlaying: {
+/*      onPlaying: {
          if (status == MediaPlayer.Loaded) {
             myFile.write(qprocess.launch("which bash"));
          }
-      }
+      }*/
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
       onStatusChanged: mainPage.onStatusChanged(status)
@@ -248,12 +248,16 @@ Rectangle {
             id: myobject
          }*/
 
+      Launcher {
+         id: qprocess
+      }
+
          Text {
 //            id: myText
 //            text: qprocess.launch("which bash")
 //            anchors.top: parent.top
 //            anchors.centerIn: parent
-            text: "TEST"
+            text: qprocess.launch("which bash")
          }
 
 /*         Component.onCompleted: {
