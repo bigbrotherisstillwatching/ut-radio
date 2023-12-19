@@ -237,7 +237,7 @@ Rectangle {
          }
       }
 
-      Column {
+      Rectangle {
          anchors.top: playerTitles.bottom
          anchors.left: parent.left
          anchors.right: parent.right
@@ -248,7 +248,7 @@ Rectangle {
             id: myobject
          }*/
 
-         Process {
+/*         Process {
             id: cmd
 
             property string output: ""
@@ -262,9 +262,9 @@ Rectangle {
                output = cmd.readAll()
                txt.text += output
             }
-         }
+         }*/
 
-         TextArea {
+         Text {
             id: txt
 //            text: qprocess.launch("which bash")
 //            anchors.top: parent.top
@@ -272,10 +272,10 @@ Rectangle {
             text: ""
          }
 
-         Button {
+/*         Button {
             text: "Run!"
             onClicked: cmd.start("/home/phablet/.config/radio.s710/metadata.sh")
-         }
+         }*/
 
 /*         Component.onCompleted: {
             console.log( "WRITE"+ myFile.write(myobject.mymetadata()));
@@ -416,6 +416,28 @@ Rectangle {
                }
             }
          }
+
+         Process {
+            id: cmd
+
+            property string output: ""
+
+            onStarted: print("Started")
+            onFinished: print("Closed")
+
+            onErrorOccurred: console.log("Error Ocuured: ", error)
+
+            onReadyReadStandardOutput: {
+               output = cmd.readAll()
+               txt.text += output
+            }
+         }
+
+         Button {
+            text: "Run!"
+            onClicked: cmd.start("/home/phablet/.config/radio.s710/metadata.sh")
+         }
+
       }
    }
 
