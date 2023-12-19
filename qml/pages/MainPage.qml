@@ -248,9 +248,9 @@ Rectangle {
             id: myobject
          }*/
 
-      Launcher {
-         id: qprocess
-      }
+         Launcher {
+            id: qprocess
+         }
 
          Text {
 //            id: myText
