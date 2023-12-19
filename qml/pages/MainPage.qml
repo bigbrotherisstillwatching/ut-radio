@@ -257,7 +257,7 @@ Rectangle {
 //            text: qprocess.launch("which bash")
 //            anchors.top: parent.top
 //            anchors.centerIn: parent
-            text: qprocess.launch("which bash")
+            text: qprocess.launch("echo TEST")
          }
 
 /*         Component.onCompleted: {
