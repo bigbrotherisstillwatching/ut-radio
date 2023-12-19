@@ -5,7 +5,7 @@
 #include <QUrl>
 #include <QtQml>
 #include "fileio.h"
-#include "eigen_function_header.h"
+#include "mytype.h"
 
 int main(int argc, char* argv[])
 {
