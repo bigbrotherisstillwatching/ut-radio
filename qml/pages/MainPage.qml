@@ -119,6 +119,7 @@ Rectangle {
 
          Text {
             id: txt
+            anchors.topMargin: 25
             horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
             wrapMode: Text.WordWrap
@@ -132,18 +133,18 @@ Rectangle {
          anchors.horizontalCenter: parent.horizontalCenter
          color: Colors.backgroundColor
 
-         border.width: 1
-         border.color: Colors.borderColor
+//         border.width: 1
+//         border.color: Colors.borderColor
 
          Icon {
-            anchors.topMargin: 50
+            anchors.topMargin: 80
             anchors.fill: parent
             name: "stock_music"
             visible: !lastStation || !lastStation.image
          }
 
          Image {
-            anchors.topMargin: 50
+            anchors.topMargin: 80
             anchors.fill: parent
             visible: lastStation && lastStation.image || false
             source: lastStation && lastStation.image || ""
