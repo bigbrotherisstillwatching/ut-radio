@@ -121,7 +121,7 @@ Rectangle {
             width: playerTitles.width
             wrapMode: Text.WordWrap
 //            text: "TEST"
-            text: txt.text: launcher.launch("which bash")
+            text: launcher.launch("which bash")
          }
       }
 
