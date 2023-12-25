@@ -112,12 +112,14 @@ Rectangle {
       }
 
       Rectangle {
+         id: mymeta
          anchors.top: playerTitles.bottom
          anchors.left: parent.left
          anchors.right: parent.right
 
          Text {
             id: txt
+            horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
             wrapMode: Text.WordWrap
             font.pointSize: 20
