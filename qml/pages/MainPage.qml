@@ -4,8 +4,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
-import FileIO 1.0
-import Process 1.0
+import Launcher 1.0
 
 import "../net"
 import "../util"
@@ -66,70 +65,14 @@ Rectangle {
       }
    }
 
-   FileIO {
-      id: myFile
-      source: "/home/phablet/.config/radio.s710/metadata.txt"
-      onError: console.log(msg)
-   }
-
-   /*function setText(url) {
-      var doc = new XMLHttpRequest();
-      doc.onreadystatechange = function() {
-         if (doc.readyState == XMLHttpRequest.DONE) {
-            mainText.text = doc.responseText;
-         }
-      }
-      doc.open("get", url);
-      doc.setRequestHeader("Content-Encoding", "UTF-8");
-      doc.send();
-   }*/
-
-/*   MyObject {
-      id: myobject
-   }*/
-
-/*   Launcher {
+   Launcher {
       id: qprocess
-   }*/
+   }
 
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
-
-/*      metaData.onMetaDataChanged: {
-         if (metaData.title) {
-            stationTitleText.displayText = metaData.title
-            stationTitleText.color = Colors.accentText
-         } else {
-            stationTitleText.displayText = textForStatus()
-            stationTitleText.color = Colors.detailText
-         }
-      }*/
-
-/*      onPlaying: {
-         if (status == MediaPlayer.Loaded) {
-            myFile.write(metaData.title);
-         }
-      }*/
-
-/*      onPlaying: {
-         if (status == MediaPlayer.Loaded) {
-            myFile.write(setText("http://chicago.discovertrance.com/7.html"));
-         }
-      }*/
-
-/*      onPlaying: {
-         if (status == MediaPlayer.Loaded) {
-            console.log(myobject.mymetadata())
-         }
-      }*/
-
-/*      onPlaying: {
-         if (status == MediaPlayer.Loaded) {
-            myFile.write(qprocess.launch("which bash"));
-         }
-      }*/
 
       onPlaybackStateChanged: mainPage.onPlaybackStateChanged()
       onStatusChanged: mainPage.onStatusChanged(status)
@@ -137,75 +80,6 @@ Rectangle {
          Notify.error(i18n.tr("Error"), audioPlayer.errorString)
       }
    }
-
-/*   Rectangle {
-      function getMetaData(metaData) {
-         var text = ""
-
-         text += "title: " + metaData.title + "\n"
-
-         return text
-      }
-      width: 360
-      height: 360
-      anchors.top: audioPlayer.bottom
-      anchors.left: parent.left
-      anchors.right: parent.right
-      anchors.bottom: playerControls.top
-      
-      function setText(url) {
-         var doc = new XMLHttpRequest();
-         doc.onreadystatechange = function() {
-            if (doc.readyState == XMLHttpRequest.DONE) {
-               mainText.text = doc.responseText;
-            }
-         }
-         doc.open("get", url);
-         doc.setRequestHeader("Content-Encoding", "UTF-8");
-         doc.send();
-      }
-
-      Text {
-         id: myText
-         text: "Hallo"
-         anchors.centerIn: parent
-      }
-
-      Component.onCompleted: {
-         console.log( "WRITE"+ myFile.write(setText("http://fr1.1mix.co.uk:8016/7.html")));
-         myText.text = myFile.read();
-      }
-
-      FileIO {
-         id: myFile
-         source: "/home/phablet/.config/radio.s710/metadata.txt"
-         onError: console.log(msg)
-      }
-
-      MediaPlayer.onMetaDataChanged: {
-         console.log( "WRITE"+ myFile.write("Hallo"));
-         myText.text =  myFile.read();
-      }
-
-      onStatusChanged: {
-         if(status == audioPlayer.Loaded) {
-            console.log( "WRITE"+ myFile.write(audioPlayer.metaData.title));
-            myText.text =  myFile.read();
-         }
-      }
-
-      audioPlayer.metaData.onMetaDataChanged: {
-         console.log( "WRITE"+ myFile.write("Hello World"));
-         myText.text =  myFile.read();
-      }
-
-      MouseArea {
-         anchors.fill: parent
-         onClicked: {
-            setText("http://fr1.1mix.co.uk:8016/7.html");
-         }
-      }
-   }*/
 
    Column {
       id: playerControls
@@ -241,48 +115,13 @@ Rectangle {
          anchors.top: playerTitles.bottom
          anchors.left: parent.left
          anchors.right: parent.right
-//         anchors.centerIn: playerTitles.bottom
-//         anchors.bottom: playerControls.top
-
-/*         MyObject {
-            id: myobject
-         }*/
-
-/*         Process {
-            id: cmd
-
-            property string output: ""
-
-            onStarted: print("Started")
-            onFinished: print("Closed")
-
-            onErrorOccurred: console.log("Error Ocuured: ", error)
-
-            onReadyReadStandardOutput: {
-               output = cmd.readAll()
-               txt.text += output
-            }
-         }*/
 
          Text {
             id: txt
-//            text: qprocess.launch("which bash")
-//            anchors.top: parent.top
-//            anchors.centerIn: parent
-            text: ""
+            width: playerTitles.width
+            wrapMode: Text.WordWrap
+//            text: ""
          }
-
-/*         Button {
-            text: "Run!"
-            onClicked: cmd.start("/home/phablet/.config/radio.s710/metadata.sh")
-         }*/
-
-/*         Component.onCompleted: {
-            console.log( "WRITE"+ myFile.write(myobject.mymetadata()));
-            myobject.mymetadata();
-            myText.text = myFile.read();
-         }*/
-
       }
 
       Rectangle {
@@ -417,25 +256,10 @@ Rectangle {
             }
          }
 
-         Process {
-            id: cmd
-
-            property string output: ""
-
-            onStarted: print("Started")
-            onFinished: print("Closed")
-
-            onErrorOccurred: console.log("Error Ocuured: ", error)
-
-            onReadyReadStandardOutput: {
-               output = cmd.readAll()
-               txt.text += output
-            }
-         }
-
          Button {
-            text: "Run!"
-            onClicked: cmd.start("/home/phablet/.config/radio.s710/metadata.sh")
+            text: "Now playing!"
+            onClicked: {
+               txt.text: qprocess.launch("playerctl metadata title")
          }
 
       }
