@@ -260,8 +260,8 @@ Rectangle {
          Button {
             text: "Now playing!"
             onClicked: {
-//               txt.text: launcher.launch("which bash");
-               txt.text: "Hallo",
+               txt.text(launcher.launch("which bash"));
+//               txt.text: "Hallo",
             }
          }
 
