@@ -120,8 +120,8 @@ Rectangle {
             id: txt
             width: playerTitles.width
             wrapMode: Text.WordWrap
-//            text: "TEST"
-            text: launcher.launch("playerctl metadata title")
+            text: "TEST"
+//            text: launcher.launch("playerctl metadata title")
          }
       }
 
@@ -259,9 +259,10 @@ Rectangle {
 
          Button {
             text: "Now playing!"
-//            onClicked: {
+            onClicked: {
 //               txt.text: launcher.launch("which bash");
-//            }
+               txt.text: "Hallo"
+            }
          }
 
       }
