@@ -66,7 +66,7 @@ Rectangle {
    }
 
    Launcher {
-      id: qprocess
+      id: launcher
    }
 
    MediaPlayer {
@@ -259,7 +259,7 @@ Rectangle {
          Button {
             text: "Now playing!"
             onClicked: {
-               txt.text: qprocess.launch("playerctl", [ "metadata", "title" ]);
+               txt.text: launcher.launch("which bash");
             }
          }
 
