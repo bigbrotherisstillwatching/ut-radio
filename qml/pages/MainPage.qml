@@ -120,7 +120,7 @@ Rectangle {
             id: txt
             width: playerTitles.width
             wrapMode: Text.WordWrap
-            font.pointSize: 24
+            font.pointSize: 20
 //            text: "TEST"
 //            text: launcher.launch("playerctl metadata title")
          }
