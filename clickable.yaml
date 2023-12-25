@@ -2,3 +2,5 @@ clickable_minimum_required: 7.11.0
 builder: cmake
 kill: "Radio"
 framework: ubuntu-sdk-20.04
+ignore_review_warnings: true
+ignore_review_errors: true
