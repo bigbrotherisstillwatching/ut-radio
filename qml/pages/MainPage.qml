@@ -260,7 +260,7 @@ Rectangle {
          }
 
          Button {
-            text: "Now playing!"
+            text: "What's playing?"
             onClicked: {
                txt.text = launcher.launch("playerctl metadata title")
 //               txt.text: "Hallo",
