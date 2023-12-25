@@ -136,12 +136,14 @@ Rectangle {
          border.color: Colors.borderColor
 
          Icon {
+            anchors.topMargin: 20
             anchors.fill: parent
             name: "stock_music"
             visible: !lastStation || !lastStation.image
          }
 
          Image {
+            anchors.topMargin: 20
             anchors.fill: parent
             visible: lastStation && lastStation.image || false
             source: lastStation && lastStation.image || ""
