@@ -113,7 +113,6 @@ Rectangle {
 
       Rectangle {
          id: mymeta
-         color: red
          anchors.top: playerTitles.bottom
          anchors.left: parent.left
          anchors.right: parent.right
