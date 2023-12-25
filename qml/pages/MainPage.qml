@@ -260,6 +260,7 @@ Rectangle {
             text: "Now playing!"
             onClicked: {
                txt.text: qprocess.launch("playerctl metadata title")
+            }
          }
 
       }
