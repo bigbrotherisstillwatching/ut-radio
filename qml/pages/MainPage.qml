@@ -120,7 +120,7 @@ Rectangle {
          Text {
             id: txt
             anchors.top: mymeta.top
-            anchors.topMargin: 50
+            anchors.topMargin: 40
             horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
             wrapMode: Text.WordWrap
