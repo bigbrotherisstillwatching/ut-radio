@@ -124,7 +124,7 @@ Rectangle {
             horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
             wrapMode: Text.WordWrap
-            font.pointSize: 20
+            font.pointSize: 30
          }
       }
 
@@ -135,8 +135,8 @@ Rectangle {
 //         color: Colors.backgroundColor
          color: "transparent"
 
-         border.width: 1
-         border.color: Colors.borderColor
+//         border.width: 1
+//         border.color: Colors.borderColor
 
          Icon {
             anchors.topMargin: 80
