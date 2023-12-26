@@ -124,7 +124,7 @@ Rectangle {
             horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
             wrapMode: Text.WordWrap
-            font.pointSize: 30
+            font.pointSize: 25
          }
       }
 
@@ -140,6 +140,9 @@ Rectangle {
 
          Icon {
             anchors.topMargin: 80
+            anchors.leftMargin: 80
+            anchors.rightMargin: 80
+            anchors.bottomMargin: 80
             anchors.fill: parent
             name: "stock_music"
             visible: !lastStation || !lastStation.image
@@ -147,6 +150,9 @@ Rectangle {
 
          Image {
             anchors.topMargin: 80
+            anchors.leftMargin: 80
+            anchors.rightMargin: 80
+            anchors.bottomMargin: 80
             anchors.fill: parent
             visible: lastStation && lastStation.image || false
             source: lastStation && lastStation.image || ""
