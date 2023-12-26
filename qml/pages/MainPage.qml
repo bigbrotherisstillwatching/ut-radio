@@ -120,7 +120,7 @@ Rectangle {
          Text {
             id: txt
             anchors.top: mymeta.top
-            anchors.topMargin: 25
+            anchors.topMargin: 50
             horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
             wrapMode: Text.WordWrap
@@ -132,7 +132,8 @@ Rectangle {
          width: mainPage.width * 0.6
          height: mainPage.width * 0.6
          anchors.horizontalCenter: parent.horizontalCenter
-         color: Colors.backgroundColor
+//         color: Colors.backgroundColor
+         color: "transparent"
 
          border.width: 1
          border.color: Colors.borderColor
