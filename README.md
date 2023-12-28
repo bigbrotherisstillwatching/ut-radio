@@ -42,13 +42,12 @@ You will have to install [playerctl](https://github.com/altdesktop/playerctl):
 
 afterwards.
 
-Unfortunately (at the moment?) this does not work, when connected to speakers etc. over bluetooth and is only for arm64.
-
 **Keep in mind that:**
 
 -it might lead to problems when doing an OTA update, so better uninstall before and reinstall after updating  
 -it is an unconfined app with full access to the system
+-only for arm64
 
 ## Download
 
-You can try this artifact from Actions (https://github.com/bigbrotherisstillwatching/ut-radio_metadata_workaround/actions/runs/7349819771/artifacts/1138195163)
+You can try this artifact from Actions (https://github.com/bigbrotherisstillwatching/ut-radio_metadata_workaround/actions/runs/7351851322/artifacts/1138556480)
