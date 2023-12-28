@@ -51,4 +51,4 @@ Unfortunately (at the moment?) this does not work, when connected to speakers et
 
 ## Download
 
-You can try this artifact from Actions (https://github.com/bigbrotherisstillwatching/ut-radio_metadata_workaround/actions/runs/7349739360/artifacts/1138181556)
+You can try this artifact from Actions (https://github.com/bigbrotherisstillwatching/ut-radio_metadata_workaround/actions/runs/7349819771/artifacts/1138195163)
