@@ -130,7 +130,7 @@ Rectangle {
       }
 
       Rectangle {
-         anchors.topMargin: 100
+         anchors.topMargin: 200
          width: mainPage.width * 0.6
          height: mainPage.width * 0.6
          anchors.horizontalCenter: parent.horizontalCenter
