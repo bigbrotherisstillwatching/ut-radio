@@ -140,20 +140,20 @@ Rectangle {
 //         border.color: Colors.borderColor
 
          Icon {
-            anchors.topMargin: 80
-            anchors.leftMargin: 80
-            anchors.rightMargin: 80
-            anchors.bottomMargin: 80
+            anchors.topMargin: 100
+            anchors.leftMargin: 100
+            anchors.rightMargin: 100
+            anchors.bottomMargin: 100
             anchors.fill: parent
             name: "stock_music"
             visible: !lastStation || !lastStation.image
          }
 
          Image {
-            anchors.topMargin: 80
-            anchors.leftMargin: 80
-            anchors.rightMargin: 80
-            anchors.bottomMargin: 80
+            anchors.topMargin: 100
+            anchors.leftMargin: 100
+            anchors.rightMargin: 100
+            anchors.bottomMargin: 100
             anchors.fill: parent
             visible: lastStation && lastStation.image || false
             source: lastStation && lastStation.image || ""
