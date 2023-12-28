@@ -270,7 +270,7 @@ Rectangle {
          }
 
          Button {
-            text: "What's playing?"
+            text: i18n.tr("What's playing?")
             onClicked: {
                txt.text = launcher.launch("playerctl metadata title")
 //               txt.text: "Hallo",
