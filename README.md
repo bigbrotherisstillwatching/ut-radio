@@ -46,7 +46,7 @@ afterwards.
 
 -it might lead to problems when doing an OTA update, so better uninstall before and reinstall after updating  
 -it is an unconfined app with full access to the system
--only for arm64
+-only for arm64  
 
 ## Download
 
