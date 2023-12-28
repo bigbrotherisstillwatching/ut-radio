@@ -69,6 +69,11 @@ Rectangle {
       id: launcher
    }
 
+   Item {
+      id: myItem
+      property var aVarString: "bash -c "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'""
+   }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -273,7 +278,7 @@ Rectangle {
          Button {
             text: i18n.tr("What's playing?")
             onClicked: {
-               txt.text = launcher.launch("bash -c "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"")
+               txt.text = launcher.launch("myItem.aVarString")
 //               txt.text: "Hallo",
             }
          }
