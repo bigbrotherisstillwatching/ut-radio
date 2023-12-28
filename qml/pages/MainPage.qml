@@ -130,6 +130,7 @@ Rectangle {
       }
 
       Rectangle {
+         anchors.topMargin: 100
          width: mainPage.width * 0.6
          height: mainPage.width * 0.6
          anchors.horizontalCenter: parent.horizontalCenter
@@ -140,20 +141,20 @@ Rectangle {
 //         border.color: Colors.borderColor
 
          Icon {
-            anchors.topMargin: 100
+/*            anchors.topMargin: 100
             anchors.leftMargin: 100
             anchors.rightMargin: 100
-            anchors.bottomMargin: 100
+            anchors.bottomMargin: 100*/
             anchors.fill: parent
             name: "stock_music"
             visible: !lastStation || !lastStation.image
          }
 
          Image {
-            anchors.topMargin: 100
+/*            anchors.topMargin: 100
             anchors.leftMargin: 100
             anchors.rightMargin: 100
-            anchors.bottomMargin: 100
+            anchors.bottomMargin: 100*/
             anchors.fill: parent
             visible: lastStation && lastStation.image || false
             source: lastStation && lastStation.image || ""
