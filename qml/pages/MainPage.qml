@@ -69,11 +69,6 @@ Rectangle {
       id: launcher
    }
 
-/*   Item {
-      id: myItem
-      property var aVarString: "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata'"
-   }*/
-
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -278,7 +273,7 @@ Rectangle {
          Button {
             text: i18n.tr("What's playing?")
             onClicked: {
-               txt.text = launcher.launch("playerctl metadata title")
+               txt.text = launcher.launch("playerctl -a metadata title")
 //               txt.text: "Hallo",
             }
          }
