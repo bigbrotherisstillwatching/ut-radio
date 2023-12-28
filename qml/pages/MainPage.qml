@@ -273,7 +273,7 @@ Rectangle {
          Button {
             text: i18n.tr("What's playing?")
             onClicked: {
-               txt.text = launcher.launch("playerctl metadata title")
+               txt.text = launcher.launch("dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | sed 's/^.*string //' | sed 's|["",]||g'")
 //               txt.text: "Hallo",
             }
          }
