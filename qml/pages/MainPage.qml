@@ -125,6 +125,7 @@ Rectangle {
             width: playerTitles.width
             wrapMode: Text.WordWrap
             font.pointSize: 25
+            Colors.mainText
          }
       }
 
