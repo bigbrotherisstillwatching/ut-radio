@@ -29,24 +29,24 @@ You will have to install [playerctl](https://github.com/altdesktop/playerctl):
 
 -for UT Focal you can find it in the repos and install it like so:
 
-`sudo mount -o remount,rw /`,
-`sudo apt update`,
-`sudo apt install playerctl`
+`sudo mount -o remount,rw /`  
+`sudo apt update`  
+`sudo apt install playerctl`  
 
 -to keep the system space clean, do:
 
-`sudo apt clean`,
-`sudo apt autoclean`,
-`sudo rm -rf /var/lib/apt/lists/*`,
+`sudo apt clean`  
+`sudo apt autoclean`  
+`sudo rm -rf /var/lib/apt/lists/*`  
 `sudo mount -o remount,ro /`
 
 afterwards.
 
 Unfortunately (at the moment?) this does not work, when connected to speakers etc. over bluetooth and is only for arm64.
 
-Keep in mind that:
+**Keep in mind that:**
 
--it might lead to problems when doing an OTA update, so better uninstall before and reinstall after updating
+-it might lead to problems when doing an OTA update, so better uninstall before and reinstall after updating  
 -it is an unconfined app with full access to the system
 
 ## Download
