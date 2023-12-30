@@ -273,7 +273,8 @@ Rectangle {
          Button {
             text: i18n.tr("What's playing?")
             onClicked: {
-               txt.text = launcher.launch("playerctl -a metadata title")
+               txt.text = launcher.launch("sh /home/phablet/Downloads/metadata.sh")
+//               txt.text = launcher.launch("playerctl -a metadata title")
 //               txt.text: "Hallo",
             }
          }
