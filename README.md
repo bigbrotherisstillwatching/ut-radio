@@ -25,22 +25,15 @@ Licensed under the MIT license
 
 ## Requirements
 
-You will have to install [playerctl](https://github.com/altdesktop/playerctl):
+Create a file `metadata.sh` in /home/phablet/Downloads with the following content:    
 
--for UT Focal you can find it in the repos and install it like so:
+-----------------------------------------------------------
 
-`sudo mount -o remount,rw /`  
-`sudo apt update`  
-`sudo apt install playerctl`  
+#!/bin/sh
 
--to keep the system space clean, do:
+dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'
 
-`sudo apt clean`  
-`sudo apt autoclean`  
-`sudo rm -rf /var/lib/apt/lists/*`  
-`sudo mount -o remount,ro /`
-
-afterwards.
+-----------------------------------------------------------
 
 **Keep in mind that:**
 
@@ -50,4 +43,5 @@ afterwards.
 
 ## Download
 
-You can try this artifact from Actions (https://github.com/bigbrotherisstillwatching/ut-radio_metadata_workaround/actions/runs/7351887334/artifacts/1138562213)
+You can try this artifact from Actions:
+
