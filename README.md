@@ -35,9 +35,12 @@ dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaP
 
 -----------------------------------------------------------
 
-**Keep in mind that:**
+and give it full permissions in terminal with:
 
--it might lead to problems when doing an OTA update, so better uninstall before and reinstall after updating  
+`cd ~/Downloads && sudo chmod a+xrw metadata.sh`
+
+**Keep in mind that:**
+  
 -it is an unconfined app with full access to the system  
 -only for arm64  
 
