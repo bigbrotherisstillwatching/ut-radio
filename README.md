@@ -24,7 +24,7 @@ Copyright (C) 2021-2022 Patrick Fial
 Licensed under the MIT license
 
 
-## Keep in mind that:
+## Keep in mind that
   
 -it is an unconfined app with full access to the system  
 -only for arm64  
