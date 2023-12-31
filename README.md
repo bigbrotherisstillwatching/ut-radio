@@ -23,22 +23,6 @@ Copyright (C) 2021-2022 Patrick Fial
 
 Licensed under the MIT license
 
-## Requirements
-
-Create a file `metadata.sh` in /home/phablet/Downloads with the following content:    
-
------------------------------------------------------------
-
-#!/bin/sh
-
-dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'
-
------------------------------------------------------------
-
-and give it full permissions in terminal with:
-
-`cd ~/Downloads && sudo chmod a+xrw metadata.sh`
-
 **Keep in mind that:**
   
 -it is an unconfined app with full access to the system  
@@ -47,4 +31,4 @@ and give it full permissions in terminal with:
 ## Download
 
 You can try this artifact from Actions:
-(https://github.com/bigbrotherisstillwatching/ut-radio_metadata_workaround/actions/runs/7361384884/artifacts/1139951046)
+
