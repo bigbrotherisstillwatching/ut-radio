@@ -4,7 +4,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
-import Launcher 1.0
+import Process 1.0
 
 import "../net"
 import "../util"
@@ -65,8 +65,11 @@ Rectangle {
       }
    }
 
-   Launcher {
-      id: launcher
+   Process {
+      id: process
+      onFinished: {
+         txt.text = readAll();
+      }
    }
 
    MediaPlayer {
@@ -272,13 +275,8 @@ Rectangle {
 
          Button {
             text: i18n.tr("What's playing?")
-            onClicked: {
-               txt.text = launcher.launch("sh /home/phablet/Downloads/metadata.sh")
-//               txt.text = launcher.launch("playerctl -a metadata title")
-//               txt.text: "Hallo",
-            }
+            onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
          }
-
       }
    }
 
