@@ -317,6 +317,7 @@ Rectangle {
                   onTriggered: {
                      var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
                      p.stationChanged.connect(mainPage.setLastStation)
+                     layout1.text: Test
                   }
                }
             ]
