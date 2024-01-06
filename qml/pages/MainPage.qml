@@ -306,7 +306,7 @@ Rectangle {
                   iconName: "delete"
                   onTriggered: {
                      Functions.removeFavourite(stationID)
-                  }
+                  },
                Action {
                   iconName: "edit"
                }
