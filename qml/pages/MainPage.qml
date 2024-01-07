@@ -72,6 +72,11 @@ Rectangle {
       }
    }
 
+   UrlPage {
+      id: upg
+      visible: false
+   }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -317,6 +322,7 @@ Rectangle {
                   onTriggered: {
                      var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
                      p.stationChanged.connect(mainPage.setLastStation)
+                     upg.text = "Test"
                   }
                }
             ]
