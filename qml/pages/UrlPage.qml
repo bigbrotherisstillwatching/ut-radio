@@ -30,6 +30,12 @@ Rectangle {
        visible: false
     }
 
+    Text {
+       id: mapgt
+       visible: false
+       text: mapg.lia.text
+    }
+
     Flickable {
        anchors.top: header.bottom
        anchors.left: parent.left
@@ -59,7 +65,7 @@ Rectangle {
                       id: urlField
                       inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
                       placeholderText: i18n.tr("Enter stream URL")
-                      text: mapg.lia.text
+                      text: mapgt.text
                   }
                   Text {
                      width: units.gu(6)
