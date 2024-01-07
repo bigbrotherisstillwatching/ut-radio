@@ -20,7 +20,6 @@ Rectangle {
    property bool resumeAfterNetworkError: false
    property bool isReconnecting: false
    property var lastStation
-   property alias lia: lia
 
    color: Colors.backgroundColor
 
@@ -313,6 +312,7 @@ Rectangle {
          }
          trailingActions: ListItemActions {
             id: lia
+            property alias lia: lia
             actions: [
                Action {
                   iconName: "edit"
