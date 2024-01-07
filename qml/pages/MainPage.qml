@@ -72,11 +72,6 @@ Rectangle {
       }
    }
 
-   UrlPage {
-      id: upg
-      visible: false
-   }
-
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -316,13 +311,15 @@ Rectangle {
             ]
          }
          trailingActions: ListItemActions {
+            id: lia
+            property alias lia: lia
             actions: [
                Action {
                   iconName: "edit"
                   onTriggered: {
                      var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
                      p.stationChanged.connect(mainPage.setLastStation)
-                     upg.urlField.text = "Test"
+                     text: "Test"
                   }
                }
             ]
