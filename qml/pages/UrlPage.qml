@@ -51,7 +51,7 @@ Rectangle {
               SlotsLayout {
                   id: layout1
                   mainSlot: TextField {
-                      property alias text: urlField.text
+                      property alias urlField: urlField
                       id: urlField
                       inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
                       placeholderText: i18n.tr("Enter stream URL")
