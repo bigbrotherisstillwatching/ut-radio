@@ -10,7 +10,6 @@ import "../util"
 import "../colors"
 
 Rectangle {
-    property alias urlField: urlField
     id: urlPage
     anchors.fill: parent
     signal stationChanged(var station)
@@ -24,6 +23,11 @@ Rectangle {
 
     ListModel {
        id: searchResultsModel
+    }
+
+    MainPage {
+       id: mapg
+       visible: false
     }
 
     Flickable {
@@ -55,6 +59,7 @@ Rectangle {
                       id: urlField
                       inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
                       placeholderText: i18n.tr("Enter stream URL")
+                      text: mapg.lia.text
                   }
                   Text {
                      width: units.gu(6)
