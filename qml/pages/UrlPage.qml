@@ -25,17 +25,6 @@ Rectangle {
        id: searchResultsModel
     }
 
-    MainPage {
-       id: mapg
-       visible: false
-    }
-
-    Text {
-       id: mapgt
-       visible: false
-       text: mapg.lia.text
-    }
-
     Flickable {
        anchors.top: header.bottom
        anchors.left: parent.left
