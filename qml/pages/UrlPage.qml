@@ -10,6 +10,7 @@ import "../util"
 import "../colors"
 
 Rectangle {
+    property alias urlField: urlField
     id: urlPage
     anchors.fill: parent
     signal stationChanged(var station)
@@ -51,7 +52,6 @@ Rectangle {
               SlotsLayout {
                   id: layout1
                   mainSlot: TextField {
-                      property alias urlField: urlField
                       id: urlField
                       inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
                       placeholderText: i18n.tr("Enter stream URL")
