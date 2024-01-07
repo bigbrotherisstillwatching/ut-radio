@@ -72,10 +72,10 @@ Rectangle {
       }
    }
 
- /*  UrlPage {
+   UrlPage {
       id: l1uF
       visible: false
-   }*/
+   }
 
    MediaPlayer {
       id: audioPlayer
