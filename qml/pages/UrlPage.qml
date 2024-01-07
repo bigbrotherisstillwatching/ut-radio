@@ -59,7 +59,7 @@ Rectangle {
                       id: urlField
                       inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
                       placeholderText: i18n.tr("Enter stream URL")
-                      text = mapg.lia.text
+                      text: mapg.lia.text
                   }
                   Text {
                      width: units.gu(6)
