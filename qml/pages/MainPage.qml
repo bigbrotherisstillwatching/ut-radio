@@ -74,6 +74,7 @@ Rectangle {
 
    UrlPage {
       id: l1uF
+      visible: false
    }
 
    MediaPlayer {
