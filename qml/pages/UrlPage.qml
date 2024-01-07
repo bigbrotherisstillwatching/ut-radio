@@ -54,7 +54,7 @@ Rectangle {
                       id: urlField
                       property alias leuF:urlField
                       inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
-                      placeholderText: i18n.tr("Enter stream URL")
+                      property string placeholderText: i18n.tr("Enter stream URL")
                   }
                   Text {
                      width: units.gu(6)
