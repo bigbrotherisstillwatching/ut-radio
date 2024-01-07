@@ -322,9 +322,7 @@ Rectangle {
                   onTriggered: {
                      var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
                      p.stationChanged.connect(mainPage.setLastStation)
-                     Text {
-                        upg.urlField.text = "Test"
-                     }
+                     upg.urlField.text = "Test"
                   }
                }
             ]
