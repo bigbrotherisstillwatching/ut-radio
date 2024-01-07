@@ -52,9 +52,8 @@ Rectangle {
                   id: layout1
                   mainSlot: TextField {
                       id: urlField
-                      property alias leuF:urlField
                       inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
-                      property string placeholderText: i18n.tr("Enter stream URL")
+                      placeholderText: i18n.tr("Enter stream URL")
                   }
                   Text {
                      width: units.gu(6)
