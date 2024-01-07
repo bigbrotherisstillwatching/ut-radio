@@ -72,10 +72,10 @@ Rectangle {
       }
    }
 
-   UrlPage {
+ /*  UrlPage {
       id: l1uF
       visible: false
-   }
+   }*/
 
    MediaPlayer {
       id: audioPlayer
@@ -322,7 +322,7 @@ Rectangle {
                   onTriggered: {
                      var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
                      p.stationChanged.connect(mainPage.setLastStation)
-                     l1uF.placeholderText = "Test"
+                     leuF.placeholderText = "Test"
                   }
                }
             ]
