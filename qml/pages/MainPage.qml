@@ -86,7 +86,7 @@ Rectangle {
                 }
 
                 // there is no equivalent yet to ListItem.Header
-                ListItem.Header { text: "Standard list items" }
+//                ListItem.Header { text: "Standard list items" }
 
                 ListItem {
                     // shall specify the height when Using ListItemLayout inside ListItem
