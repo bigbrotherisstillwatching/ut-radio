@@ -65,12 +65,12 @@ Rectangle {
       }
    }
 
-/*   Process {
+   Process {
       id: process
       onFinished: {
          txt.text = readAll();
       }
-   }*/
+   }
 
    MediaPlayer {
       id: audioPlayer
@@ -273,10 +273,10 @@ Rectangle {
             }
          }
 
-         /*Button {
+         Button {
             text: i18n.tr("What's playing?")
             onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
-         }*/
+         }
       }
    }
 
@@ -317,7 +317,6 @@ Rectangle {
                   onTriggered: {
                      var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
                      p.stationChanged.connect(mainPage.setLastStation)
-                     txt.text = "TEST"
                   }
                }
             ]
