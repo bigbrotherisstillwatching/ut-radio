@@ -68,7 +68,7 @@ Rectangle {
    Process {
       id: process
       onFinished: {
-         txt.text = readAll();
+         txt.text = readAll() + favouriteModel.get(index);
       }
    }
 
