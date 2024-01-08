@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import Process 1.0
+import Lomiri.Components.Popups 1.3
 
 import "../net"
 import "../util"
