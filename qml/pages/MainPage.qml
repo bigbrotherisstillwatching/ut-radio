@@ -72,6 +72,53 @@ Rectangle {
       }
    }
 
+   Component {
+        id: popoverComponent
+
+        Popover {
+            id: popover
+            Column {
+                id: containerLayout
+                anchors {
+                    left: parent.left
+                    top: parent.top
+                    right: parent.right
+                }
+
+                // there is no equivalent yet to ListItem.Header
+                Old_ListItem.Header { text: "Standard list items" }
+
+                ListItem {
+                    // shall specify the height when Using ListItemLayout inside ListItem
+                    height: somethingLayout.height + (divider.visible ? divider.height : 0)
+                    ListItemLayout {
+                        id: somethingLayout
+                        title.text: favouriteModel(index)
+                    }
+                    onClicked: console.log("clicked on ListItem with onClicked implemented")
+                }
+                ListItem {
+                    // shall specify the height when Using ListItemLayout inside ListItem
+                    height: somethingElseLayout.height + (divider.visible ? divider.height : 0)
+                    ListItemLayout {
+                        id: somethingElseLayout
+                        title.text: "Do somethings"
+                        subtitle.text: "else"
+                    }
+                }
+                ListItem {
+                    // shall specify the height when Using ListItemLayout inside ListItem
+                    height: closeBtn.height + (divider.visible ? divider.height : 0)
+                    Button {
+                        id: closeBtn
+                        text: "Close button"
+                        onClicked: PopupUtils.close(popover);
+                    }
+                }
+            }
+        }
+    }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -313,10 +360,12 @@ Rectangle {
          trailingActions: ListItemActions {
             actions: [
                Action {
+                  id: popoverButton
                   iconName: "edit"
                   onTriggered: {
-                     var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
-                     p.stationChanged.connect(mainPage.setLastStation)
+//                     var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
+//                     p.stationChanged.connect(mainPage.setLastStation)
+                     PopupUtils.open(popoverComponent, popoverButton)
                   }
                }
             ]
