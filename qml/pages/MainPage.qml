@@ -348,7 +348,7 @@ Rectangle {
                Action {
                   iconName: "save"
                   onTriggered: {
-                     favouriteModel.set(index, {"url": txt.text})
+                     favouriteModel.setProperty(index, "url", txt.text})
                   }
                }
             ]
