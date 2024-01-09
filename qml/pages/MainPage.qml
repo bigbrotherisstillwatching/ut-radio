@@ -344,11 +344,7 @@ Rectangle {
                   onTriggered: {
                      txt.text = favouriteModel.get(index).url
                   }
-               }
-            ]
-         }
-         trailingActions: ListItemActions {
-            actions: [
+               },
                Action {
                   iconName: "save"
                   onTriggered: {
