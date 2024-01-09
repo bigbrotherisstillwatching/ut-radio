@@ -273,7 +273,7 @@ Rectangle {
             }
          }
 
-         Icon {
+/*         Icon {
             id: editIcon
             height: units.gu(2)
             width: units.gu(2)
@@ -287,7 +287,7 @@ Rectangle {
                   var p = pageStack.push(Qt.resolvedUrl("./EditPage.qml"))
                }
             }
-         }
+         }*/
 
          Button {
             text: i18n.tr("What's playing?")
@@ -326,18 +326,18 @@ Rectangle {
                }
             ]
          }
-/*         trailingActions: ListItemActions {
+         trailingActions: ListItemActions {
             actions: [
                Action {
                   iconName: "edit"
                   onTriggered: {
                      var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
                      p.stationChanged.connect(mainPage.setLastStation)
-                     txt.text = favouriteModel.get(1).url
+                     txt.text = favouriteModel.get(index).url
                   }
                }
             ]
-         }*/
+         }
          SlotsLayout {
             id: layout
             mainSlot: Label {
