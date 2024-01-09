@@ -57,8 +57,8 @@ Rectangle {
                   mainSlot: TextField {
                       id: urlField
                       inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
-                      placeholderText: i18n.tr("Enter stream URL")
-//                      text: favouriteModel.get(
+//                      placeholderText: i18n.tr("Enter stream URL")
+                      text: favouriteModel.get(indexField.text-1).url
                   }
                   Text {
                      width: units.gu(6)
@@ -85,7 +85,8 @@ Rectangle {
                   id: layout2
                   mainSlot: TextField {
                       id: nameField
-                      placeholderText: i18n.tr("Enter stream name")
+//                      placeholderText: i18n.tr("Enter stream name")
+                      text: favouriteModel.get(indexField.text-1).name
                   }
                   Text {
                      width: units.gu(6)
@@ -113,7 +114,8 @@ Rectangle {
                   mainSlot: TextField {
                       id: imageField
                       inputMethodHints: Qt.ImhNoAutoUppercase | Qt.ImhUrlCharactersOnly | Qt.ImhNoPredictiveText
-                      placeholderText: i18n.tr("Enter URL to station image/artwork")
+ //                     placeholderText: i18n.tr("Enter URL to station image/artwork")
+                      text: favouriteModel.get(indexField.text-1).image
                   }
                   Text {
                      width: units.gu(6)
