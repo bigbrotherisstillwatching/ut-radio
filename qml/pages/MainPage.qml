@@ -139,7 +139,7 @@ Rectangle {
 //            wrapMode: Text.WordWrap
             font.pointSize: 25
             color: Colors.mainText
-            hasClearButton: true
+//            hasClearButton: true
             text: favouriteModel.get(0).url
          }
       }
