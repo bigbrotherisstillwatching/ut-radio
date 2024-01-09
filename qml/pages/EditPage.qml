@@ -150,6 +150,7 @@ Rectangle {
                      text: i18n.tr("Station number:")
                      color: Colors.mainText
                      SlotsLayout.position: SlotsLayout.Leading
+                     wrapMode: Text.WordWrap
                   }
               }
           }
