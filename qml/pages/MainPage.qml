@@ -5,7 +5,6 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import Process 1.0
-import Lomiri.Components.Popups 1.3
 
 import "../net"
 import "../util"
@@ -286,7 +285,6 @@ Rectangle {
                anchors.fill: parent
                onClicked: {
                   var p = pageStack.push(Qt.resolvedUrl("./EditPage.qml"))
- //                 PopupUtils.open(popoverComponent, editIcon)
                }
             }
          }
