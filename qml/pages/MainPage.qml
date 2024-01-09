@@ -352,7 +352,7 @@ Rectangle {
                asynchronous: true
             }
             Text {
-               source: index
+               text: index
                SlotsLayout.position: SlotsLayout.Trailing;
                width: units.gu(4)
                height: units.gu(4)
