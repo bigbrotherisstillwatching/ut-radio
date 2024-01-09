@@ -306,7 +306,7 @@ Rectangle {
          }
 
          Icon {
-            id: changeIcon
+            id: settingsIcon
             height: units.gu(2)
             width: units.gu(2)
             anchors.verticalCenter: parent.verticalCenter
@@ -322,7 +322,7 @@ Rectangle {
          }
 
          Icon {
-            id: settingsIcon
+            id: editIcon
             height: units.gu(2)
             width: units.gu(2)
             anchors.verticalCenter: parent.verticalCenter
@@ -333,7 +333,7 @@ Rectangle {
                anchors.fill: parent
                onClicked: {
   //                var p = pageStack.push(Qt.resolvedUrl("./EditPage.qml"))
-                  PopupUtils.open(popoverComponent, popoverButton)
+                  PopupUtils.open(popoverComponent, editIcon)
                }
             }
          }
