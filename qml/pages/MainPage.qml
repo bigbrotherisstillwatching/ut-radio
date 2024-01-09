@@ -357,6 +357,7 @@ Rectangle {
                width: units.gu(4)
                height: units.gu(4)
                asynchronous: true
+            }
          }
       }
    }
