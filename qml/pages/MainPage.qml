@@ -120,7 +120,7 @@ Rectangle {
          anchors.left: parent.left
          anchors.right: parent.right
 
-         Text {
+         TextField {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
