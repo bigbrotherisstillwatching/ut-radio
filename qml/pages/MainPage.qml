@@ -263,12 +263,12 @@ Rectangle {
             width: units.gu(2)
             anchors.verticalCenter: parent.verticalCenter
 
-            name: "edit"
+            name: "settings"
 
             MouseArea {
                anchors.fill: parent
                onClicked: {
-                  var p = pageStack.push(Qt.resolvedUrl("./ChangePage.qml"))
+                  var p = pageStack.push(Qt.resolvedUrl("./SettingsPage.qml"))
                }
             }
          }
@@ -279,12 +279,12 @@ Rectangle {
             width: units.gu(2)
             anchors.verticalCenter: parent.verticalCenter
 
-            name: "settings"
+            name: "edit"
 
             MouseArea {
                anchors.fill: parent
                onClicked: {
-                  var p = pageStack.push(Qt.resolvedUrl("./SettingsPage.qml"))
+                  var p = pageStack.push(Qt.resolvedUrl("./EditPage.qml"))
                }
             }
          }
