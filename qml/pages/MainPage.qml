@@ -65,12 +65,12 @@ Rectangle {
       }
    }
 
-/*   Process {
+   Process {
       id: process
       onFinished: {
          txt.text = readAll();
       }
-   }*/
+   }
 
    MediaPlayer {
       id: audioPlayer
@@ -258,6 +258,22 @@ Rectangle {
          }
 
          Icon {
+            id: changeIcon
+            height: units.gu(2)
+            width: units.gu(2)
+            anchors.verticalCenter: parent.verticalCenter
+
+            name: "edit"
+
+            MouseArea {
+               anchors.fill: parent
+               onClicked: {
+                  var p = pageStack.push(Qt.resolvedUrl("./ChangePage.qml"))
+               }
+            }
+         }
+
+         Icon {
             id: settingsIcon
             height: units.gu(2)
             width: units.gu(2)
@@ -273,10 +289,10 @@ Rectangle {
             }
          }
 
-/*         Button {
+         Button {
             text: i18n.tr("What's playing?")
             onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
-         }*/
+         }
       }
    }
 
@@ -310,18 +326,18 @@ Rectangle {
                }
             ]
          }
-         trailingActions: ListItemActions {
+/*         trailingActions: ListItemActions {
             actions: [
                Action {
                   iconName: "edit"
                   onTriggered: {
-//                     var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
-//                     p.stationChanged.connect(mainPage.setLastStation)
+                     var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
+                     p.stationChanged.connect(mainPage.setLastStation)
                      txt.text = favouriteModel.get(1).url
                   }
                }
             ]
-         }
+         }*/
          SlotsLayout {
             id: layout
             mainSlot: Label {
@@ -335,6 +351,12 @@ Rectangle {
                height: units.gu(4)
                asynchronous: true
             }
+            Text {
+               source: index
+               SlotsLayout.position: SlotsLayout.Trailing;
+               width: units.gu(4)
+               height: units.gu(4)
+               asynchronous: true
          }
       }
    }
