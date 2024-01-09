@@ -72,6 +72,53 @@ Rectangle {
       }
    }
 
+   Component {
+        id: popoverComponent
+
+        Popover {
+            id: popover
+            Column {
+                id: containerLayout
+                anchors {
+                    left: parent.left
+                    top: parent.top
+                    right: parent.right
+                }
+
+                // there is no equivalent yet to ListItem.Header
+ //               Old_ListItem.Header { text: "Standard list items" }
+
+                ListItem {
+                    // shall specify the height when Using ListItemLayout inside ListItem
+                    height: somethingLayout.height + (divider.visible ? divider.height : 0)
+                    ListItemLayout {
+                        id: somethingLayout
+                        title.text: "Do somethings"
+                    }
+                    onClicked: console.log("clicked on ListItem with onClicked implemented")
+                }
+                ListItem {
+                    // shall specify the height when Using ListItemLayout inside ListItem
+                    height: somethingElseLayout.height + (divider.visible ? divider.height : 0)
+                    ListItemLayout {
+                        id: somethingElseLayout
+                        title.text: "Do somethings"
+                        subtitle.text: "else"
+                    }
+                }
+                ListItem {
+                    // shall specify the height when Using ListItemLayout inside ListItem
+                    height: closeBtn.height + (divider.visible ? divider.height : 0)
+                    Button {
+                        id: closeBtn
+                        text: "Close button"
+                        onClicked: PopupUtils.close(popover);
+                    }
+                }
+            }
+        }
+    }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -284,7 +331,8 @@ Rectangle {
             MouseArea {
                anchors.fill: parent
                onClicked: {
-                  var p = pageStack.push(Qt.resolvedUrl("./EditPage.qml"))
+  //                var p = pageStack.push(Qt.resolvedUrl("./EditPage.qml"))
+                  PopupUtils.open(popoverComponent, popoverButton)
                }
             }
          }
