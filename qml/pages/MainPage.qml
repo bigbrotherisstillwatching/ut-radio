@@ -140,6 +140,7 @@ Rectangle {
             font.pointSize: 25
             color: Colors.mainText
             hasClearButton: true
+            autoScroll: true
          }
       }
 
