@@ -134,7 +134,7 @@ Rectangle {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
-//            horizontalAlignment: Text.AlignHCenter
+            horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
 //            wrapMode: Text.WordWrap
             font.pointSize: 25
@@ -342,9 +342,17 @@ Rectangle {
                Action {
                   iconName: "edit"
                   onTriggered: {
-//                     var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
-//                     p.stationChanged.connect(mainPage.setLastStation)
                      txt.text = favouriteModel.get(index).url
+                  }
+               }
+            ]
+         }
+         trailingActions: ListItemActions {
+            actions: [
+               Action {
+                  iconName: "save"
+                  onTriggered: {
+                     favouriteModel.set(index, {"url": txt.text})
                   }
                }
             ]
