@@ -298,7 +298,6 @@ Rectangle {
 
    ListView {
       id: favList
-      property alias favList: favList
       anchors.top: playerControls.bottom
       anchors.topMargin: padding/2
       anchors.left: parent.left
