@@ -353,8 +353,9 @@ Rectangle {
             }
             Text {
                text: index
-               style: Text.Outline
-               styleColor: "white"
+ //              style: Text.Outline
+ //              styleColor: "white"
+               verticalAlignment: Text.AlignVCenter
                SlotsLayout.position: SlotsLayout.Leading;
                width: units.gu(4)
                height: units.gu(4)
