@@ -352,7 +352,7 @@ Rectangle {
                asynchronous: true
             }
             Text {
-               text: index
+               text: index+1
  //              style: Text.Outline
  //              styleColor: "white"
  //              verticalAlignment: Text.AlignBottom
