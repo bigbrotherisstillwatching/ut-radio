@@ -130,7 +130,7 @@ Rectangle {
             font.pointSize: 25
             color: Colors.mainText
          }*/
-         Text {
+         TextField {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
