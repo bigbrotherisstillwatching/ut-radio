@@ -353,7 +353,9 @@ Rectangle {
             }
             Text {
                text: index
-               SlotsLayout.position: SlotsLayout.Trailing;
+               style: Text.Outline
+               styleColor: "white"
+               SlotsLayout.position: SlotsLayout.Leading;
                width: units.gu(4)
                height: units.gu(4)
  //              asynchronous: true
