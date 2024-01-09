@@ -331,8 +331,8 @@ Rectangle {
                Action {
                   iconName: "edit"
                   onTriggered: {
-                     var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
-                     p.stationChanged.connect(mainPage.setLastStation)
+//                     var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
+//                     p.stationChanged.connect(mainPage.setLastStation)
                      txt.text = favouriteModel.get(index).url
                   }
                }
