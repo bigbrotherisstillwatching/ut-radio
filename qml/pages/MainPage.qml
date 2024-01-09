@@ -79,27 +79,27 @@ Rectangle {
         Popover {
             id: popover
             Flickable {
-       anchors.top: header.bottom
-       anchors.left: parent.left
-       anchors.right: parent.right
-       anchors.bottom: parent.bottom
+               anchors.top: header.bottom
+               anchors.left: parent.left
+               anchors.right: parent.right
+               anchors.bottom: parent.bottom
 
-       contentWidth: parent.width
-       contentHeight: childrenRect.height
+               contentWidth: parent.width
+               contentHeight: childrenRect.height
 
-       Column {
-          anchors.left: parent.left
-          anchors.right: parent.right
+               Column {
+                  anchors.left: parent.left
+                  anchors.right: parent.right
 
-          ListItem {
-              anchors.left: parent.left
-              anchors.right: parent.right
-              color: Colors.surfaceColor
-              divider.colorFrom: Colors.borderColor
-              divider.colorTo: Colors.borderColor
-              highlightColor: Colors.highlightColor
+               ListItem {
+                  anchors.left: parent.left
+                  anchors.right: parent.right
+                  color: Colors.surfaceColor
+                  divider.colorFrom: Colors.borderColor
+                  divider.colorTo: Colors.borderColor
+                  highlightColor: Colors.highlightColor
 
-              height: layout1.height + (divider.visible ? divider.height : 0)
+                  height: layout1.height + (divider.visible ? divider.height : 0)
 
               SlotsLayout {
                   id: layout1
