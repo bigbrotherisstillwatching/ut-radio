@@ -273,7 +273,6 @@ Rectangle {
             height: units.gu(2)
             width: units.gu(2)
             anchors.verticalCenter: parent.verticalCenter
-            anchors.horizontalCenter: parent.horizontalCenter
 
             name: "settings"
 
