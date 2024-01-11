@@ -342,7 +342,7 @@ Rectangle {
                Action {
                   iconName: "edit"
                   onTriggered: {
-                     txt.text = favouriteModel.get(index).url
+                     txt.text = favouriteModel.get(index).name
                   }
                },
                Action {
