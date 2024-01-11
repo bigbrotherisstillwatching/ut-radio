@@ -82,4 +82,26 @@ Item {
 
       return s.hasOwnProperty(stationID)
    }
+
+   function changeName(name) {
+      var s
+
+      try {
+         s = JSON.parse(settings.value("favouriteStations"))
+      } catch (e) {
+         s = {}
+      }
+
+      for (var i = 0; i < favouriteModel.count; i++) {
+         var station = favouriteModel.get(i)
+
+         if (station.name === name) {
+            favouriteModel.setProperty(i, "name", txt.text)
+            break
+         }
+      }
+
+      settings.setValue("favouriteStations", JSON.stringify(s))
+   }
+
 }
