@@ -101,6 +101,7 @@ Item {
          }
       }
 
-      settings.setValue("favouriteStations", JSON.stringify(s).replace(/oldname/g, 'newname'));)
+      JSON.stringify(s).replace(/oldname/g, 'newname')
+      settings.setValue("favouriteStations", s)
    }
 }
