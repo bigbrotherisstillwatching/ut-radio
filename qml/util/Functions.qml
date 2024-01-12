@@ -101,7 +101,7 @@ Item {
          }
       }
 
-      JSON.stringify(s).replace(/oldname/g, 'newname')
+      JSON.stringify(s).replace(oldname, newname)
       settings.setValue("favouriteStations", s)
    }
 }
