@@ -92,7 +92,7 @@ Item {
          s = {}
       }
 
-      s.replace(/name1/g, 'name2'));
+      s.replace(/name1/g, 'name2');
 
       for (var i = 0; i < favouriteModel.count; i++) {
          var stationName = favouriteModel.get(i)
