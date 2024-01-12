@@ -83,7 +83,7 @@ Item {
       return s.hasOwnProperty(stationID)
    }
 
-   function changeName(name1, name2) {
+   function changeName(oldname, newname) {
       var s
 
       try {
@@ -92,17 +92,15 @@ Item {
          s = {}
       }
 
-      s.replace(/name1/g, 'name2');
-
       for (var i = 0; i < favouriteModel.count; i++) {
          var stationName = favouriteModel.get(i)
 
-         if (stationName.name === name1) {
-            favouriteModel.setProperty(i, "name", name2)
+         if (stationName.name === oldname) {
+            favouriteModel.setProperty(i, "name", newname)
             break
          }
       }
 
-      settings.setValue("favouriteStations", JSON.stringify(s))
+      settings.setValue("favouriteStations", JSON.stringify(s).replace(/oldname/g, 'newname')))
    }
 }
