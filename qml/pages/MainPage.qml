@@ -349,7 +349,7 @@ Rectangle {
                   iconName: "save"
                   onTriggered: {
 //                     favouriteModel.setProperty(index, "url", txt.text)
-                     Functions.removeFavourite(stationID)
+                     Functions.changeName(favouriteModel.get(index).name, txt.text)
                   }
                }
             ]
