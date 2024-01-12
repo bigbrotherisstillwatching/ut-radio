@@ -284,22 +284,6 @@ Rectangle {
             }
          }
 
-/*         Icon {
-            id: editIcon
-            height: units.gu(2)
-            width: units.gu(2)
-            anchors.verticalCenter: parent.verticalCenter
-
-            name: "edit"
-
-            MouseArea {
-               anchors.fill: parent
-               onClicked: {
-                  var p = pageStack.push(Qt.resolvedUrl("./EditPage.qml"))
-               }
-            }
-         }*/
-
          Button {
             text: i18n.tr("What's playing?")
             onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
@@ -340,9 +324,7 @@ Rectangle {
          trailingActions: ListItemActions {
             actions: [
                Action {
-//                  iconName: "edit"
-//                  iconName: "info"
-                  text: "Show name"
+                  iconName: "info"
                   onTriggered: {
                      txt.text = favouriteModel.get(index).name
                   }
@@ -350,7 +332,6 @@ Rectangle {
                Action {
                   iconName: "save"
                   onTriggered: {
-//                     favouriteModel.setProperty(index, "url", txt.text)
                      Functions.changeName(favouriteModel.get(index).name, txt.text)
                   }
                }
@@ -368,17 +349,6 @@ Rectangle {
                width: units.gu(4)
                height: units.gu(4)
                asynchronous: true
-            }
-            Text {
-               text: index+1
- //              style: Text.Outline
- //              styleColor: "white"
- //              verticalAlignment: Text.AlignBottom
-               font.bold: true
-               SlotsLayout.position: SlotsLayout.Leading;
-               width: units.gu(4)
-               height: units.gu(4)
- //              asynchronous: true
             }
          }
       }
