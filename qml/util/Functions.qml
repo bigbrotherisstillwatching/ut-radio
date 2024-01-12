@@ -57,7 +57,7 @@ Item {
          s = {}
       }
 
-//      delete s[stationID]
+      delete s[stationID]
 
       for (var i = 0; i < favouriteModel.count; i++) {
          var station = favouriteModel.get(i)
