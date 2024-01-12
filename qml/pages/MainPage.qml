@@ -340,7 +340,10 @@ Rectangle {
          trailingActions: ListItemActions {
             actions: [
                Action {
-                  iconName: "edit"
+//                  iconName: "edit"
+                  iconName: "info"
+                  text: "Show name"
+                  wrapMode: Text.WordWrap
                   onTriggered: {
                      txt.text = favouriteModel.get(index).name
                   }
