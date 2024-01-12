@@ -343,7 +343,6 @@ Rectangle {
 //                  iconName: "edit"
                   iconName: "info"
                   text: "Show name"
-                  wrapMode: Text.WordWrap
                   onTriggered: {
                      txt.text = favouriteModel.get(index).name
                   }
