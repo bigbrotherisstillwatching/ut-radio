@@ -341,7 +341,7 @@ Rectangle {
             actions: [
                Action {
 //                  iconName: "edit"
-                  iconName: "info"
+//                  iconName: "info"
                   text: "Show name"
                   onTriggered: {
                      txt.text = favouriteModel.get(index).name
