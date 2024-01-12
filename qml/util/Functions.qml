@@ -57,7 +57,7 @@ Item {
          s = {}
       }
 
-      delete s[stationID]
+//      delete s[stationID]
 
       for (var i = 0; i < favouriteModel.count; i++) {
          var station = favouriteModel.get(i)
@@ -81,28 +81,5 @@ Item {
       }
 
       return s.hasOwnProperty(stationID)
-   }
-
-   function removeFavourite2(name) {
-      var s
-
-      try {
-         s = JSON.parse(settings.value("favouriteStations"))
-      } catch (e) {
-         s = {}
-      }
-
-      delete s[name]
-
-      for (var i = 0; i < favouriteModel.count; i++) {
-         var station = favouriteModel.get(i)
-
-         if (station.name === name) {
-            favouriteModel.remove(i)
-            break
-         }
-      }
-
-      settings.setValue("favouriteStations", JSON.stringify(s))
    }
 }
