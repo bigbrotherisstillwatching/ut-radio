@@ -83,24 +83,26 @@ Item {
       return s.hasOwnProperty(stationID)
    }
 
-   function changeName(stationID) {
-      var s
+   function changeName(name1, name2) {
+   var s
 
-      try {
-         s = JSON.parse(settings.value("favouriteStations"))
-      } catch (e) {
-         s = {}
+   try {
+      s = JSON.parse(settings.value("favouriteStations"))
+   } catch (e) {
+      s = {}
+   }
+
+   replace s(name1, name2)
+
+   for (var i = 0; i < favouriteModel.count; i++) {
+      var stationName = favouriteModel.get(i)
+
+      if (stationName.name === name1) {
+         favouriteModel.setProperty(i, "name", name2)
+         break
       }
+   }
 
-      for (var i = 0; i < favouriteModel.count; i++) {
-         var station = favouriteModel.get(i)
-
-         if (station.stationID === stationID) {
-            favouriteModel.setProperty(i, "name", txt.text)
-            break
-         }
-      }
-
-      settings.setValue("favouriteStations", JSON.stringify(s))
+   settings.setValue("favouriteStations", JSON.stringify(s))
    }
 }
