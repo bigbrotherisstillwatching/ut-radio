@@ -130,13 +130,13 @@ Rectangle {
             font.pointSize: 25
             color: Colors.mainText
          }*/
-         TextField {
+         TextInput {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
             horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
-//            wrapMode: Text.WordWrap
+            wrapMode: Text.WordWrap
             font.pointSize: 25
             color: Colors.mainText
             hasClearButton: true
