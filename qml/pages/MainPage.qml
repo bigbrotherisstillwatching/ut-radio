@@ -334,6 +334,18 @@ Rectangle {
                   onTriggered: {
                      Functions.changeName(favouriteModel.get(index).name, txt.text)
                   }
+               },
+               Action {
+                  iconName: "info"
+               },
+               Action {
+                  iconName: "info"
+               },
+               Action {
+                  iconName: "info"
+               },
+               Action {
+                  iconName: "info"
                }
             ]
          }
