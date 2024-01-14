@@ -180,7 +180,7 @@ Rectangle {
             anchors.topMargin: 80
             anchors.leftMargin: 80
             anchors.rightMargin: 80
-            anchors.bottomMargin: 80
+            anchors.bottomMargin: -80
             anchors.fill: parent
             name: "stock_music"
             visible: !lastStation || !lastStation.image
@@ -190,7 +190,7 @@ Rectangle {
             anchors.topMargin: 80
             anchors.leftMargin: 80
             anchors.rightMargin: 80
-            anchors.bottomMargin: 80
+            anchors.bottomMargin: -80
             anchors.fill: parent
             visible: lastStation && lastStation.image || false
             source: lastStation && lastStation.image || ""
