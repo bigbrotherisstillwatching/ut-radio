@@ -150,7 +150,7 @@ Rectangle {
             wrapMode: Text.WordWrap
             font.pointSize: 25
             color: Colors.mainText
-            hasClearButton: true
+//            hasClearButton: true
             maximumLineCount: 3
          }
       }
