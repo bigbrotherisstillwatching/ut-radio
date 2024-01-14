@@ -176,6 +176,7 @@ Rectangle {
 //         border.color: Colors.borderColor
 
          Icon {
+            y: 200
             anchors.topMargin: 80
             anchors.leftMargin: 80
             anchors.rightMargin: 80
@@ -186,6 +187,7 @@ Rectangle {
          }
 
          Image {
+            y: 200
             anchors.topMargin: 80
             anchors.leftMargin: 80
             anchors.rightMargin: 80
