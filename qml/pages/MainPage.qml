@@ -163,6 +163,7 @@ Rectangle {
             wrapMode: Text.WordWrap
             font.pointSize: 25
             color: Colors.mainText
+            height: mymeta.height
          }
       }
 
