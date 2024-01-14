@@ -119,6 +119,7 @@ Rectangle {
          anchors.top: playerTitles.bottom
          anchors.left: parent.left
          anchors.right: parent.right
+         height: main.page * 0.1
 
 /*         Text {
             id: txt
@@ -162,7 +163,6 @@ Rectangle {
             wrapMode: Text.WordWrap
             font.pointSize: 25
             color: Colors.mainText
-            height: main.page * 0.1
          }
       }
 
