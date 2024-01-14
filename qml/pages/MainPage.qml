@@ -157,7 +157,6 @@ Rectangle {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
-            anchors.bottom: imgrec.top
             horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
             wrapMode: Text.WordWrap
@@ -167,7 +166,6 @@ Rectangle {
       }
 
       Rectangle {
-         id: imgrec
          width: mainPage.width * 0.6
          height: mainPage.width * 0.6
          anchors.horizontalCenter: parent.horizontalCenter
