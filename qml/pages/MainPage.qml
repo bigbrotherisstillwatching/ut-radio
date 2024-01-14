@@ -166,7 +166,6 @@ Rectangle {
       }
 
       Rectangle {
-         y: 500
          width: mainPage.width * 0.6
          height: mainPage.width * 0.6
          anchors.horizontalCenter: parent.horizontalCenter
@@ -180,7 +179,7 @@ Rectangle {
             anchors.topMargin: 80
             anchors.leftMargin: 80
             anchors.rightMargin: 80
-            anchors.bottomMargin: -80
+            anchors.bottomMargin: -50
             anchors.fill: parent
             name: "stock_music"
             visible: !lastStation || !lastStation.image
@@ -190,7 +189,7 @@ Rectangle {
             anchors.topMargin: 80
             anchors.leftMargin: 80
             anchors.rightMargin: 80
-            anchors.bottomMargin: -80
+            anchors.bottomMargin: -50
             anchors.fill: parent
             visible: lastStation && lastStation.image || false
             source: lastStation && lastStation.image || ""
