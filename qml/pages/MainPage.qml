@@ -166,6 +166,7 @@ Rectangle {
       }
 
       Rectangle {
+         y: 500
          width: mainPage.width * 0.6
          height: mainPage.width * 0.6
          anchors.horizontalCenter: parent.horizontalCenter
@@ -176,7 +177,6 @@ Rectangle {
 //         border.color: Colors.borderColor
 
          Icon {
-            y: 500
             anchors.topMargin: 80
             anchors.leftMargin: 80
             anchors.rightMargin: 80
@@ -187,7 +187,6 @@ Rectangle {
          }
 
          Image {
-            y: 500
             anchors.topMargin: 80
             anchors.leftMargin: 80
             anchors.rightMargin: 80
