@@ -113,9 +113,9 @@ Item {
       }
 
       for (var i = 0; i < favouriteModel.count; i++) {
-         var stationName = favouriteModel.get(i)
+         var stationImage = favouriteModel.get(i)
 
-         if (stationName.image === oldimage) {
+         if (stationImage.image === oldimage) {
             favouriteModel.setProperty(i, "image", newimage)
             break
          }
