@@ -346,7 +346,7 @@ Rectangle {
          trailingActions: ListItemActions {
             actions: [
                Action {
-                  iconName: "info"
+                  iconName: "tag"
                   onTriggered: {
                      txt.text = favouriteModel.get(index).name
                   }
@@ -358,16 +358,16 @@ Rectangle {
                   }
                },
                Action {
-                  iconName: "info"
+                  iconName: "stock_link"
                },
                Action {
-                  iconName: "info"
+                  iconName: "save"
                },
                Action {
-                  iconName: "info"
+                  iconName: "stock_image"
                },
                Action {
-                  iconName: "info"
+                  iconName: "save"
                }
             ]
          }
