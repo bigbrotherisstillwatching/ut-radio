@@ -122,4 +122,40 @@ Item {
       }
       settings.setValue("favouriteStations", JSON.stringify(s).replace(oldimage, newimage))
    }
+
+   function changeUrl(oldurl, newurl) {
+      var s
+
+      try {
+         s = JSON.parse(settings.value("favouriteStations"))
+      } catch (e) {
+         s = {}
+      }
+
+      for (var i = 0; i < favouriteModel.count; i++) {
+         var stationUrl = favouriteModel.get(i)
+
+         if (stationUrl.url === oldurl) {
+            favouriteModel.setProperty(i, "url", newurl)
+            break
+         }
+      }
+      settings.setValue("favouriteStations", JSON.stringify(s).replace(oldurl, newurl))
+
+      try {
+         s = JSON.parse(settings.value("favouriteStations"))
+      } catch (e) {
+         s = {}
+      }
+
+      for (var i = 0; i < favouriteModel.count; i++) {
+         var station = favouriteModel.get(i)
+
+         if (station.stationID === Qt.md5(oldurl)) {
+            favouriteModel.setProperty(i, "stationID", Qt.md5(newurl))
+            break
+         }
+      }
+      settings.setValue("favouriteStations", JSON.stringify(s).replace(Qt.md5(oldurl), Qt.md5(newurl)))
+   }
 }
