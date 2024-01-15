@@ -142,10 +142,12 @@ Item {
       }
       settings.setValue("favouriteStations", JSON.stringify(s).replace(oldurl, newurl))
 
+      var t
+
       try {
-         s = JSON.parse(settings.value("favouriteStations"))
+         t = JSON.parse(settings.value("favouriteStations"))
       } catch (e) {
-         s = {}
+         t = {}
       }
 
       for (var i = 0; i < favouriteModel.count; i++) {
@@ -156,6 +158,6 @@ Item {
             break
          }
       }
-      settings.setValue("favouriteStations", JSON.stringify(s).replace(Qt.md5(oldurl), Qt.md5(newurl)))
+      settings.setValue("favouriteStations", JSON.stringify(t).replace(Qt.md5(oldurl), Qt.md5(newurl)))
    }
 }
