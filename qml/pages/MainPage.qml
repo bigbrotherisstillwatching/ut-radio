@@ -359,12 +359,18 @@ Rectangle {
                },
                Action {
                   iconName: "stock_link"
+                  onTriggered: {
+                     txt.text = favouriteModel.get(index).url
+                  }
                },
                Action {
                   iconName: "save"
                },
                Action {
                   iconName: "stock_image"
+                  onTriggered: {
+                     txt.text = favouriteModel.get(index).image
+                  }
                },
                Action {
                   iconName: "save"
