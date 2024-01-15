@@ -176,7 +176,7 @@ Rectangle {
 //         border.color: Colors.borderColor
 
          Icon {
-            anchors.topMargin: 180
+            anchors.topMargin: 200
 //            anchors.leftMargin: 80
 //            anchors.rightMargin: 80
             anchors.bottomMargin: -50
@@ -186,7 +186,7 @@ Rectangle {
          }
 
          Image {
-            anchors.topMargin: 180
+            anchors.topMargin: 200
 //            anchors.leftMargin: 80
 //            anchors.rightMargin: 80
             anchors.bottomMargin: -50
