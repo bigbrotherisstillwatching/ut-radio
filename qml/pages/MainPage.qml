@@ -141,7 +141,7 @@ Rectangle {
             color: Colors.mainText
             hasClearButton: true
          }*/
-/*         TextArea {
+         TextArea {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
@@ -152,8 +152,8 @@ Rectangle {
             color: Colors.mainText
 //            hasClearButton: true
             maximumLineCount: 3
-         }*/
-         TextEdit {
+         }
+/*         TextEdit {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
@@ -162,7 +162,7 @@ Rectangle {
             wrapMode: Text.WordWrap
             font.pointSize: 25
             color: Colors.mainText
-         }
+         }*/
       }
 
       Rectangle {
