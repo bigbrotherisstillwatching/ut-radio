@@ -365,6 +365,8 @@ Rectangle {
                },
                Action {
                   iconName: "save"
+                  onTriggered: {
+                     Functions.changeUrl(favouriteModel.get(index).url, txt.text)
                },
                Action {
                   iconName: "stock_image"
