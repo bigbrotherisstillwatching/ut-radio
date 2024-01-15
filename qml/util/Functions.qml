@@ -158,6 +158,6 @@ Item {
             break
          }
       }
-      settings.setValue("favouriteStations", JSON.stringify(t).replace(Qt.md5(oldurl), Qt.md5(newurl)))
+      settings.setValue("favouriteStations", JSON.stringify(t).replaceAll(Qt.md5(oldurl), Qt.md5(newurl)))
    }
 }
