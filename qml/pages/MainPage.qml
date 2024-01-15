@@ -176,9 +176,9 @@ Rectangle {
 //         border.color: Colors.borderColor
 
          Icon {
-            anchors.topMargin: -50
-//            anchors.leftMargin: 50
-//            anchors.rightMargin: 50
+            anchors.topMargin: 130
+//            anchors.leftMargin: 80
+//            anchors.rightMargin: 80
             anchors.bottomMargin: -50
             anchors.fill: parent
             name: "stock_music"
@@ -186,9 +186,9 @@ Rectangle {
          }
 
          Image {
-            anchors.topMargin: -50
-//            anchors.leftMargin: 50
-//            anchors.rightMargin: 50
+            anchors.topMargin: 130
+//            anchors.leftMargin: 80
+//            anchors.rightMargin: 80
             anchors.bottomMargin: -50
             anchors.fill: parent
             visible: lastStation && lastStation.image || false
