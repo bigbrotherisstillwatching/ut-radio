@@ -374,6 +374,9 @@ Rectangle {
                },
                Action {
                   iconName: "save"
+                  onTriggered: {
+                     Functions.changeImage(favouriteModel.get(index).image, txt.text)
+                  }
                }
             ]
          }
