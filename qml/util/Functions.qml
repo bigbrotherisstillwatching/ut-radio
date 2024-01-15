@@ -102,4 +102,24 @@ Item {
       }
       settings.setValue("favouriteStations", JSON.stringify(s).replace(oldname, newname))
    }
+
+   function changeImage(oldimage, newimage) {
+      var s
+
+      try {
+         s = JSON.parse(settings.value("favouriteStations"))
+      } catch (e) {
+         s = {}
+      }
+
+      for (var i = 0; i < favouriteModel.count; i++) {
+         var stationName = favouriteModel.get(i)
+
+         if (stationName.image === oldimage) {
+            favouriteModel.setProperty(i, "image", newimage)
+            break
+         }
+      }
+      settings.setValue("favouriteStations", JSON.stringify(s).replace(oldimage, newimage))
+   }
 }
