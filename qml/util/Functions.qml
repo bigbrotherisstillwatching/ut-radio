@@ -158,6 +158,24 @@ Item {
             break
          }
       }
-      settings.setValue("favouriteStations", JSON.stringify(t).replaceAll(Qt.md5(oldurl), Qt.md5(newurl)))
+      settings.setValue("favouriteStations", JSON.stringify(t).replace(Qt.md5(oldurl), Qt.md5(newurl)))
+
+      var u
+
+      try {
+         u = JSON.parse(settings.value("favouriteStations"))
+      } catch (e) {
+         u = {}
+      }
+
+      for (var i = 0; i < favouriteModel.count; i++) {
+         var station = favouriteModel.get(i)
+
+         if (station.stationID === Qt.md5(oldurl)) {
+            favouriteModel.setProperty(i, "stationID", Qt.md5(newurl))
+            break
+         }
+      }
+      settings.setValue("favouriteStations", JSON.stringify(u).replace(Qt.md5(oldurl), Qt.md5(newurl)))
    }
 }
