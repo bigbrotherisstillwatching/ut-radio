@@ -217,7 +217,7 @@ Rectangle {
             }
 
             Tltp.ToolTip.visible: pressed
-            Tltp.ToolTip.delay: 1000
+//            Tltp.ToolTip.delay: 1000
             Tltp.ToolTip.text: i18n.tr("Search station")
          }
 
@@ -250,6 +250,10 @@ Rectangle {
                else
                   Functions.saveFavourite(lastStation)
             }
+
+            Tltp.ToolTip.visible: pressed
+//            Tltp.ToolTip.delay: 1000
+            Tltp.ToolTip.text: i18n.tr("Set/Unset favourite")
          }
 
          Button {
@@ -274,6 +278,10 @@ Rectangle {
                var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
                p.stationChanged.connect(mainPage.setLastStation)
             }
+
+            Tltp.ToolTip.visible: pressed
+//            Tltp.ToolTip.delay: 1000
+            Tltp.ToolTip.text: i18n.tr("Add station")
          }
       }
 
@@ -310,6 +318,10 @@ Rectangle {
                   var p = pageStack.push(Qt.resolvedUrl("./SettingsPage.qml"))
                }
             }
+
+            Tltp.ToolTip.visible: pressed
+//            Tltp.ToolTip.delay: 1000
+            Tltp.ToolTip.text: i18n.tr("Settings")
          }
 
          Button {
@@ -346,6 +358,9 @@ Rectangle {
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
+                  Tltp.ToolTip.visible: pressed
+                  Tltp.ToolTip.delay: 1000
+                  Tltp.ToolTip.text: i18n.tr("Delete station")
                }
             ]
          }
