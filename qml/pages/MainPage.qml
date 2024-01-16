@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import Process 1.0
+import QtQuick.Controls 2.7
 
 import "../net"
 import "../util"
@@ -214,6 +215,10 @@ Rectangle {
                var p = pageStack.push(Qt.resolvedUrl("./SearchPage.qml"))
                p.stationChanged.connect(setLastStation)
             }
+
+            Tooltip.visible: pressed
+            Tooltip.delay: 1000
+            Tooltip.text: i18n.tr("Search station")
          }
 
          Button {
