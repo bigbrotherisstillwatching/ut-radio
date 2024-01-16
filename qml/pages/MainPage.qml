@@ -1,11 +1,11 @@
 import Lomiri.Components 1.3
 import Lomiri.Components.ListItems 1.3
-import QtQuick 2.12
+import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import Process 1.0
-import QtQuick.Controls 2.12
+//import QtQuick.Controls 2.12
 
 import "../net"
 import "../util"
@@ -216,9 +216,9 @@ Rectangle {
                p.stationChanged.connect(setLastStation)
             }
 
-            ToolTip.visible: pressed
+/*            ToolTip.visible: pressed
             ToolTip.delay: 1000
-            ToolTip.text: i18n.tr("Search station")
+            ToolTip.text: i18n.tr("Search station")*/
          }
 
          Button {
