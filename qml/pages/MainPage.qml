@@ -275,7 +275,7 @@ Rectangle {
       Row {
          anchors.horizontalCenter: parent.horizontalCenter
          spacing: mainPage.padding
-         rightPadding: 50
+         rightPadding: 60
 
          Rectangle {
             height: units.gu(2)
