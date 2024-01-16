@@ -200,7 +200,7 @@ Rectangle {
       Row {
          anchors.horizontalCenter: parent.horizontalCenter
          spacing: mainPage.padding
-         rightPadding: 50
+         leftPadding: 50
 
          Button {
             width: units.gu(4)
