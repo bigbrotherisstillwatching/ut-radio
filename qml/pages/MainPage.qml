@@ -146,9 +146,9 @@ Rectangle {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
-            horizontalAlignment: TextArea.AlignHCenter
+            horizontalAlignment: TextEdit.AlignHCenter
             width: playerTitles.width
-            wrapMode: TextArea.WordWrap
+            wrapMode: TextEdit.WordWrap
             font.pointSize: 25
             color: Colors.mainText
 //            hasClearButton: true
@@ -318,10 +318,6 @@ Rectangle {
                   var p = pageStack.push(Qt.resolvedUrl("./SettingsPage.qml"))
                }
             }
-
-            Tltp.ToolTip.visible: pressed
-//            Tltp.ToolTip.delay: 1000
-            Tltp.ToolTip.text: i18n.tr("Settings")
          }
 
          Button {
