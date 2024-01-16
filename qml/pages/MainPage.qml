@@ -153,7 +153,6 @@ Rectangle {
             color: Colors.mainText
 //            hasClearButton: true
             maximumLineCount: 3
-            backgroundVisible: false
          }
 /*         TextEdit {
             id: txt
