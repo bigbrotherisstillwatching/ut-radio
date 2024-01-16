@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import Process 1.0
-//import QtQuick.Controls 2.1
+import QtQuick.Controls 2.7 as Tltp
 
 import "../net"
 import "../util"
@@ -216,9 +216,9 @@ Rectangle {
                p.stationChanged.connect(setLastStation)
             }
 
-/*            ToolTip.visible: pressed
-            ToolTip.delay: 1000
-            ToolTip.text: i18n.tr("Search station")*/
+            Tltp.ToolTip.visible: pressed
+            Tltp.ToolTip.delay: 1000
+            Tltp.ToolTip.text: i18n.tr("Search station")
          }
 
          Button {
