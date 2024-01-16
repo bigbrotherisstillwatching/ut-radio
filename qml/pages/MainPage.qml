@@ -216,9 +216,9 @@ Rectangle {
                p.stationChanged.connect(setLastStation)
             }
 
-            Tooltip.visible: pressed
-            Tooltip.delay: 1000
-            Tooltip.text: i18n.tr("Search station")
+            ToolTip.visible: pressed
+            ToolTip.delay: 1000
+            ToolTip.text: i18n.tr("Search station")
          }
 
          Button {
