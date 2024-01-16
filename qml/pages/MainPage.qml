@@ -1,6 +1,6 @@
 import Lomiri.Components 1.3
 import Lomiri.Components.ListItems 1.3
-import QtQuick 2.7
+import QtQuick 2.12
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
