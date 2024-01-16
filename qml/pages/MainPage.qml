@@ -358,9 +358,6 @@ Rectangle {
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
-                  Tltp.ToolTip.visible: pressed
-//                  Tltp.ToolTip.delay: 1000
-                  Tltp.ToolTip.text: i18n.tr("Delete station")
                }
             ]
          }
