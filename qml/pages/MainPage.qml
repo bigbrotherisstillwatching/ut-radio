@@ -152,7 +152,7 @@ Rectangle {
             font.pointSize: 25
             color: Colors.mainText
 //            hasClearButton: true
-            maximumLineCount: 3
+//            maximumLineCount: 3
          }
 /*         TextEdit {
             id: txt
