@@ -121,49 +121,17 @@ Rectangle {
          anchors.left: parent.left
          anchors.right: parent.right
 
-/*         Text {
-            id: txt
-            anchors.top: mymeta.top
-            anchors.topMargin: 20
-            horizontalAlignment: Text.AlignHCenter
-            width: playerTitles.width
-            wrapMode: Text.WordWrap
-            font.pointSize: 25
-            color: Colors.mainText
-         }*/
-/*         TextField {
-            id: txt
-            anchors.top: mymeta.top
-            anchors.topMargin: 20
-            horizontalAlignment: Text.AlignHCenter
-            width: playerTitles.width
-//            wrapMode: Text.WordWrap
-            font.pointSize: 25
-            color: Colors.mainText
-            hasClearButton: true
-         }*/
          TextArea {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
-            horizontalAlignment: TextEdit.AlignHCenter
-            width: playerTitles.width
-            wrapMode: TextEdit.WordWrap
-            font.pointSize: 25
-            color: Colors.mainText
-//            hasClearButton: true
-            maximumLineCount: 3
-         }
-/*         TextEdit {
-            id: txt
-            anchors.top: mymeta.top
-            anchors.topMargin: 20
             horizontalAlignment: Text.AlignHCenter
             width: playerTitles.width
             wrapMode: Text.WordWrap
             font.pointSize: 25
             color: Colors.mainText
-         }*/
+            maximumLineCount: 3
+         }
       }
 
       Rectangle {
@@ -217,7 +185,6 @@ Rectangle {
             }
 
             Tltp.ToolTip.visible: pressed
-//            Tltp.ToolTip.delay: 1000
             Tltp.ToolTip.text: i18n.tr("Search station")
          }
 
@@ -252,7 +219,6 @@ Rectangle {
             }
 
             Tltp.ToolTip.visible: pressed
-//            Tltp.ToolTip.delay: 1000
             Tltp.ToolTip.text: i18n.tr("Set/Unset favourite")
          }
 
@@ -280,7 +246,6 @@ Rectangle {
             }
 
             Tltp.ToolTip.visible: pressed
-//            Tltp.ToolTip.delay: 1000
             Tltp.ToolTip.text: i18n.tr("Add station")
          }
       }
