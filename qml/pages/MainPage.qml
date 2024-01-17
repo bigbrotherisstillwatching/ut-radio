@@ -470,23 +470,17 @@ Rectangle {
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.WordWrap
                textSize: Label.Small
-/*               MouseArea {
+               MouseArea {
                   anchors.fill: parent
                   onClicked: {
-                     Functions.removeFavourite(favouriteModel.get(index).stationID)
+                     txt.text = favouriteModel.get(index).name
                   }
-               }*/
+               }
             }
          }
          actions: Action {
-            iconName: "delete"
-            text: i18n.tr("Delete station")
-         }
-         MouseArea {
-            anchors.fill: parent
-            onClicked: {
-               txt.text = favouriteModel.get(index).name
-            }
+            iconName: "tag"
+            text: i18n.tr("Show name")
          }
       }
    }
