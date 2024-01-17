@@ -431,6 +431,7 @@ Rectangle {
                height: width
 //               color: pressed ? "blue" : "lightblue"
                anchors.horizontalCenter: parent.horizontalCenter
+               anchors.topMargin: 10
             }
             Label {
                text: action.text// + "#" + index
@@ -438,6 +439,7 @@ Rectangle {
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.WordWrap
                textSize: Label.Small
+               anchors.topMargin: 10
             }
          }
          actions: Action {
