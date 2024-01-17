@@ -447,7 +447,7 @@ Rectangle {
             text: i18n.tr("Delete station")
             onTriggered: {
 //               Functions.removeFavourite(stationID)
-               txt.text = favList.favouriteModel.get(index).name
+               txt.text = favList.model.get(index).name
             }
          }
       }
