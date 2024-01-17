@@ -404,7 +404,7 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: actionsList1
-         property var trailingActions1: ({ trailingActions: 'actionsList2' })
+         property alias trailingActions1: trailingActions.actionsList2
 
          SlotsLayout {
             id: layout
