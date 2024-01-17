@@ -319,13 +319,17 @@ Rectangle {
          leadingActions: ListItemActions {
             actions: [
                Action {
-//                  iconName: "delete"
+                  iconName: "delete"
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
-                  keywords: "Test"
-                  description: "Test"
-                  text: "Test"
+                  Label {
+                     text: "Test"
+                     width: parent.width
+                     horizontalAlignment: Text.AlignHCenter
+                     wrapMode: Text.WordWrap
+                     textSize: Label.Small
+                  }
                }
             ]
          }
