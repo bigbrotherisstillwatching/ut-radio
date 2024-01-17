@@ -323,13 +323,7 @@ Rectangle {
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
-                  Label {
-                     text: "Test"
-                     width: parent.width
-                     horizontalAlignment: Text.AlignHCenter
-                     wrapMode: Text.WordWrap
-                     textSize: Label.Small
-                  }
+               Label { text: "Test" width: parent.width horizontalAlignment: Text.AlignHCenter wrapMode: Text.WordWrap textSize: Label.Small }
                }
             ]
          }
