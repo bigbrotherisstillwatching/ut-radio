@@ -405,6 +405,21 @@ Rectangle {
 
          leadingActions: actionsList1
          trailingActions: actionsList2
+
+         SlotsLayout {
+            id: layout
+            mainSlot: Label {
+               text: name
+               color: Colors.mainText
+            }
+            Image {
+               source: image
+               SlotsLayout.position: SlotsLayout.Leading;
+               width: units.gu(4)
+               height: units.gu(4)
+               asynchronous: true
+            }
+         }
       }
       ListItemActions {
          id: actionsList1
@@ -426,20 +441,6 @@ Rectangle {
          actions: Action {
             iconName: "starred"
             text: "Star"
-         }
-      }
-      SlotsLayout {
-         id: layout
-         mainSlot: Label {
-            text: name
-            color: Colors.mainText
-         }
-         Image {
-            source: image
-            SlotsLayout.position: SlotsLayout.Leading;
-            width: units.gu(4)
-            height: units.gu(4)
-            asynchronous: true
          }
       }
    }
