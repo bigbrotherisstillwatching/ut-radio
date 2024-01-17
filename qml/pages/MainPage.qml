@@ -436,6 +436,7 @@ Rectangle {
                text: action.text// + "#" + index
                width: parent.width
                horizontalAlignment: Text.AlignHCenter
+               wrapMode: Text.WordWrap
             }
          }
          actions: Action {
