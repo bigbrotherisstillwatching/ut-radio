@@ -431,12 +431,6 @@ Rectangle {
                height: width
 //               color: pressed ? "blue" : "lightblue"
                anchors.horizontalCenter: parent.horizontalCenter
-               MouseArea {
-                  anchors.fill: parent
-                  onClicked: {
-                     txt.text = favouriteModel.get(index).name
-                  }
-               }
             }
             Label {
                text: action.text + "#" + index
@@ -444,6 +438,12 @@ Rectangle {
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.WordWrap
                textSize: Label.Small
+               MouseArea {
+                  anchors.fill: parent
+                  onClicked: {
+                     txt.text = favouriteModel.get(index).name
+                  }
+               }
             }
          }
          actions: Action {
