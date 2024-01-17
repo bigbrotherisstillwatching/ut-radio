@@ -6,6 +6,7 @@ import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import Process 1.0
 import QtQuick.Controls 2.7 as Tltp
+import QtQuick.Controls.Styles 2.7 as TxtArStls
 
 import "../net"
 import "../util"
@@ -131,7 +132,7 @@ Rectangle {
             font.pointSize: 25
             color: Colors.mainText
             maximumLineCount: 3
-            Tltp.style: Tltp.TextAreaStyle {
+            TxtArStls.style: TxtArStls.TextAreaStyle {
                backgroundColor: "transparent"
             }
          }
