@@ -433,7 +433,8 @@ Rectangle {
                anchors.horizontalCenter: parent.horizontalCenter
             }
             Label {
-               text: action.text + "#" + index
+//               text: action.text + "#" + index
+               text: action.text
                width: parent.width
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.WordWrap
@@ -441,7 +442,6 @@ Rectangle {
                MouseArea {
                   anchors.fill: parent
                   onClicked: {
-//                     txt.text = favouriteModel.get(index).name
                      Functions.removeFavourite(favouriteModel.get(index).stationID)
                   }
                }
@@ -450,6 +450,43 @@ Rectangle {
          actions: Action {
             iconName: "delete"
             text: i18n.tr("Delete station")
+         }
+      }
+      ListItemActions {
+         id: actionsList2
+         delegate: Column {
+            width: height + units.gu(2)
+            Icon {
+               name: action.iconName
+               width: units.gu(3)
+               height: width
+//               color: pressed ? "blue" : "lightblue"
+               anchors.horizontalCenter: parent.horizontalCenter
+            }
+            Label {
+//               text: action.text + "#" + index
+               text: action.text
+               width: parent.width
+               horizontalAlignment: Text.AlignHCenter
+               wrapMode: Text.WordWrap
+               textSize: Label.Small
+/*               MouseArea {
+                  anchors.fill: parent
+                  onClicked: {
+                     Functions.removeFavourite(favouriteModel.get(index).stationID)
+                  }
+               }*/
+            }
+         }
+         actions: Action {
+            iconName: "delete"
+            text: i18n.tr("Delete station")
+            MouseArea {
+                  anchors.fill: parent
+                  onClicked: {
+                     txt.text = favouriteModel.get(index).name
+                  }
+            }
          }
       }
    }
