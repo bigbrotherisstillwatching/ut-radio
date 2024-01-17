@@ -433,6 +433,7 @@ Rectangle {
                anchors.horizontalCenter: parent.horizontalCenter
             }
             Label {
+               id: label1
                text: action.text + "#" + index
                width: parent.width
                horizontalAlignment: Text.AlignHCenter
@@ -446,7 +447,7 @@ Rectangle {
             onTriggered: {
 //               Functions.removeFavourite(favouriteModel.get(favList.model.index).stationID)
 //               txt.text = favouriteModel.get(favList.model.index).name
-               txt.text = favouriteModel.get(favList.index).name
+               txt.text = favouriteModel.get(label1.index).name
             }
          }
       }
