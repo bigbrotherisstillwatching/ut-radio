@@ -320,9 +320,6 @@ Rectangle {
             actions: [
                Action {
                   iconName: "delete"
-                  Rectangle {
-                     text: "Test"
-                  }
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
