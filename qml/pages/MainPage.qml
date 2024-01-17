@@ -431,6 +431,12 @@ Rectangle {
                height: width
 //               color: pressed ? "blue" : "lightblue"
                anchors.horizontalCenter: parent.horizontalCenter
+               MouseArea {
+                  anchors.fill: parent
+                  onClicked: {
+                     txt.text = favouriteModel.get(index).name
+                  }
+               }
             }
             Label {
                text: action.text + "#" + index
@@ -445,7 +451,7 @@ Rectangle {
             text: i18n.tr("Delete station")
             onTriggered: {
 //               Functions.removeFavourite(favouriteModel.get(favList.model.index).stationID)
-               txt.text = favouriteModel.get(favList.model.index).name
+//               txt.text = favouriteModel.get(favList.model.index).name
 //               txt.text = favouriteModel.get(actionsList1.index).name
             }
          }
