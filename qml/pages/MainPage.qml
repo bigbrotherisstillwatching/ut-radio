@@ -6,7 +6,7 @@ import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import Process 1.0
 import QtQuick.Controls 2.7 as Tltp
-import QtQuick.Controls.Styles 2.7 as TxtArStls
+import QtQuick.Controls.Styles 1.4 as TxtArStls
 
 import "../net"
 import "../util"
