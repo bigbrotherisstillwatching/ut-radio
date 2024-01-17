@@ -453,7 +453,7 @@ Rectangle {
          }
       }
       ListItemActions {
-         id: trailingActions1.trailingActions
+         id: trailingActions1
          delegate: Column {
             width: height + units.gu(2)
             Icon {
