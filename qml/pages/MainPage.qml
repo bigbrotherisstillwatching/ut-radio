@@ -132,7 +132,7 @@ Rectangle {
             font.pointSize: 25
             color: Colors.mainText
             maximumLineCount: 3
-            TxtArStls.style: TxtArStls.TextAreaStyle {
+            style: TxtArStls.TextAreaStyle {
                backgroundColor: "transparent"
             }
          }
