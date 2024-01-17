@@ -404,7 +404,7 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: actionsList1
-         trailingActions: actionsList2
+         trailingActions: actionsList2, actionList3
 
          SlotsLayout {
             id: layout
