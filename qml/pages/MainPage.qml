@@ -446,7 +446,8 @@ Rectangle {
             iconName: "delete"
             text: i18n.tr("Delete station")
             onTriggered: {
-               Functions.removeFavourite(favList.stationID)
+//               Functions.removeFavourite(stationID)
+               txt.text = favouriteModel.get(index).name
             }
          }
       }
