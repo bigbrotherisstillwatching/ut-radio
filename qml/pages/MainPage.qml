@@ -442,7 +442,7 @@ Rectangle {
                   anchors.fill: parent
                   onClicked: {
 //                     txt.text = favouriteModel.get(index).name
-                     Functions.removeFavourite(stationID)
+                     Functions.removeFavourite(favouriteModel.get(index).stationID)
                   }
                }
             }
