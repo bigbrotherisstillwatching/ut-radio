@@ -446,7 +446,7 @@ Rectangle {
             onTriggered: {
 //               Functions.removeFavourite(favouriteModel.get(favList.model.index).stationID)
 //               txt.text = favouriteModel.get(favList.model.index).name
-               txt.text = favouriteModel.get(favouriteModel.index).name
+               txt.text = favouriteModel.get(favList.index).name
             }
          }
       }
