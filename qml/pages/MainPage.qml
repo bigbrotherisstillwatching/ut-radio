@@ -424,7 +424,6 @@ Rectangle {
       ListItemActions {
          id: actionsList1
          delegate: Column {
-            id: column1
             width: height + units.gu(2)
             Icon {
                name: action.iconName
@@ -447,7 +446,7 @@ Rectangle {
             onTriggered: {
 //               Functions.removeFavourite(favouriteModel.get(favList.model.index).stationID)
 //               txt.text = favouriteModel.get(favList.model.index).name
-               txt.text = favouriteModel.get(column1.index).name
+               txt.text = favouriteModel.get(actionsList1.index).name
             }
          }
       }
