@@ -444,7 +444,10 @@ Rectangle {
          }
          actions: Action {
             iconName: "delete"
-            text: i18n.tr("Delete station aaaaaaaaaaaaaa aaaaaaaaaaaaaa")
+            text: i18n.tr("Delete station")
+            onTriggered: {
+               Functions.removeFavourite(stationID)
+            }
          }
       }
    }
