@@ -441,7 +441,8 @@ Rectangle {
                MouseArea {
                   anchors.fill: parent
                   onClicked: {
-                     txt.text = favouriteModel.get(index).name
+//                     txt.text = favouriteModel.get(index).name
+                     Functions.removeFavourite(stationID)
                   }
                }
             }
@@ -449,11 +450,6 @@ Rectangle {
          actions: Action {
             iconName: "delete"
             text: i18n.tr("Delete station")
-//            onTriggered: {
-//               Functions.removeFavourite(favouriteModel.get(favList.model.index).stationID)
-//               txt.text = favouriteModel.get(favList.model.index).name
-//               txt.text = favouriteModel.get(actionsList1.index).name
-//            }
          }
       }
    }
