@@ -439,15 +439,14 @@ Rectangle {
                wrapMode: Text.WordWrap
                textSize: Label.Small
             }
-//         }
-            actions: Action {
-               iconName: "delete"
-               text: i18n.tr("Delete station")
-               onTriggered: {
+         }
+         actions: Action {
+            iconName: "delete"
+            text: i18n.tr("Delete station")
+            onTriggered: {
 //               Functions.removeFavourite(favouriteModel.get(favList.model.index).stationID)
 //               txt.text = favouriteModel.get(favList.model.index).name
-                  txt.text = favouriteModel.get(index).name
-               }
+               txt.text = favouriteModel.get(index).name
             }
          }
       }
