@@ -429,18 +429,18 @@ Rectangle {
                name: action.iconName
                width: units.gu(3)
                height: width
-               color: pressed ? "blue" : "lightblue"
+//               color: pressed ? "blue" : "lightblue"
                anchors.horizontalCenter: parent.horizontalCenter
             }
             Label {
-               text: action.text + "#" + index
+               text: action.text// + "#" + index
                width: parent.width
                horizontalAlignment: Text.AlignHCenter
             }
          }
          actions: Action {
-            iconName: "starred"
-            text: "Star"
+            iconName: "delete"
+            text: i18n.tr("Delete station")
          }
       }
    }
