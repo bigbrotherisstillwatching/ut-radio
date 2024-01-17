@@ -428,6 +428,20 @@ Rectangle {
             text: "Star"
          }
       }
+      SlotsLayout {
+         id: layout
+         mainSlot: Label {
+            text: name
+            color: Colors.mainText
+         }
+         Image {
+            source: image
+            SlotsLayout.position: SlotsLayout.Leading;
+            width: units.gu(4)
+            height: units.gu(4)
+            asynchronous: true
+         }
+      }
    }
             
 
