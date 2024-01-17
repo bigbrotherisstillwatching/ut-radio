@@ -404,7 +404,7 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: actionsList1
-         trailingActions: [actionsList2, actionsList3]
+         property var trailingActions1: ({ trailingActions: 'actionsList2' })
 
          SlotsLayout {
             id: layout
@@ -453,7 +453,7 @@ Rectangle {
          }
       }
       ListItemActions {
-         id: actionsList2
+         id: trailingActions1.trailingActions
          delegate: Column {
             width: height + units.gu(2)
             Icon {
