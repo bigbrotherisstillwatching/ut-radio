@@ -319,7 +319,7 @@ Rectangle {
          leadingActions: ListItemActions {
             actions: [
                Action {
-                  iconName: "delete"
+//                  iconName: "delete"
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
