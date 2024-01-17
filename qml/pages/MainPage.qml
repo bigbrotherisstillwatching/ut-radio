@@ -131,6 +131,9 @@ Rectangle {
             font.pointSize: 25
             color: Colors.mainText
             maximumLineCount: 3
+            Tltp.style: Tltp.TextAreaStyle {
+               backgroundColor: "transparent"
+            }
          }
       }
 
