@@ -481,11 +481,11 @@ Rectangle {
          actions: Action {
             iconName: "delete"
             text: i18n.tr("Delete station")
-            MouseArea {
-                  anchors.fill: parent
-                  onClicked: {
-                     txt.text = favouriteModel.get(index).name
-                  }
+         }
+         MouseArea {
+            anchors.fill: parent
+            onClicked: {
+               txt.text = favouriteModel.get(index).name
             }
          }
       }
