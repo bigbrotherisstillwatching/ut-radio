@@ -437,6 +437,7 @@ Rectangle {
                width: parent.width
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.WordWrap
+               textSize: Label.Small
             }
          }
          actions: Action {
