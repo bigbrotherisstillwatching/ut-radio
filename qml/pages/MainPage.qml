@@ -320,10 +320,12 @@ Rectangle {
             actions: [
                Action {
                   iconName: "delete"
+                  text: "Test"
+                  description: "Test"
+                  keywords: "Test"
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
-               Label { text: "Test" width: parent.width horizontalAlignment: Text.AlignHCenter wrapMode: Text.WordWrap textSize: Label.Small }
                }
             ]
          }
