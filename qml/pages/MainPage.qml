@@ -296,7 +296,7 @@ Rectangle {
       }
    }
 
-/*   ListView {
+   ListView {
       id: favList
       anchors.top: playerControls.bottom
       anchors.topMargin: padding/2
@@ -323,6 +323,9 @@ Rectangle {
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
+                  keywords: "Test"
+                  description: "Test"
+                  text: "Test"
                }
             ]
          }
@@ -381,9 +384,9 @@ Rectangle {
             }
          }
       }
-   }*/
+   }
 
-   LomiriListView {
+/*   LomiriListView {
       id: favList
       anchors.top: playerControls.bottom
       anchors.topMargin: padding/2
@@ -451,7 +454,7 @@ Rectangle {
             }
          }
       }
-   }
+   }*/
             
 
    // *******************************************************************
