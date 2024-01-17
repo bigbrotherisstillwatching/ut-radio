@@ -433,7 +433,7 @@ Rectangle {
                anchors.horizontalCenter: parent.horizontalCenter
             }
             Label {
-               text: action.text// + "#" + index
+               text: action.text + "#" + index
                width: parent.width
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.WordWrap
@@ -446,7 +446,7 @@ Rectangle {
             onTriggered: {
 //               Functions.removeFavourite(favouriteModel.get(favList.model.index).stationID)
 //               txt.text = favouriteModel.get(favList.model.index).name
-               txt.text = favouriteModel.get(favouriteModel.index).name
+//               txt.text = favouriteModel.get(favouriteModel.index).name
             }
          }
       }
