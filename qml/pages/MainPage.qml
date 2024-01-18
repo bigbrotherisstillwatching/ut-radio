@@ -319,7 +319,7 @@ Rectangle {
          leadingActions: ListItemActions {
             actions: [
                Tltp.Action {
-                  iconName: "delete"
+                  icon.name: "delete"
                   text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
