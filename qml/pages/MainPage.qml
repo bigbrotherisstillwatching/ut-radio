@@ -406,6 +406,7 @@ Rectangle {
 
          leadingActions: ListItemActions {
             delegate: Rectangle {//Column {
+               anchors.fill: parent
                width: height
                color: Colors.surfaceColor
                Icon {
