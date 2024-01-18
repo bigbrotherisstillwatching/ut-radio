@@ -318,6 +318,10 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: ListItemActions {
+            delegate: Rectangle {
+               anchors.fill: parent
+               color: Colors.surfaceColor
+            }
             actions: [
                Action {
                   iconName: "delete"
