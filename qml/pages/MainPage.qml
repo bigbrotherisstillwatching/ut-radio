@@ -405,11 +405,9 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: ListItemActions {
-            delegate: Column {
+            delegate: Rectangle {//Column {
                width: height
-               Rectangle {
-                  color: Colors.surfaceColor
-               }
+               color: Colors.surfaceColor
                Icon {
                   name: action.iconName
                   width: units.gu(3)
