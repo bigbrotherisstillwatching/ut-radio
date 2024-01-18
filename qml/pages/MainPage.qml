@@ -439,7 +439,7 @@ Rectangle {
          }
          trailingActions: ListItemActions {
             delegate: Rectangle { //Column {
-               id: actRect2
+               id: actRec2
 //               topPadding: 10
                width: height
                color: Colors.surfaceColor
@@ -450,8 +450,8 @@ Rectangle {
                   anchors.horizontalCenter: parent.horizontalCenter
                }*/
                Label {
-//                  anchors.centerIn: actRec2
-                  verticalAlignment: Text.AlignVCenter
+                  anchors.centerIn: actRec2
+//                  verticalAlignment: Text.AlignVCenter
                   color: Colors.mainText
                   text: action.text
                   width: parent.width
