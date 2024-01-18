@@ -422,7 +422,7 @@ Rectangle {
                   color: Colors.mainText
                   text: action.text
                   width: parent.width
-//                  horizontalAlignment: Text.AlignHCenter
+                  horizontalAlignment: Text.AlignHCenter
                   textSize: Label.XSmall
                   wrapMode: Text.WordWrap
                }
