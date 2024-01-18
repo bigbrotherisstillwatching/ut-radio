@@ -405,9 +405,11 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: ListItemActions {
-            delegate: Column {
-               topPadding: 10
-               width: height
+            delegate: Rectangle { //Column {
+//               topPadding: 10
+//               width: height
+               width: 10
+               height: 10
                Icon {
                   name: action.iconName
                   width: units.gu(3)
