@@ -407,21 +407,22 @@ Rectangle {
          leadingActions: ListItemActions {
             delegate: Rectangle {
                color: Colors.surfaceColor
+               }
                Column {
-                  width: height
-                  Icon {
-                     name: action.iconName
-                     width: units.gu(3)
-                     height: width
-                     anchors.horizontalCenter: parent.horizontalCenter
-                  }
-                  Label {
-                     text: action.text
-                     width: parent.width
-                     horizontalAlignment: Text.AlignHCenter
-                     textSize: Label.XSmall
-                     wrapMode: Text.WordWrap
-                  }
+               topPadding: 10
+               width: height
+               Icon {
+                  name: action.iconName
+                  width: units.gu(3)
+                  height: width
+                  anchors.horizontalCenter: parent.horizontalCenter
+               }
+               Label {
+                  text: action.text
+                  width: parent.width
+                  horizontalAlignment: Text.AlignHCenter
+                  textSize: Label.XSmall
+                  wrapMode: Text.WordWrap
                }
             }
             actions: [
