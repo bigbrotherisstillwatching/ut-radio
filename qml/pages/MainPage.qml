@@ -296,7 +296,7 @@ Rectangle {
       }
    }
 
-/*   ListView {
+   ListView {
       id: favList
       anchors.top: playerControls.bottom
       anchors.topMargin: padding/2
@@ -318,8 +318,9 @@ Rectangle {
 
          leadingActions: ListItemActions {
             actions: [
-               Action {
+               Tltp.Action {
                   iconName: "delete"
+                  text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
@@ -381,111 +382,7 @@ Rectangle {
             }
          }
       }
-   }*/
-
-   LomiriListView {
-      id: favList
-      anchors.top: playerControls.bottom
-      anchors.topMargin: padding/2
-      anchors.left: parent.left
-      anchors.right: parent.right
-      anchors.bottom: parent.bottom
-      clip: true
-
-      model: favouriteModel
-
-      delegate: ListItem {
-         height: layout.height + (divider.visible ? divider.height : 0)
-         color: Colors.surfaceColor
-         divider.colorFrom: Colors.borderColor
-         divider.colorTo: Colors.borderColor
-         highlightColor: Colors.highlightColor
-
-         onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
-
-         leadingActions: actionsList1
-         trailingActions: actionsList2
-
-         SlotsLayout {
-            id: layout
-            mainSlot: Label {
-               text: name
-               color: Colors.mainText
-            }
-            Image {
-               source: image
-               SlotsLayout.position: SlotsLayout.Leading;
-               width: units.gu(4)
-               height: units.gu(4)
-               asynchronous: true
-            }
-         }
-      }
-
-      ListItemActions {
-         id: actionsList1
-         delegate: Column {
-            width: height + units.gu(2)
-            Icon {
-               name: action.iconName
-               width: units.gu(3)
-               height: width
-//               color: pressed ? "blue" : "lightblue"
-               anchors.horizontalCenter: parent.horizontalCenter
-            }
-            Label {
-//               text: action.text + "#" + index
-               text: action.text
-               width: parent.width
-               horizontalAlignment: Text.AlignHCenter
-               wrapMode: Text.WordWrap
-               textSize: Label.Small
-               MouseArea {
-                  anchors.fill: parent
-                  onClicked: {
-                     Functions.removeFavourite(favouriteModel.get(index).stationID)
-                  }
-               }
-            }
-         }
-         actions: Action {
-            iconName: "delete"
-            text: i18n.tr("Delete station")
-         }
-      }
-      ListItemActions {
-         id: actionsList2
-         delegate: Column {
-            width: height + units.gu(2)
-            Icon {
-               name: action.iconName
-               width: units.gu(3)
-               height: width
-//               color: pressed ? "blue" : "lightblue"
-               anchors.horizontalCenter: parent.horizontalCenter
-            }
-            Label {
-//               text: action.text + "#" + index
-//               text: action.text
-               width: parent.width
-               horizontalAlignment: Text.AlignHCenter
-               wrapMode: Text.WordWrap
-               textSize: Label.Small
-               MouseArea {
-                  anchors.fill: parent
-                  onClicked: {
-                     txt.text = favouriteModel.get(index).name
-                  }
-               }
-            }
-         }
-         actions: Action {
-            iconName: "tag"
-            keywords: i18n.tr("Show name")
-         }
-      }
    }
-            
 
    // *******************************************************************
    // Init
