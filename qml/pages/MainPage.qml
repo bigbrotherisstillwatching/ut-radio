@@ -432,7 +432,7 @@ Rectangle {
                iconName: "tag"
                text: i18n.tr("Show name")
             }
-         }, ListItemActions {
+         } ListItemActions {
             delegate: Column {
                width: height + units.gu(2)
                Icon {
