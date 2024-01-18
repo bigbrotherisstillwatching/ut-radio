@@ -406,7 +406,10 @@ Rectangle {
 
          leadingActions: ListItemActions {
             delegate: Column {
-               width: height// + units.gu(2)
+               width: height
+               Rectangle {
+                  color: Colors.surfaceColor
+               }
                Icon {
                   name: action.iconName
                   width: units.gu(3)
@@ -433,7 +436,7 @@ Rectangle {
          }
          trailingActions: ListItemActions {
             delegate: Column {
-               width: height// + units.gu(2)
+               width: height
                Icon {
                   name: action.iconName
                   width: units.gu(3)
