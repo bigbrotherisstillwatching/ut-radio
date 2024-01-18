@@ -411,18 +411,18 @@ Rectangle {
                width: height
 //               anchors.fill: parent
                color: Colors.surfaceColor
-               Icon {
+/*               Icon {
                   name: action.iconName
                   width: units.gu(3)
                   height: width
                   anchors.horizontalCenter: parent.horizontalCenter
-               }
+               }*/
                Label {
                   anchors.centerIn: actRec
                   color: Colors.mainText
                   text: action.text
                   width: parent.width
-                  horizontalAlignment: Text.AlignHCenter
+//                  horizontalAlignment: Text.AlignHCenter
                   textSize: Label.XSmall
                   wrapMode: Text.WordWrap
                }
