@@ -297,6 +297,93 @@ Rectangle {
       }
    }
 
+/*   ListView {
+      id: favList
+      anchors.top: playerControls.bottom
+      anchors.topMargin: padding/2
+      anchors.left: parent.left
+      anchors.right: parent.right
+      anchors.bottom: parent.bottom
+      clip: true
+
+      model: favouriteModel
+
+      delegate: ListItem {
+         height: layout.height + (divider.visible ? divider.height : 0)
+         color: Colors.surfaceColor
+         divider.colorFrom: Colors.borderColor
+         divider.colorTo: Colors.borderColor
+         highlightColor: Colors.highlightColor
+
+         onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
+
+         leadingActions: ListItemActions {
+            actions: [
+               Action {
+                  iconName: "delete"
+                  onTriggered: {
+                     Functions.removeFavourite(stationID)
+                  }
+               }
+            ]
+         }
+         trailingActions: ListItemActions {
+            actions: [
+               Action {
+                  iconName: "tag"
+                  onTriggered: {
+                     txt.text = favouriteModel.get(index).name
+                  }
+               },
+               Action {
+                  iconName: "save"
+                  onTriggered: {
+                     Functions.changeName(favouriteModel.get(index).name, txt.text)
+                  }
+               },
+               Action {
+                  iconName: "stock_link"
+                  onTriggered: {
+                     txt.text = favouriteModel.get(index).url
+                  }
+               },
+               Action {
+                  iconName: "save"
+                  onTriggered: {
+                     Functions.changeUrl(favouriteModel.get(index).url, txt.text)
+                  }
+               },
+               Action {
+                  iconName: "stock_image"
+                  onTriggered: {
+                     txt.text = favouriteModel.get(index).image
+                  }
+               },
+               Action {
+                  iconName: "save"
+                  onTriggered: {
+                     Functions.changeImage(favouriteModel.get(index).image, txt.text)
+                  }
+               }
+            ]
+         }
+         SlotsLayout {
+            id: layout
+            mainSlot: Label {
+               text: name
+               color: Colors.mainText
+            }
+            Image {
+               source: image
+               SlotsLayout.position: SlotsLayout.Leading;
+               width: units.gu(4)
+               height: units.gu(4)
+               asynchronous: true
+            }
+         }
+      }
+   }*/
+
    ListView {
       id: favList
       anchors.top: playerControls.bottom
@@ -318,13 +405,25 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: ListItemActions {
-            delegate: Rectangle {
-               anchors.fill: parent
-               color: Colors.surfaceColor
+            delegate: Column {
+               width: height + units.gu(2)
+               Icon {
+                  name: action.iconName
+                  width: units.gu(3)
+                  height: width
+//                  color: pressed ? "blue" : "lightblue"
+                  anchors.horizontalCenter: parent.horizontalCenter
+               }
+               Label {
+                  text: action.text + "#" + index
+                  width: parent.width
+                  horizontalAlignment: Text.AlignHCenter
+               }
             }
             actions: [
                Action {
                   iconName: "delete"
+                  text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
