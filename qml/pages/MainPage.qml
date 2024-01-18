@@ -406,19 +406,19 @@ Rectangle {
 
          leadingActions: ListItemActions {
             delegate: Rectangle { //Column {
+               id: actRec
 //               topPadding: 10
-               width: height+10
+               width: height
 //               anchors.fill: parent
                color: Colors.surfaceColor
                Icon {
-//                  y: -10
                   name: action.iconName
                   width: units.gu(3)
                   height: width
                   anchors.horizontalCenter: parent.horizontalCenter
                }
                Label {
-//                  y: -50
+                  anchors.bottom: actRec.bottom
                   text: action.text
                   width: parent.width
                   horizontalAlignment: Text.AlignHCenter
