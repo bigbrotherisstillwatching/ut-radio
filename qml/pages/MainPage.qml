@@ -415,9 +415,10 @@ Rectangle {
                   anchors.horizontalCenter: parent.horizontalCenter
                }
                Label {
-                  text: action.text + "#" + index
+                  text: action.text// + "#" + index
                   width: parent.width
                   horizontalAlignment: Text.AlignHCenter
+                  textSize: Label.Small
                }
             }
             actions: [
