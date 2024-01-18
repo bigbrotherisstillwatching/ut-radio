@@ -442,7 +442,7 @@ Rectangle {
                id: actRec2
 //               topPadding: 10
                width: height
-               color: Colors.surfaceColor
+               color: color: pressed ? Colors.highlightColor : Colors.surfaceColor
 /*               Icon {
                   name: action.iconName
                   width: units.gu(3)
