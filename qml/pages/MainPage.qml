@@ -411,14 +411,14 @@ Rectangle {
                   name: action.iconName
                   width: units.gu(3)
                   height: width
-//                  color: pressed ? "blue" : "lightblue"
                   anchors.horizontalCenter: parent.horizontalCenter
                }
                Label {
-                  text: action.text// + "#" + index
+                  text: action.text
                   width: parent.width
                   horizontalAlignment: Text.AlignHCenter
                   textSize: Label.Small
+                  wrapMode: Text.WordWrap
                }
             }
             actions: [
@@ -432,39 +432,61 @@ Rectangle {
             ]
          }
          trailingActions: ListItemActions {
+            delegate: Column {
+               width: height + units.gu(2)
+               Icon {
+                  name: action.iconName
+                  width: units.gu(3)
+                  height: width
+                  anchors.horizontalCenter: parent.horizontalCenter
+               }
+               Label {
+                  text: action.text
+                  width: parent.width
+                  horizontalAlignment: Text.AlignHCenter
+                  textSize: Label.Small
+                  wrapMode: Text.WordWrap
+               }
+            }
             actions: [
                Action {
                   iconName: "tag"
+                  text: i18n.tr("Show name")
                   onTriggered: {
                      txt.text = favouriteModel.get(index).name
                   }
                },
                Action {
                   iconName: "save"
+                  text: i18n.tr("Save name")
                   onTriggered: {
                      Functions.changeName(favouriteModel.get(index).name, txt.text)
                   }
                },
                Action {
                   iconName: "stock_link"
+                  text: i18n.tr("Show stream URL")
                   onTriggered: {
                      txt.text = favouriteModel.get(index).url
                   }
                },
                Action {
                   iconName: "save"
+                  text: i18n.tr("Save stream URL")
                   onTriggered: {
                      Functions.changeUrl(favouriteModel.get(index).url, txt.text)
                   }
                },
                Action {
                   iconName: "stock_image"
+                  text: i18n.tr("Show image URL")
                   onTriggered: {
                      txt.text = favouriteModel.get(index).image
                   }
                },
                Action {
                   iconName: "save"
+                  text: i18n.tr("Save image URL")
                   onTriggered: {
                      Functions.changeImage(favouriteModel.get(index).image, txt.text)
                   }
