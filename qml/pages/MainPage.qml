@@ -408,16 +408,17 @@ Rectangle {
             delegate: Rectangle { //Column {
 //               topPadding: 10
 //               width: height
+               anchors.fill: parent
                color: Colors.surfaceColor
                Icon {
-                  y: -10
+//                  y: -10
                   name: action.iconName
                   width: units.gu(3)
                   height: width
                   anchors.horizontalCenter: parent.horizontalCenter
                }
                Label {
-                  y: -50
+//                  y: -50
                   text: action.text
                   width: parent.width
                   horizontalAlignment: Text.AlignHCenter
