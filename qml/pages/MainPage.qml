@@ -404,62 +404,7 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: actionsList1
-         trailingActions: [ListItemActions {
-//            id: actionsList2
-            delegate: Column {
-               width: height + units.gu(2)
-               Icon {
-                  name: action.iconName
-                  width: units.gu(3)
-                  height: width
-                  anchors.horizontalCenter: parent.horizontalCenter
-               }
-               Label {
-                  text: action.text
-                  width: parent.width
-                  horizontalAlignment: Text.AlignHCenter
-                  wrapMode: Text.WordWrap
-                  textSize: Label.Small
-                  MouseArea {
-                     anchors.fill: parent
-                     onClicked: {
-                     txt.text = favouriteModel.get(index).name
-                     }
-                  }
-               }
-            }
-            actions: Action {
-               iconName: "tag"
-               text: i18n.tr("Show name")
-            }
-         }, ListItemActions {
-            delegate: Column {
-               width: height + units.gu(2)
-               Icon {
-                  name: action.iconName
-                  width: units.gu(3)
-                  height: width
-                  anchors.horizontalCenter: parent.horizontalCenter
-               }
-               Label {
-                  text: action.text
-                  width: parent.width
-                  horizontalAlignment: Text.AlignHCenter
-                  wrapMode: Text.WordWrap
-                  textSize: Label.Small
-                  MouseArea {
-                     anchors.fill: parent
-                     onClicked: {
-                     txt.text = favouriteModel.get(index).name
-                     }
-                  }
-               }
-            }
-            actions: Action {
-               iconName: "tag"
-               text: i18n.tr("Show name")
-            }
-         }]
+         trailingActions: actionsList2
 
          SlotsLayout {
             id: layout
@@ -508,7 +453,7 @@ Rectangle {
             text: i18n.tr("Delete station")
          }
       }
-/*      ListItemActions {
+      ListItemActions {
          id: actionsList2
          delegate: Column {
             width: height + units.gu(2)
@@ -521,7 +466,7 @@ Rectangle {
             }
             Label {
 //               text: action.text + "#" + index
-               text: action.text
+//               text: action.text
                width: parent.width
                horizontalAlignment: Text.AlignHCenter
                wrapMode: Text.WordWrap
@@ -538,7 +483,7 @@ Rectangle {
             iconName: "tag"
             text: i18n.tr("Show name")
          }
-      }*/
+      }
    }
             
 
