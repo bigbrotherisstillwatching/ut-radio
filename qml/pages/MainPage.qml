@@ -409,15 +409,15 @@ Rectangle {
 //               topPadding: 10
 //               width: height
                color: Colors.surfaceColor
-               width: 10
-               height: 10
                Icon {
+                  y: -10
                   name: action.iconName
                   width: units.gu(3)
                   height: width
                   anchors.horizontalCenter: parent.horizontalCenter
                }
                Label {
+                  y: -50
                   text: action.text
                   width: parent.width
                   horizontalAlignment: Text.AlignHCenter
