@@ -410,7 +410,7 @@ Rectangle {
 //               topPadding: 10
                width: height
 //               anchors.fill: parent
-               color: Colors.surfaceColor
+               color: pressed ? Colors.highlightColor : Colors.surfaceColor
 /*               Icon {
                   name: action.iconName
                   width: units.gu(3)
