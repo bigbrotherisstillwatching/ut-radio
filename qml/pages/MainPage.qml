@@ -434,6 +434,7 @@ Rectangle {
          }
          trailingActions: ListItemActions {
             delegate: Column {
+               topPadding: 10
                width: height
                Icon {
                   name: action.iconName
