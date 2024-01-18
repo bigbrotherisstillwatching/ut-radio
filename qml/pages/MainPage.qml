@@ -296,7 +296,7 @@ Rectangle {
       }
    }
 
-   ListView {
+   LomiriListView {
       id: favList
       anchors.top: playerControls.bottom
       anchors.topMargin: padding/2
@@ -318,8 +318,8 @@ Rectangle {
 
          leadingActions: ListItemActions {
             actions: [
-               Tltp.Action {
-                  icon.name: "delete"
+               Action {
+                  iconName: "delete"
                   text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
