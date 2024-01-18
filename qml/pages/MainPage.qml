@@ -450,7 +450,8 @@ Rectangle {
                   anchors.horizontalCenter: parent.horizontalCenter
                }*/
                Label {
-                  anchors.centerIn: actRec2
+//                  anchors.centerIn: actRec2
+                  verticalAlignment: Text.AlignVCenter
                   color: Colors.mainText
                   text: action.text
                   width: parent.width
