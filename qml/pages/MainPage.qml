@@ -404,7 +404,7 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: actionsList1
-         trailingActions: ListItemActions {
+         trailingActions: [ListItemActions {
 //            id: actionsList2
             delegate: Column {
                width: height + units.gu(2)
@@ -432,7 +432,7 @@ Rectangle {
                iconName: "tag"
                text: i18n.tr("Show name")
             }
-         } ListItemActions {
+         }, ListItemActions {
             delegate: Column {
                width: height + units.gu(2)
                Icon {
@@ -459,7 +459,7 @@ Rectangle {
                iconName: "tag"
                text: i18n.tr("Show name")
             }
-         }
+         }]
 
          SlotsLayout {
             id: layout
