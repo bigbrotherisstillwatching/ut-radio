@@ -408,6 +408,7 @@ Rectangle {
             delegate: Rectangle { //Column {
 //               topPadding: 10
 //               width: height
+               color: Colors.surfaceColor
                width: 10
                height: 10
                Icon {
