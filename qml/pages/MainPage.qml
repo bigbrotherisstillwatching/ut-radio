@@ -406,7 +406,6 @@ Rectangle {
 
          leadingActions: ListItemActions {
             delegate: Column {
-               opacity: 0.0
                width: height
                Icon {
                   name: action.iconName
