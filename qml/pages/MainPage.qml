@@ -291,12 +291,13 @@ Rectangle {
 
          Button {
             text: i18n.tr("What's playing?")
+            color: Colors.surfaceColor
             onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
          }
       }
    }
 
-   LomiriListView {
+   ListView {
       id: favList
       anchors.top: playerControls.bottom
       anchors.topMargin: padding/2
@@ -320,7 +321,6 @@ Rectangle {
             actions: [
                Action {
                   iconName: "delete"
-                  text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                   }
