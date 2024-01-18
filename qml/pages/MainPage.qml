@@ -418,8 +418,10 @@ Rectangle {
                   text: action.text
                   width: parent.width
                   horizontalAlignment: Text.AlignHCenter
+                  verticalAlignment: Text.AlignVCenter
                   textSize: Label.XSmall
                   wrapMode: Text.WordWrap
+                  color: Colors.mainText
                }
             }
             actions: [
