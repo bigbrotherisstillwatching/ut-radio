@@ -405,14 +405,33 @@ Rectangle {
 
          leadingActions: actionsList1
          trailingActions: ListItemActions {
-            actions: [
-               Action {
-                  id: actionsList2
-               },
-               Action {
-                  id: actionsList3
+//            id: actionsList2
+            delegate: Column {
+               width: height + units.gu(2)
+               Icon {
+                  name: action.iconName
+                  width: units.gu(3)
+                  height: width
+                  anchors.horizontalCenter: parent.horizontalCenter
                }
-            ]
+               Label {
+                  text: action.text
+                  width: parent.width
+                  horizontalAlignment: Text.AlignHCenter
+                  wrapMode: Text.WordWrap
+                  textSize: Label.Small
+                  MouseArea {
+                     anchors.fill: parent
+                     onClicked: {
+                     txt.text = favouriteModel.get(index).name
+                     }
+                  }
+               }
+            }
+            actions: Action {
+               iconName: "tag"
+               text: i18n.tr("Show name")
+            }
          }
 
          SlotsLayout {
@@ -430,6 +449,7 @@ Rectangle {
             }
          }
       }
+
       ListItemActions {
          id: actionsList1
          delegate: Column {
@@ -461,7 +481,7 @@ Rectangle {
             text: i18n.tr("Delete station")
          }
       }
-      ListItemActions {
+/*      ListItemActions {
          id: actionsList2
          delegate: Column {
             width: height + units.gu(2)
@@ -491,7 +511,7 @@ Rectangle {
             iconName: "tag"
             text: i18n.tr("Show name")
          }
-      }
+      }*/
    }
             
 
