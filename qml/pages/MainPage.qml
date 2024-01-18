@@ -481,7 +481,7 @@ Rectangle {
          }
          actions: Action {
             iconName: "tag"
-            text: i18n.tr("Show name")
+            description: i18n.tr("Show name")
          }
       }
    }
