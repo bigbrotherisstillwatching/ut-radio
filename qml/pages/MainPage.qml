@@ -481,7 +481,7 @@ Rectangle {
          }
          actions: Action {
             iconName: "tag"
-            description: i18n.tr("Show name")
+            keywords: i18n.tr("Show name")
          }
       }
    }
