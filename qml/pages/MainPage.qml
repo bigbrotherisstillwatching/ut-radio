@@ -406,7 +406,7 @@ Rectangle {
 
          leadingActions: ListItemActions {
             delegate: Column {
-               width: height + units.gu(2)
+               width: height// + units.gu(2)
                Icon {
                   name: action.iconName
                   width: units.gu(3)
