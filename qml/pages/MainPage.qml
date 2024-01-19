@@ -102,7 +102,6 @@ Rectangle {
 
          ScrollableText {
             id: stationText
-            anchors.horizontalCenter: parent.horizontalCenter
             font.bold: true
             color: Colors.mainText
             width: playerTitles.width
@@ -111,8 +110,7 @@ Rectangle {
          }
          ScrollableText {
             id: stationTitleText
-            horizontalAlignment: Text.AlignHCenter
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.leftMargin: 50
             width: playerTitles.width
 
             displayText: mainPage.textForStatus()
