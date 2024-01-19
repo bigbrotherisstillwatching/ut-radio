@@ -100,17 +100,18 @@ Rectangle {
          width: parent.width
          spacing: units.gu(1)
 
-            ScrollableText {
-               id: stationText
-               anchors.horizontalCenter: parent.horizontalCenter
-               font.bold: true
-               color: Colors.mainText
-               width: playerTitles.width
+         ScrollableText {
+            id: stationText
+            anchors.horizontalCenter: parent.horizontalCenter
+            font.bold: true
+            color: Colors.mainText
+            width: playerTitles.width
 
-               displayText: lastStation && lastStation.name || i18n.tr("No station")
-            }
+            displayText: lastStation && lastStation.name || i18n.tr("No station")
+         }
          ScrollableText {
             id: stationTitleText
+            horizontalAlignment: Text.AlignHCenter
             anchors.horizontalCenter: parent.horizontalCenter
             width: playerTitles.width
 
