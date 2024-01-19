@@ -90,13 +90,15 @@ Rectangle {
       id: playerControls
       anchors.top: parent.top
       anchors.topMargin: mainPage.padding
-      anchors.horizontalCenter: parent.horizontalCenter
+//      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.horizontalCenter: mainPage.horizontalCenter
       width: parent.width * 0.9
       spacing: mainPage.padding
 
       Column {
          id: playerTitles
-         anchors.horizontalCenter: parent.horizontalCenter
+//         anchors.horizontalCenter: parent.horizontalCenter
+         anchors.horizontalCenter: mainPage.horizontalCenter
          width: parent.width
          spacing: units.gu(1)
 
@@ -110,7 +112,6 @@ Rectangle {
          }
          ScrollableText {
             id: stationTitleText
-            anchors.horizontalCenter: playerControls.horizontalCenter
             width: playerTitles.width
 
             displayText: mainPage.textForStatus()
