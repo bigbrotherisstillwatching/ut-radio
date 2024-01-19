@@ -90,15 +90,13 @@ Rectangle {
       id: playerControls
       anchors.top: parent.top
       anchors.topMargin: mainPage.padding
-//      anchors.horizontalCenter: parent.horizontalCenter
-      anchors.horizontalCenter: mainPage.horizontalCenter
+      anchors.horizontalCenter: parent.horizontalCenter
       width: parent.width * 0.9
       spacing: mainPage.padding
 
       Column {
          id: playerTitles
-//         anchors.horizontalCenter: parent.horizontalCenter
-         anchors.horizontalCenter: mainPage.horizontalCenter
+         anchors.horizontalCenter: parent.horizontalCenter      
          width: parent.width
          spacing: units.gu(1)
 
