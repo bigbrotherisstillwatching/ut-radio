@@ -110,7 +110,6 @@ Rectangle {
          }
          ScrollableText {
             id: stationTitleText
-            anchors.leftMargin: 100
             width: playerTitles.width
 
             displayText: mainPage.textForStatus()
