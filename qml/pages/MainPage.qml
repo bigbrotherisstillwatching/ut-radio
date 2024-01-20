@@ -271,7 +271,7 @@ Rectangle {
 
          Text {
             anchors.verticalCenter: parent.verticalCenter
-            text: favouriteModel.count + " " + i18n.tr("Favourites")
+            text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
             color: Colors.mainText
             font.bold: true
 //            visible: favouriteModel.count
