@@ -450,7 +450,12 @@ Rectangle {
 //                  iconName: "delete"
                   text: i18n.tr("Delete")
                   onTriggered: {
-                     Functions.removeFavourite(stationID)
+//                     Functions.removeFavourite(stationID)
+                       lastStation.favourite = !lastStation.favourite
+/*                       favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
+
+                       if (!lastStation.favourite)
+                       Functions.removeFavourite(lastStation.stationID)*/
                   }
                }
             ]
