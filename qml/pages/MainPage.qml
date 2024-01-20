@@ -297,8 +297,7 @@ Rectangle {
             }
          }
 
-//         Button {
-         AbstractButton {
+         Button {
             id: metaButton
             text: i18n.tr("What's playing?")
             color: Colors.surfaceColor
