@@ -266,7 +266,8 @@ Rectangle {
          Rectangle {
             height: units.gu(2)
             width: units.gu(2)
-            color: "transparent"
+//            color: "transparent"
+            color: "red"
          }
 
          Text {
@@ -302,7 +303,8 @@ Rectangle {
          Rectangle {
             height: units.gu(2)
             width: units.gu(2)
-            color: "transparent"
+//            color: "transparent"
+            color: "red"
          }
       }
    }
