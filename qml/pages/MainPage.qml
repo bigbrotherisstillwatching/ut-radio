@@ -137,6 +137,7 @@ Rectangle {
             style: ActionBarStyle {
                backgroundColor: "transparent"
             }
+            placeholderText: i18n.tr("Metadata is shown here. You can edit Station name and URL as well as the image URL by swiping to the left in the station list.")
          }
       }
 
