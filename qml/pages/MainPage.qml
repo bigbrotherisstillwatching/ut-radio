@@ -266,12 +266,14 @@ Rectangle {
          Rectangle {
             height: units.gu(2)
 //            width: units.gu(2)
-            width: units.gu(6)
+//            width: units.gu(6)
+            width: metaButton.length
 //            color: "transparent"
             color: "red"
          }
 
          Text {
+            id: favText
             anchors.verticalCenter: parent.verticalCenter
             text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
             color: Colors.mainText
@@ -296,6 +298,7 @@ Rectangle {
          }
 
          Button {
+            id: metaButton
             text: i18n.tr("What's playing?")
             color: Colors.surfaceColor
             onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
@@ -304,7 +307,8 @@ Rectangle {
          Rectangle {
             height: units.gu(2)
 //            width: units.gu(2)
-            width: units.gu(6.6)
+//            width: units.gu(6.6)
+            width: favText.length
 //            color: "transparent"
             color: "red"
          }
