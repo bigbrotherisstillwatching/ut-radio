@@ -267,7 +267,7 @@ Rectangle {
             height: units.gu(2)
 //            width: units.gu(2)
 //            width: units.gu(6)
-            width: metaButton.text.length
+            width: metaButton.text.contentWidth
 //            color: "transparent"
             color: "red"
          }
@@ -308,7 +308,7 @@ Rectangle {
             height: units.gu(2)
 //            width: units.gu(2)
 //            width: units.gu(6.6)
-            width: favText.text.length
+            width: favText.text.contentWidth
 //            color: "transparent"
             color: "red"
          }
