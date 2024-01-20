@@ -108,12 +108,10 @@ Rectangle {
 
             displayText: lastStation && lastStation.name || i18n.tr("No station")
          }
-//         ScrollableText {
          Text {
             id: stationTitleText
             width: playerTitles.width
 
-//            displayText: mainPage.textForStatus()
             text: mainPage.textForStatus()
             horizontalAlignment: Text.AlignHCenter
             color: Colors.detailText
@@ -146,16 +144,10 @@ Rectangle {
          width: mainPage.width * 0.6
          height: mainPage.width * 0.6
          anchors.horizontalCenter: parent.horizontalCenter
-//         color: Colors.backgroundColor
          color: "transparent"
-
-//         border.width: 1
-//         border.color: Colors.borderColor
 
          Icon {
             anchors.topMargin: 200
-//            anchors.leftMargin: 80
-//            anchors.rightMargin: 80
             anchors.bottomMargin: -50
             anchors.fill: parent
             name: "stock_music"
@@ -164,8 +156,6 @@ Rectangle {
 
          Image {
             anchors.topMargin: 200
-//            anchors.leftMargin: 80
-//            anchors.rightMargin: 80
             anchors.bottomMargin: -50
             anchors.fill: parent
             visible: lastStation && lastStation.image || false
@@ -261,15 +251,11 @@ Rectangle {
       Row {
          anchors.horizontalCenter: parent.horizontalCenter
          spacing: mainPage.padding
-//         rightPadding: 65
 
          Rectangle {
             height: units.gu(2)
-//            width: units.gu(2)
-//            width: units.gu(6)
             width: metaButton.width
             color: "transparent"
-//            color: "red"
          }
 
          Text {
@@ -278,7 +264,6 @@ Rectangle {
             text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
             color: Colors.mainText
             font.bold: true
-//            visible: favouriteModel.count
          }
 
          Icon {
@@ -306,101 +291,11 @@ Rectangle {
 
          Rectangle {
             height: units.gu(2)
-//            width: units.gu(2)
-//            width: units.gu(6.6)
             width: favText.contentWidth
             color: "transparent"
-//            color: "red"
          }
       }
    }
-
-/*   ListView {
-      id: favList
-      anchors.top: playerControls.bottom
-      anchors.topMargin: padding/2
-      anchors.left: parent.left
-      anchors.right: parent.right
-      anchors.bottom: parent.bottom
-      clip: true
-
-      model: favouriteModel
-
-      delegate: ListItem {
-         height: layout.height + (divider.visible ? divider.height : 0)
-         color: Colors.surfaceColor
-         divider.colorFrom: Colors.borderColor
-         divider.colorTo: Colors.borderColor
-         highlightColor: Colors.highlightColor
-
-         onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
-
-         leadingActions: ListItemActions {
-            actions: [
-               Action {
-                  iconName: "delete"
-                  onTriggered: {
-                     Functions.removeFavourite(stationID)
-                  }
-               }
-            ]
-         }
-         trailingActions: ListItemActions {
-            actions: [
-               Action {
-                  iconName: "tag"
-                  onTriggered: {
-                     txt.text = favouriteModel.get(index).name
-                  }
-               },
-               Action {
-                  iconName: "save"
-                  onTriggered: {
-                     Functions.changeName(favouriteModel.get(index).name, txt.text)
-                  }
-               },
-               Action {
-                  iconName: "stock_link"
-                  onTriggered: {
-                     txt.text = favouriteModel.get(index).url
-                  }
-               },
-               Action {
-                  iconName: "save"
-                  onTriggered: {
-                     Functions.changeUrl(favouriteModel.get(index).url, txt.text)
-                  }
-               },
-               Action {
-                  iconName: "stock_image"
-                  onTriggered: {
-                     txt.text = favouriteModel.get(index).image
-                  }
-               },
-               Action {
-                  iconName: "save"
-                  onTriggered: {
-                     Functions.changeImage(favouriteModel.get(index).image, txt.text)
-                  }
-               }
-            ]
-         }
-         SlotsLayout {
-            id: layout
-            mainSlot: Label {
-               text: name
-               color: Colors.mainText
-            }
-            Image {
-               source: image
-               SlotsLayout.position: SlotsLayout.Leading;
-               width: units.gu(4)
-               height: units.gu(4)
-               asynchronous: true
-            }
-         }
-      }
-   }*/
 
    ListView {
       id: favList
@@ -423,18 +318,10 @@ Rectangle {
          onClicked: mainPage.setLastStation(JSON.parse(JSON.stringify(favouriteModel.get(index))))
 
          leadingActions: ListItemActions {
-            delegate: Rectangle { //Column {
+            delegate: Rectangle {
                id: actRec
-//               topPadding: 10
                width: height
-//               anchors.fill: parent
                color: pressed ? Colors.highlightColor : Colors.surfaceColor
-/*               Icon {
-                  name: action.iconName
-                  width: units.gu(3)
-                  height: width
-                  anchors.horizontalCenter: parent.horizontalCenter
-               }*/
                Label {
                   anchors.centerIn: actRec
                   color: Colors.mainText
@@ -447,34 +334,22 @@ Rectangle {
             }
             actions: [
                Action {
-//                  iconName: "delete"
                   text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
                      lastStation.favourite = !lastStation.favourite
                      favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
-
-/*                     if (!lastStation.favourite)
-                        Functions.removeFavourite(lastStation.stationID)*/
                   }
                }
             ]
          }
          trailingActions: ListItemActions {
-            delegate: Rectangle { //Column {
+            delegate: Rectangle {
                id: actRec2
-//               topPadding: 10
                width: height
                color: pressed ? Colors.highlightColor : Colors.surfaceColor
-/*               Icon {
-                  name: action.iconName
-                  width: units.gu(3)
-                  height: width
-                  anchors.horizontalCenter: parent.horizontalCenter
-               }*/
                Label {
                   anchors.centerIn: actRec2
-//                  verticalAlignment: Text.AlignVCenter
                   color: Colors.mainText
                   text: action.text
                   width: parent.width
@@ -485,42 +360,36 @@ Rectangle {
             }
             actions: [
                Action {
-//                  iconName: "tag"
                   text: i18n.tr("Show name")
                   onTriggered: {
                      txt.text = favouriteModel.get(index).name
                   }
                },
                Action {
-//                  iconName: "save"
                   text: i18n.tr("Save name")
                   onTriggered: {
                      Functions.changeName(favouriteModel.get(index).name, txt.text)
                   }
                },
                Action {
-//                  iconName: "stock_link"
                   text: i18n.tr("Show stream URL")
                   onTriggered: {
                      txt.text = favouriteModel.get(index).url
                   }
                },
                Action {
-//                  iconName: "save"
                   text: i18n.tr("Save stream URL")
                   onTriggered: {
                      Functions.changeUrl(favouriteModel.get(index).url, txt.text)
                   }
                },
                Action {
-//                  iconName: "stock_image"
                   text: i18n.tr("Show image URL")
                   onTriggered: {
                      txt.text = favouriteModel.get(index).image
                   }
                },
                Action {
-//                  iconName: "save"
                   text: i18n.tr("Save image URL")
                   onTriggered: {
                      Functions.changeImage(favouriteModel.get(index).image, txt.text)
