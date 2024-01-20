@@ -128,7 +128,6 @@ Rectangle {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
-            anchors.leftMargin : 50
             horizontalAlignment: TextEdit.AlignHCenter
             width: playerTitles.width
             wrapMode: TextEdit.Wrap
