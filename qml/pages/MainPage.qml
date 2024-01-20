@@ -128,9 +128,9 @@ Rectangle {
             id: txt
             anchors.top: mymeta.top
             anchors.topMargin: 20
-            horizontalAlignment: Text.AlignHCenter
+            horizontalAlignment: TextEdit.AlignHCenter
             width: playerTitles.width
-            wrapMode: Text.WordWrap
+            wrapMode: TextEdit.Wrap
             font.pointSize: 25
             color: Colors.mainText
             maximumLineCount: 3
