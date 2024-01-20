@@ -304,7 +304,7 @@ Rectangle {
          Rectangle {
             height: units.gu(2)
 //            width: units.gu(2)
-            width: units.gu(6.5)
+            width: units.gu(6.6)
 //            color: "transparent"
             color: "red"
          }
