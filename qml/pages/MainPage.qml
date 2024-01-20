@@ -265,7 +265,8 @@ Rectangle {
 
          Rectangle {
             height: units.gu(2)
-            width: units.gu(2)
+//            width: units.gu(2)
+            width: units.gu(6)
 //            color: "transparent"
             color: "red"
          }
@@ -302,7 +303,8 @@ Rectangle {
 
          Rectangle {
             height: units.gu(2)
-            width: units.gu(2)
+//            width: units.gu(2)
+            width: units.gu(6)
 //            color: "transparent"
             color: "red"
          }
