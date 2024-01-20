@@ -275,8 +275,7 @@ Rectangle {
          Text {
             id: favText
             anchors.verticalCenter: parent.verticalCenter
-//            text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
-            text: "Favourites" + " (" + favouriteModel.count + ")"
+            text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
             color: Colors.mainText
             font.bold: true
 //            visible: favouriteModel.count
@@ -300,8 +299,7 @@ Rectangle {
 
          Button {
             id: metaButton
-//            text: i18n.tr("What's playing?")
-            text: "What's playing?"
+            text: i18n.tr("What's playing?")
             color: Colors.surfaceColor
             onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
          }
