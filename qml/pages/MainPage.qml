@@ -451,7 +451,6 @@ Rectangle {
                   text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
-                     favIcon.iconName = lastStation.favourite ? "non-starred" : "starred"
                   }
                }
             ]
