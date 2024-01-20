@@ -9,7 +9,7 @@
             "desktop":  "Radio.desktop"
         }
     },
-    "version": "1.4.3",
-    "maintainer": "patrickjane <mg.m@gmx.net>",
+    "version": "1.4.4",
+    "maintainer": "bbisw",
     "framework" : "@CLICK_FRAMEWORK@"
 }
