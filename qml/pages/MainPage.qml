@@ -261,7 +261,7 @@ Rectangle {
       Row {
          anchors.horizontalCenter: parent.horizontalCenter
          spacing: mainPage.padding
-         rightPadding: 65
+//         rightPadding: 65
 
          Rectangle {
             height: units.gu(2)
@@ -271,10 +271,10 @@ Rectangle {
 
          Text {
             anchors.verticalCenter: parent.verticalCenter
-            text: i18n.tr("Favourites")
+            text: i18n.tr("Favourites") + favouriteModel.count
             color: Colors.mainText
             font.bold: true
-            visible: favouriteModel.count
+//            visible: favouriteModel.count
          }
 
          Icon {
