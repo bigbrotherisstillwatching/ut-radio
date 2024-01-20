@@ -116,6 +116,7 @@ Rectangle {
 //            displayText: mainPage.textForStatus()
             text: mainPage.textForStatus()
             horizontalAlignment: Text.AlignHCenter
+            color: Colors.detailText
          }
       }
 
