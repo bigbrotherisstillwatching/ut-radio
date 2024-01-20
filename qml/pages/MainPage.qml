@@ -271,7 +271,7 @@ Rectangle {
 
          Text {
             anchors.verticalCenter: parent.verticalCenter
-            text: i18n.tr("Favourites") + " " + favouriteModel.count
+            text: i18n.tr("Favourites:") + " " + favouriteModel.count
             color: Colors.mainText
             font.bold: true
 //            visible: favouriteModel.count
@@ -282,7 +282,7 @@ Rectangle {
             height: units.gu(2)
             width: units.gu(2)
             anchors.verticalCenter: parent.verticalCenter
-            anchors.horizontalCenter: playerControls.horizontalCenter
+            anchors.horizontalCenter: mainPage.horizontalCenter
 
             name: "settings"
 
