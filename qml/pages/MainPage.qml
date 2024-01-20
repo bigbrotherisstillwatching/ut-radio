@@ -267,7 +267,7 @@ Rectangle {
             height: units.gu(2)
 //            width: units.gu(2)
 //            width: units.gu(6)
-            width: metaButton.text.contentWidth
+            width: metaButton.width
 //            color: "transparent"
             color: "red"
          }
@@ -297,7 +297,8 @@ Rectangle {
             }
          }
 
-         Button {
+//         Button {
+         AbstractButton {
             id: metaButton
             text: i18n.tr("What's playing?")
             color: Colors.surfaceColor
@@ -308,7 +309,7 @@ Rectangle {
             height: units.gu(2)
 //            width: units.gu(2)
 //            width: units.gu(6.6)
-            width: favText.text.contentWidth
+            width: favText.contentWidth
 //            color: "transparent"
             color: "red"
          }
