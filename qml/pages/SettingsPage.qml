@@ -73,7 +73,7 @@ Rectangle {
                   id: l2
                   mainSlot: Text {
                      anchors.verticalCenter: parent.verticalCenter
-                     text: i18n.tr("Dark mode:")
+                     text: i18n.tr("Dark mode")
                      color: Colors.mainText
                   }
                   Switch {
