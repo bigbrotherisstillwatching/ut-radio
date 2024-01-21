@@ -108,13 +108,11 @@ Rectangle {
 
             displayText: lastStation && lastStation.name || i18n.tr("No station")
          }
-         Text {
+         ScrollableText {
             id: stationTitleText
             width: playerTitles.width
 
-            text: mainPage.textForStatus()
-            horizontalAlignment: Text.AlignHCenter
-            color: Colors.detailText
+            displayText: mainPage.textForStatus()
          }
       }
 
