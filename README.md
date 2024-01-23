@@ -28,5 +28,5 @@ Licensed under the MIT license
   
 -it is an unconfined app with full access to the system  
 -only for arm64     
--better backup ~/.config/radio.s710/radio.s710.conf just    in case something goes wrong
+-better backup ~/.config/radio.s710/radio.s710.conf just    in case something goes wrong      
 -still has errors, don't download
