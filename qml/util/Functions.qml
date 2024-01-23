@@ -178,4 +178,14 @@ Item {
       }
       settings.setValue("favouriteStations", JSON.stringify(u).replace(Qt.md5(oldurl), Qt.md5(newurl)))
    }
+
+   function genRandomString(length) {
+      var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      var charLength = chars.length;
+      var result = '';
+      for ( var i = 0; i < length; i++ ) {
+         result += chars.charAt(Math.floor(Math.random() * charLength));
+      }
+      return result;
+   }
 }
