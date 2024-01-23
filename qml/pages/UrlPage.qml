@@ -143,12 +143,7 @@ Rectangle {
                            stationID: Qt.md5(urlField.text),
                            url: urlField.text,
                            name: nameField.text,
-                           if (imageField.text === "") {
-                              image: Functions.genRandomString(30),
-                           else
-                              image: imageField.text,
-                           }
-//                           image: imageField.text,
+                           image: imageField.text,
                            manual: true,
                            favourite: Functions.hasFavourite(Qt.md5(urlField.text))
                         }
