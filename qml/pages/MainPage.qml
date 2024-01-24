@@ -379,7 +379,7 @@ Rectangle {
                Action {
                   text: i18n.tr("Save stream URL")
                   onTriggered: {
-                     Functions.changeUrl(favouriteModel.get(index).url, txt.text)
+                     Functions.changeUrl(favouriteModel.get(index).stationID, favouriteModel.get(index).url, txt.text)
                   }
                },
                Action {
