@@ -83,7 +83,7 @@ Item {
       return s.hasOwnProperty(stationID)
    }
 
-   function changeName(stationID, newname) {
+   function changeName(sttnID, newname) {
       var s
 
       try {
@@ -95,14 +95,14 @@ Item {
       for (var i = 0; i < favouriteModel.count; i++) {
          var stationName = favouriteModel.get(i)
 
-         if (stationName.stationID === stationID) {
+         if (stationName.stationID === sttnID) {
             favouriteModel.setProperty(i, "name", newname)
             break
          }
       }
 
       for (var i in s) {
-         if (s[i].stationID === stationID) {
+         if (s[i].stationID === sttnID) {
             s[i].name = newname
             break
          }
@@ -111,7 +111,7 @@ Item {
       settings.setValue("favouriteStations", JSON.stringify(s))
    }
 
-   function changeImage(stationID, newimage) {
+   function changeImage(sttnID, newimage) {
       var s
 
       try {
@@ -123,14 +123,14 @@ Item {
       for (var i = 0; i < favouriteModel.count; i++) {
          var stationImage = favouriteModel.get(i)
 
-         if (stationImage.stationID === stationID) {
+         if (stationImage.stationID === sttnID) {
             favouriteModel.setProperty(i, "image", newimage)
             break
          }
       }
 
       for (var i in s) {
-         if (s[i].stationID === stationID) {
+         if (s[i].stationID === sttnID) {
             s[i].image = newimage
             break
          }
@@ -139,7 +139,7 @@ Item {
       settings.setValue("favouriteStations", JSON.stringify(s))
    }
 
-   function changeUrl(oldurl, newurl) {
+   function changeUrl(sttnID, oldurl, newurl) {
       var s
 
       try {
@@ -147,6 +147,11 @@ Item {
       } catch (e) {
          s = {}
       }
+
+/*      if (s[sttnID]) {
+         Notify.warning(i18n.tr("Favourites"), i18n.tr("URL for station has already been added as favourite"))
+         return
+      }*/
 
       for (var i = 0; i < favouriteModel.count; i++) {
          var stationUrl = favouriteModel.get(i)
