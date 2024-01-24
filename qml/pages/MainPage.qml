@@ -392,7 +392,8 @@ Rectangle {
                Action {
                   text: i18n.tr("Save image URL")
                   onTriggered: {
-                     Functions.changeImage(favouriteModel.get(index).image, txt.text)
+//                     Functions.changeImage(favouriteModel.get(index).image, txt.text)
+                     Functions.changeImage(favouriteModel.get(index).stationID, txt.text)
                   }
                }
             ]
