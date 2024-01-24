@@ -136,7 +136,7 @@ Rectangle {
                   mainSlot: Button {
                      id: buttonLogin
                      text: i18n.tr("Open stream")
-                     enabled: urlField.text.length && nameField.text.length && imageField.text.length
+                     enabled: urlField.text.length && nameField.text.length
 
                      onClicked: {
                         var station = {
