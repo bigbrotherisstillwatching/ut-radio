@@ -367,7 +367,8 @@ Rectangle {
                Action {
                   text: i18n.tr("Save name")
                   onTriggered: {
-                     Functions.changeName(favouriteModel.get(index).name, txt.text)
+//                     Functions.changeName(favouriteModel.get(index).name, txt.text)
+                     Functions.changeName(favouriteModel.get(index).stationID, txt.text)
                   }
                },
                Action {
