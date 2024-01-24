@@ -131,7 +131,7 @@ Item {
       settings.setValue("favouriteStations", JSON.stringify(s))
    }
 
-   function changeImage(oldimage, newimage) {
+/*   function changeImage(oldimage, newimage) {
       var s
 
       try {
@@ -149,6 +149,34 @@ Item {
          }
       }
       settings.setValue("favouriteStations", JSON.stringify(s).replace(oldimage, newimage))
+   }*/
+
+   function changeImage(stationID, newimage) {
+      var s
+
+      try {
+         s = JSON.parse(settings.value("favouriteStations"))
+      } catch (e) {
+         s = {}
+      }
+
+      for (var i = 0; i < favouriteModel.count; i++) {
+         var stationImage = favouriteModel.get(i)
+
+         if (stationImage.stationID === stationID) {
+            favouriteModel.setProperty(i, "image", newimage)
+            break
+         }
+      }
+
+      for (var i in s) {
+         if (s[i].stationID === stationID) {
+            s[i].image = newimage
+            break
+         }
+      }
+
+      settings.setValue("favouriteStations", JSON.stringify(s))
    }
 
    function changeUrl(oldurl, newurl) {
@@ -205,15 +233,5 @@ Item {
          }
       }
       settings.setValue("favouriteStations", JSON.stringify(u).replace(Qt.md5(oldurl), Qt.md5(newurl)))
-   }
-
-   function genRandomString(length) {
-      var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-      var charLength = chars.length;
-      var result = '';
-      for ( var i = 0; i < length; i++ ) {
-         result += chars.charAt(Math.floor(Math.random() * charLength));
-      }
-      return result;
    }
 }
