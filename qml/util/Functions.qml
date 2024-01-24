@@ -83,7 +83,7 @@ Item {
       return s.hasOwnProperty(stationID)
    }
 
-   function changeName(oldname, newname) {
+/*   function changeName(oldname, newname) {
       var s
 
       try {
@@ -101,6 +101,34 @@ Item {
          }
       }
       settings.setValue("favouriteStations", JSON.stringify(s).replace(oldname, newname))
+   }*/
+
+   function changeName(stationID, newname) {
+      var s
+
+      try {
+         s = JSON.parse(settings.value("favouriteStations"))
+      } catch (e) {
+         s = {}
+      }
+
+      for (var i = 0; i < favouriteModel.count; i++) {
+         var stationName = favouriteModel.get(i)
+
+         if (stationName.stationID === stationID) {
+            favouriteModel.setProperty(i, "name", newname)
+            break
+         }
+      }
+
+      for (var i in s) {
+         if (s[i].stationID === stationID) {
+            s[i].name = newname
+            break
+         }
+      }
+
+      settings.setValue("favouriteStations", JSON.stringify(s))
    }
 
    function changeImage(oldimage, newimage) {
