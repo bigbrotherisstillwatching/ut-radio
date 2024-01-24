@@ -150,6 +150,7 @@ Item {
 
       if (s[sttnID]) {
          Notify.warning(i18n.tr("Favourites"), i18n.tr("URL for station has already been added as favourite"))
+//         settings.setValue("favouriteStations", JSON.stringify(s))
          return
       }
 
