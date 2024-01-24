@@ -367,7 +367,6 @@ Rectangle {
                Action {
                   text: i18n.tr("Save name")
                   onTriggered: {
-//                     Functions.changeName(favouriteModel.get(index).name, txt.text)
                      Functions.changeName(favouriteModel.get(index).stationID, txt.text)
                   }
                },
@@ -392,7 +391,6 @@ Rectangle {
                Action {
                   text: i18n.tr("Save image URL")
                   onTriggered: {
-//                     Functions.changeImage(favouriteModel.get(index).image, txt.text)
                      Functions.changeImage(favouriteModel.get(index).stationID, txt.text)
                   }
                }
