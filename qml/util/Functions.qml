@@ -83,26 +83,6 @@ Item {
       return s.hasOwnProperty(stationID)
    }
 
-/*   function changeName(oldname, newname) {
-      var s
-
-      try {
-         s = JSON.parse(settings.value("favouriteStations"))
-      } catch (e) {
-         s = {}
-      }
-
-      for (var i = 0; i < favouriteModel.count; i++) {
-         var stationName = favouriteModel.get(i)
-
-         if (stationName.name === oldname) {
-            favouriteModel.setProperty(i, "name", newname)
-            break
-         }
-      }
-      settings.setValue("favouriteStations", JSON.stringify(s).replace(oldname, newname))
-   }*/
-
    function changeName(stationID, newname) {
       var s
 
@@ -130,26 +110,6 @@ Item {
 
       settings.setValue("favouriteStations", JSON.stringify(s))
    }
-
-/*   function changeImage(oldimage, newimage) {
-      var s
-
-      try {
-         s = JSON.parse(settings.value("favouriteStations"))
-      } catch (e) {
-         s = {}
-      }
-
-      for (var i = 0; i < favouriteModel.count; i++) {
-         var stationImage = favouriteModel.get(i)
-
-         if (stationImage.image === oldimage) {
-            favouriteModel.setProperty(i, "image", newimage)
-            break
-         }
-      }
-      settings.setValue("favouriteStations", JSON.stringify(s).replace(oldimage, newimage))
-   }*/
 
    function changeImage(stationID, newimage) {
       var s
