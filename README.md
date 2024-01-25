@@ -26,7 +26,11 @@ Licensed under the MIT license
 
 ## Keep in mind that !!!
   
--it is an unconfined app with full access to the system  
+-it is an unconfined app with full access to the system    
 -only for arm64     
--better backup ~/.config/radio.s710/radio.s710.conf just    in case something goes wrong      
--still has errors, don't download
+-better backup ~/.config/radio.s710/radio.s710.conf just in case something goes wrong    
+
+## Download
+
+-you can try this artifact from Actions:
+(https://github.com/bigbrotherisstillwatching/ut-radio_metadata/actions/runs/7653594668/artifacts/1194486080)
