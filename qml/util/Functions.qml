@@ -157,7 +157,11 @@ Item {
       for (var i = 0; i < favouriteModel.count; i++) {
          var stationUrl = favouriteModel.get(i)
 
-         if (stationUrl.url === oldurl) {
+         if (stationUrl.url === newurl) {
+            Notify.warning(i18n.tr("Favourites"), i18n.tr("URL for station has already been added as favourite"))
+            settings.setValue("favouriteStations", JSON.stringify(s))
+            return
+         } else if (stationUrl.url === oldurl) {
             favouriteModel.setProperty(i, "url", newurl)
             break
          }
