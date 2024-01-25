@@ -32,7 +32,7 @@ jobs:
         run: |
          CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable build --verbose  --arch ${{ matrix.arch }}
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: always()
         with:
           name: "ut-radio-${{ matrix.arch }}--${{ matrix.build }}--click"
