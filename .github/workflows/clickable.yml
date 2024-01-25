@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.1.1
 #        with:
 #          submodules: recursive
       - name: Install Dependencies
@@ -32,7 +32,7 @@ jobs:
         run: |
          CLICKABLE_FRAMEWORK=ubuntu-sdk-20.04 clickable build --verbose  --arch ${{ matrix.arch }}
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.3.0
         if: always()
         with:
           name: "ut-radio-${{ matrix.arch }}--${{ matrix.build }}--click"
