@@ -148,12 +148,6 @@ Item {
          s = {}
       }
 
-/*      if (s[sttnID]) {
-         Notify.warning(i18n.tr("Favourites"), i18n.tr("URL for station has already been added as favourite"))
-         settings.setValue("favouriteStations", JSON.stringify(s))
-         return
-      }*/
-
       for (var i = 0; i < favouriteModel.count; i++) {
          var stationUrl = favouriteModel.get(i)
 
