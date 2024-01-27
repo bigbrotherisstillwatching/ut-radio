@@ -410,6 +410,25 @@ Rectangle {
                asynchronous: true
             }
          }
+         ListItemLayout {
+            id: modelLayout
+            title.text: modelData
+         }
+         color: dragMode ? "lightblue" : "lightgray"
+         onPressAndHold: ListView.view.ViewItems.dragMode =
+            !ListView.view.ViewItems.dragMode
+      }
+      ViewItems.onDragUpdated: {
+         if (event.status == ListItemDrag.Moving) {
+            event.accept = false;
+         } else if (event.status == ListItemDrag.Dropped) {
+            model.move(event.from, event.to, 1);
+         }
+      }
+      moveDisplaced: Transition {
+         LomiriNumberAnimation {
+            property: "y"
+         }
       }
    }
 
