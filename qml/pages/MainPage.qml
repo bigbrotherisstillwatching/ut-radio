@@ -423,7 +423,7 @@ Rectangle {
             event.accept = false;
          } else if (event.status == ListItemDrag.Dropped) {
             model.move(event.from, event.to, 1);
-            settings.setValue("favouriteStations", JSON.stringify(favouriteModel))
+//            settings.setValue("favouriteStations", JSON.stringify(favouriteModel))
          }
       }
       moveDisplaced: Transition {
