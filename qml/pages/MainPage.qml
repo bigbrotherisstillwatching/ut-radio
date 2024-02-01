@@ -412,7 +412,7 @@ Rectangle {
          }
          ListItemLayout {
             id: modelLayout
-            title.text: modelData
+//            title.text: modelData
          }
 //         color: dragMode ? "lightblue" : "lightgray"
          onPressAndHold: ListView.view.ViewItems.dragMode =
@@ -423,7 +423,7 @@ Rectangle {
             event.accept = false;
          } else if (event.status == ListItemDrag.Dropped) {
             model.move(event.from, event.to, 1);
-            settings.setValue("favouriteStations", JSON.stringify(favouriteModel))
+            settings.setValue("favouriteStations", JSON.stringify(JSON.parse(settings.value("favouriteStations"))))
          }
       }
       moveDisplaced: Transition {
