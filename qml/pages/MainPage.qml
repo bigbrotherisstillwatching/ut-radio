@@ -426,8 +426,8 @@ Rectangle {
             model.move(event.from, event.to, 1);
             var datamodel
             for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
-            favouriteStations = JSON.stringify(datamodel)
-//            settings.setValue("favouriteStations", JSON.stringify(datamodel))
+//            favouriteStations = JSON.stringify(datamodel)
+            settings.setValue("favouriteStations", JSON.stringify(datamodel))
          }
       }
       moveDisplaced: Transition {
