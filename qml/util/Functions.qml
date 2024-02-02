@@ -224,8 +224,9 @@ Item {
          });
       };
       sortArray(arr1, arr2);
-//      return Object.fromEntries(arr2);
+      /*return*/ 
+      const arr3 = Object.fromEntries(arr2);
 
-      settings.setValue("favouriteStations", JSON.stringify(Object.fromEntries(arr2)))
+      settings.setValue("favouriteStations", JSON.stringify(arr3))
    }
 }
