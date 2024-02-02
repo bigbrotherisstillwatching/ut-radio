@@ -7,6 +7,7 @@ import "../notify"
 
 Item {
    property var favouriteModel
+   property string datastore: ""
 
    Settings {
       id: settings
