@@ -432,6 +432,12 @@ Rectangle {
       }
    }
 
+   onClosing: {
+      var datamodel
+      for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
+      favouriteStations = JSON.stringify(datamodel)
+   }
+
    // *******************************************************************
    // Init
    // *******************************************************************
