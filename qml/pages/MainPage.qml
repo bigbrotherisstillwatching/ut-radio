@@ -34,7 +34,6 @@ Rectangle {
    Settings {
       id: settings
       property string lastStation: "{}"
-//      property string favouriteStations: "{}"
    }
 
    Timer {
@@ -424,10 +423,6 @@ Rectangle {
             event.accept = false;
          } else if (event.status == ListItemDrag.Dropped) {
             model.move(event.from, event.to, 1);
-            var datamodel = []
-            for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
-//            favouriteStations = JSON.stringify(datamodel)
-            settings.setValue("favouriteStations", JSON.stringify(datamodel))
          }
       }
       moveDisplaced: Transition {
@@ -436,13 +431,6 @@ Rectangle {
          }
       }
    }
-
-/*   Component.onDestruction: {
-      var datamodel
-      for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
-      favouriteStations = JSON.stringify(datamodel)
-      settings.setValue("favouriteStations", JSON.stringify(datamodel))
-   }*/
 
    // *******************************************************************
    // Init
