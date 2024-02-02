@@ -423,6 +423,7 @@ Rectangle {
             event.accept = false;
          } else if (event.status == ListItemDrag.Dropped) {
             model.move(event.from, event.to, 1);
+            Functions.changeOrder()
          }
       }
       moveDisplaced: Transition {
