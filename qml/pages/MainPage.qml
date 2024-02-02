@@ -361,7 +361,8 @@ Rectangle {
                Action {
                   text: i18n.tr("Show name")
                   onTriggered: {
-                     txt.text = favouriteModel.get(index).name
+//                     txt.text = favouriteModel.get(index).name
+                     txt.text = favouriteModel.get(index).key
                   }
                },
                Action {
