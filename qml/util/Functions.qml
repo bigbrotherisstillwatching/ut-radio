@@ -204,16 +204,17 @@ Item {
 
    for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
 //   datastore = JSON.stringify(datamodel)
+   settings.setValue("favouriteStations", JSON.stringify(datamodel))
 
-/*   var s
+   var s
 
    try {
-      s = JSON.parse(datastore)
+      s = JSON.parse(favouriteStations)
    } catch (e) {
       s = {}
-   }*/
+   }
 
-   t = Object.fromEntries(Object.entries(datamodel))
+   t = Object.fromEntries(Object.entries(s))
 
    const renamedObj = {};
 
