@@ -200,11 +200,11 @@ Item {
    }
 
    function changeOrder() {
-   var datamodel = []
+//   var datamodel = []
 
-   for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
+//   for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
 //   datastore = JSON.stringify(datamodel)
-   settings.setValue("favouriteStations", JSON.stringify(datamodel))
+//   settings.setValue("favouriteStations", JSON.stringify(datamodel))
 
    var s
 
