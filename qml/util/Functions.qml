@@ -203,17 +203,17 @@ Item {
    var datamodel = []
 
    for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
-   datastore = JSON.stringify(datamodel)
+//   datastore = JSON.stringify(datamodel)
 
-   var s
+/*   var s
 
    try {
       s = JSON.parse(datastore)
    } catch (e) {
       s = {}
-   }
+   }*/
 
-   t = Object.fromEntries(Object.entries(s))
+   t = Object.fromEntries(Object.entries(datamodel))
 
    const renamedObj = {};
 
