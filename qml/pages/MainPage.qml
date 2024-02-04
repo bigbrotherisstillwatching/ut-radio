@@ -426,7 +426,7 @@ Rectangle {
             var datamodel = []
             for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
             settings.setValue("favouriteStations", JSON.stringify(datamodel))
-//            Functions.changeOrder()
+            Functions.changeOrder()
          }
       }
       moveDisplaced: Transition {
