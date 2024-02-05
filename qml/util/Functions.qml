@@ -214,7 +214,7 @@ Item {
       s = {}
    }
 
-   t = Object.fromEntries(Object.entries(s))
+   var t = Object.fromEntries(Object.entries(s))
 
    const renamedObj = {};
 
