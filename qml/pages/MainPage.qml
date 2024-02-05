@@ -439,11 +439,9 @@ Rectangle {
             height: 50
             z: 2
 
-            color: "blue"
-
-            Text {
-                text: "HEADER"
-                color: "red"
+            gradient: Gradient {
+               GradientStop { position: 0.0; color: "white" }
+               GradientStop { position: 1.0; color: "black" }
             }
         }
 
@@ -453,11 +451,9 @@ Rectangle {
             height: 50
             z: 2
 
-            color: "blue"
-
-            Text {
-                text: "HEADER"
-                color: "red"
+            gradient: Gradient {
+               GradientStop { position: 0.0; color: "black" }
+               GradientStop { position: 1.0; color: "white" }
             }
         }
    }
