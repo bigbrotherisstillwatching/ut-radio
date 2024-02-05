@@ -433,7 +433,7 @@ Rectangle {
          }
       }
 
-      header: Rectangle {
+/*      header: Rectangle {
             id: headerItem
             width: favList.width
             height: 50
@@ -455,7 +455,7 @@ Rectangle {
                GradientStop { position: 0.0; color: "black" }
                GradientStop { position: 1.0; color: "white" }
             }
-        }
+        }*/
    }
 
    // *******************************************************************
