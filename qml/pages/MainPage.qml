@@ -432,6 +432,34 @@ Rectangle {
             property: "y"
          }
       }
+
+      header: Rectangle {
+            id: headerItem
+            width: favList.width
+            height: 50
+            z: 2
+
+            color: "blue"
+
+            Text {
+                text: "HEADER"
+                color: "red"
+            }
+        }
+
+      footer: Rectangle {
+            id: footerItem
+            width: favList.width
+            height: 50
+            z: 2
+
+            color: "blue"
+
+            Text {
+                text: "HEADER"
+                color: "red"
+            }
+        }
    }
 
    // *******************************************************************
