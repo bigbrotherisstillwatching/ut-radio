@@ -200,31 +200,33 @@ Item {
    }
 
    function changeOrder() {
-//   var datamodel = []
+//      var datamodel = []
 
-//   for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
-//   datastore = JSON.stringify(datamodel)
-//   settings.setValue("favouriteStations", JSON.stringify(datamodel))
+//      for (var i = 0; i < favouriteModel.count; ++i) datamodel.push(favouriteModel.get(i))
+//      datastore = JSON.stringify(datamodel)
+//      settings.setValue("favouriteStations", JSON.stringify(datamodel))
 
-   var s
+      var s
 
-   try {
-      s = JSON.parse(settings.value("favouriteStations"))
-   } catch (e) {
-      s = {}
-   }
+      try {
+         s = JSON.parse(settings.value("favouriteStations"))
+      } catch (e) {
+         s = {}
+      }
 
-   var t = Object.fromEntries(Object.entries(s))
+      var t
 
-   const renamedObj = {};
+      t = Object.fromEntries(Object.entries(s))
 
-   for (const key in t) {
+      const renamedObj = {};
 
-      const newKey = key === key ? t[key].stationID : key;
+      for (const key in t) {
 
-      renamedObj[newKey] = t[key];
-   }
+         const newKey = key === key ? t[key].stationID : key;
 
-   settings.setValue("favouriteStations", JSON.stringify(renamedObj))
+         renamedObj[newKey] = t[key];
+      }
+
+      settings.setValue("favouriteStations", JSON.stringify(renamedObj))
    }
 }
