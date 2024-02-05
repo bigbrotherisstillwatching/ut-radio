@@ -214,17 +214,19 @@ Item {
          s = {}
       }
 
-      var t
+//      var t
 
-      t = Object.fromEntries(Object.entries(s))
+//      t = Object.fromEntries(Object.entries(s))
+
+      const obj = Object.assign({}, s);
 
       const renamedObj = {};
 
-      for (const key in t) {
+      for (const key in obj) {
 
-         const newKey = key === key ? t[key].stationID : key;
+         const newKey = key === key ? obj[key].stationID : key;
 
-         renamedObj[newKey] = t[key];
+         renamedObj[newKey] = obj[key];
       }
 
       settings.setValue("favouriteStations", JSON.stringify(renamedObj))
