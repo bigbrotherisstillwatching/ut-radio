@@ -209,7 +209,7 @@ Item {
    var s
 
    try {
-      s = JSON.parse(favouriteStations)
+      s = JSON.parse(settings.value("favouriteStations"))
    } catch (e) {
       s = {}
    }
