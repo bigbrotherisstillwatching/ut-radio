@@ -412,9 +412,7 @@ Rectangle {
          }
          ListItemLayout {
             id: modelLayout
-//            title.text: modelData
          }
-//         color: dragMode ? "lightblue" : "lightgray"
          onPressAndHold: ListView.view.ViewItems.dragMode =
             !ListView.view.ViewItems.dragMode
       }
