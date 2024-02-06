@@ -443,19 +443,21 @@ Rectangle {
          }
       }
 
-/*      header: Rectangle {
-            id: headerItem
-            width: favList.width
-            height: 50
-            z: 2
+      header: Rectangle {
+         id: headerItem
+         width: favList.width
+         height: 100
+         z: 2
 
-            gradient: Gradient {
-               GradientStop { position: 0.0; color: "white" }
-               GradientStop { position: 1.0; color: "black" }
-            }
-        }
+/*         gradient: Gradient {
+            GradientStop { position: 0.0; color: "white" }
+            GradientStop { position: 1.0; color: "black" }
+         }*/
+         Text {
+            text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
+      }
 
-      footer: Rectangle {
+/*      footer: Rectangle {
             id: footerItem
             width: favList.width
             height: 50
