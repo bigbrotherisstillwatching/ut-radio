@@ -257,13 +257,13 @@ Rectangle {
             color: "transparent"
          }
 
-         Text {
+/*         Text {
             id: favText
             anchors.verticalCenter: parent.verticalCenter
             text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
             color: Colors.mainText
             font.bold: true
-         }
+         }*/
 
          Icon {
             id: settingsIcon
@@ -446,8 +446,9 @@ Rectangle {
       header: Rectangle {
          id: headerItem
          width: favList.width
-         height: 100
+         height: 50
          z: 2
+         color: "red"
 
 /*         gradient: Gradient {
             GradientStop { position: 0.0; color: "white" }
