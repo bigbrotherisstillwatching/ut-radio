@@ -340,7 +340,7 @@ Rectangle {
                         lastStation.favourite = !lastStation.favourite
                         favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
                      } else {*/
-                     txt.text = favouriteModel.get(index).stationID
+                     txt.text = lastStation.stationID
                   }
                }
             ]
