@@ -257,14 +257,6 @@ Rectangle {
             color: "transparent"
          }
 
-/*         Text {
-            id: favText
-            anchors.verticalCenter: parent.verticalCenter
-            text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
-            color: Colors.mainText
-            font.bold: true
-         }*/
-
          Icon {
             id: settingsIcon
             height: units.gu(2)
@@ -335,17 +327,11 @@ Rectangle {
                Action {
                   text: i18n.tr("Delete")
                   onTriggered: {
-//                     Functions.removeFavourite(stationID)
                      if (favouriteModel.get(index).stationID === lastStation.stationID) {
                         lastStation.favourite = !lastStation.favourite
                         favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
-//                        favIcon.iconName = "non-starred"
-//                        txt.text = "true"
                      } else if (favouriteModel.get(index).stationID != lastStation.stationID) {
-//                        txt.text = "false"
-//                        lastStation.favourite = !lastStation.favourite
                         favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
-//                        favIcon.iconName = "starred"
                      }
                      Functions.removeFavourite(stationID)
                   }
@@ -450,10 +436,6 @@ Rectangle {
          z: 2
          color: Colors.surfaceColor
 
-/*         gradient: Gradient {
-            GradientStop { position: 0.0; color: "white" }
-            GradientStop { position: 1.0; color: "black" }
-         }*/
          Text {
             anchors.centerIn: parent
             text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
@@ -461,18 +443,6 @@ Rectangle {
             font.bold: true
          }
       }
-
-/*      footer: Rectangle {
-            id: footerItem
-            width: favList.width
-            height: 50
-            z: 2
-
-            gradient: Gradient {
-               GradientStop { position: 0.0; color: "black" }
-               GradientStop { position: 1.0; color: "white" }
-            }
-        }*/
    }
 
    // *******************************************************************
