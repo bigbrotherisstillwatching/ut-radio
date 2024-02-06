@@ -341,7 +341,7 @@ Rectangle {
 //                        favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
                         txt.text = "true"*/
           /*} else */if (favouriteModel.get(index).stationID != lastStation.stationID) {
-//                      txt.text = "false"
+                        txt.text = "false"
                      }
                   }
                }
