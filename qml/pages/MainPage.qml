@@ -454,7 +454,10 @@ Rectangle {
             GradientStop { position: 1.0; color: "black" }
          }*/
          Text {
+            anchors.centerIn: parent
             text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
+            color: Colors.mainText
+            font.bold: true
       }
 
 /*      footer: Rectangle {
