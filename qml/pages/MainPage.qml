@@ -206,7 +206,12 @@ Rectangle {
             enabled: !!lastStation
 
             onClicked: {
-               lastStation.favourite = !lastStation.favourite
+//               lastStation.favourite = !lastStation.favourite
+               if (lastStation.favourite == false) {
+                  lastStation.favourite = true;
+               } else if (lastStation.favourite == true) {
+                  lastStation.favourite = false;
+               }
                favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
 
                if (!lastStation.favourite)
