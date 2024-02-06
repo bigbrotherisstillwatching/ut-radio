@@ -335,14 +335,14 @@ Rectangle {
                Action {
                   text: i18n.tr("Delete")
                   onTriggered: {
-                     Functions.removeFavourite(stationID)
+//                     Functions.removeFavourite(stationID)
                      if (favouriteModel.get(index).stationID === lastStation.stationID) {
-                        lastStation.favourite = !lastStation.favourite
-                        favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
+//                        lastStation.favourite = !lastStation.favourite
+//                        favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
 //                        favIcon.iconName = "non-starred"
-//                        txt.text = "true"
-//                     } else if (favouriteModel.get(index).stationID != lastStation.stationID) {
-//                        txt.text = "false"
+                        txt.text = "true"
+                     } else if (favouriteModel.get(index).stationID != lastStation.stationID) {
+                        txt.text = "false"
 //                        lastStation.favourite = !lastStation.favourite
 //                        favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
 //                        favIcon.iconName = "starred"
