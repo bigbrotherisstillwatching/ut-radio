@@ -346,7 +346,7 @@ Rectangle {
 //                        lastStation.favourite = !lastStation.favourite
 //                        favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
 //                        favIcon.iconName = "starred"
-                     }
+//                     }
                   }
                }
             ]
