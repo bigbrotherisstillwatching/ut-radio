@@ -458,6 +458,7 @@ Rectangle {
             text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
             color: Colors.mainText
             font.bold: true
+         }
       }
 
 /*      footer: Rectangle {
