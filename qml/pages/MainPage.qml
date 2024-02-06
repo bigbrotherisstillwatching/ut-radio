@@ -448,7 +448,7 @@ Rectangle {
          width: favList.width
          height: 50
          z: 2
-         color: Colors.surfaceColor
+         color: Colors.detailText
 
 /*         gradient: Gradient {
             GradientStop { position: 0.0; color: "white" }
