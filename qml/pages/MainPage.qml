@@ -338,7 +338,7 @@ Rectangle {
                      Functions.removeFavourite(stationID)
                      if (favouriteModel.get(index).stationID === lastStation.stationID) {
                         lastStation.favourite = !lastStation.favourite
-                        favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
+                        favIcon.iconName = lastStation.favourite ? "non-starred" : "starred"
 //                        txt.text = "true"
                      } else if (favouriteModel.get(index).stationID != lastStation.stationID) {
 //                        txt.text = "false"
