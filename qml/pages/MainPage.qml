@@ -336,9 +336,9 @@ Rectangle {
                   text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
-//                     if (favouriteModel.get(index).stationID === lastStation.stationID) {
-                     lastStation.favourite = !lastStation.favourite
-                     favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
+                     if (favouriteModel.get(index).stationID === lastStation.stationID) {
+                        lastStation.favourite = !lastStation.favourite
+                        favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
 //                        favIcon.iconName = "non-starred"
 //                        txt.text = "true"
 //                     } else if (favouriteModel.get(index).stationID != lastStation.stationID) {
@@ -346,7 +346,7 @@ Rectangle {
 //                        lastStation.favourite = !lastStation.favourite
 //                        favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
 //                        favIcon.iconName = "starred"
-//                     }
+                     }
                   }
                }
             ]
