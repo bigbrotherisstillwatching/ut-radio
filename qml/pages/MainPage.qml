@@ -336,16 +336,16 @@ Rectangle {
                   text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
-                     if (favouriteModel.get(index).stationID === lastStation.stationID) {
-                        lastStation.favourite = !lastStation.favourite
-                        favIcon.iconName = lastStation.favourite ? "non-starred" : "starred"
+//                     if (favouriteModel.get(index).stationID === lastStation.stationID) {
+                     lastStation.favourite = !lastStation.favourite
+                     favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
 //                        favIcon.iconName = "non-starred"
 //                        txt.text = "true"
-                     } else if (favouriteModel.get(index).stationID != lastStation.stationID) {
+//                     } else if (favouriteModel.get(index).stationID != lastStation.stationID) {
 //                        txt.text = "false"
 //                        lastStation.favourite = !lastStation.favourite
 //                        favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
-                        favIcon.iconName = "starred"
+//                        favIcon.iconName = "starred"
                      }
                   }
                }
