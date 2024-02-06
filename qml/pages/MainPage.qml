@@ -289,7 +289,8 @@ Rectangle {
 
          Rectangle {
             height: units.gu(2)
-            width: favText.contentWidth
+//            width: favText.contentWidth
+            width: helpButton.width
             color: "transparent"
          }
       }
