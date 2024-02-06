@@ -336,7 +336,7 @@ Rectangle {
                   text: i18n.tr("Delete")
                   onTriggered: {
                      Functions.removeFavourite(stationID)
-                     if (lastStation.name === favouriteModel.get(index).name) {
+                     if (lastStation.stationID === stationID) {
                         lastStation.favourite = !lastStation.favourite
                         favIcon.iconName = lastStation.favourite ? "starred" : "non-starred"
                      }/* else {*/
