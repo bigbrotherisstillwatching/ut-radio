@@ -257,6 +257,13 @@ Rectangle {
             color: "transparent"
          }
 
+         Button {
+            id: helpButton
+            text: i18n.tr("Help")
+            color: Colors.surfaceColor
+//            onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
+         }
+
          Icon {
             id: settingsIcon
             height: units.gu(2)
