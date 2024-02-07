@@ -135,7 +135,7 @@ Rectangle {
             style: ActionBarStyle {
                backgroundColor: "transparent"
             }
-            placeholderText: i18n.tr("Metadata is shown here. You can also show, edit & save station name & URL as well as the image URL by swiping to the left in the favourite list. Sort mode gets (de)activated by long-pressing on a favourite")
+            placeholderText: i18n.tr("Metadata is shown here. You can also show, edit & save station name & URL as well as the image URL by swiping to the left in the favourite list. Sort mode gets (de)activated by long-pressing on a favourite.")
          }
       }
 
