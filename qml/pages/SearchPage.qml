@@ -152,6 +152,9 @@ Rectangle {
          mainSlot: TextField {
             id: searchInputField
             placeholderText: i18n.tr("Enter search term")
+            style: ActionBarStyle {
+               backgroundColor: "lightgray"
+            }
             onAccepted: startSearch()
          }
          Button {
