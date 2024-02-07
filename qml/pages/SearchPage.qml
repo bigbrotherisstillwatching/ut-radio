@@ -154,7 +154,7 @@ Rectangle {
             id: searchInputField
             placeholderText: i18n.tr("Enter search term")
             style: ActionBarStyle {
-               backgroundColor: "lightgray"
+               backgroundColor: "lightgrey"
             }
             onAccepted: startSearch()
          }
