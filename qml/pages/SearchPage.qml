@@ -4,7 +4,6 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
-import Lomiri.Components.Styles 1.3
 
 import "../net"
 import "../util"
@@ -153,9 +152,6 @@ Rectangle {
          mainSlot: TextField {
             id: searchInputField
             placeholderText: i18n.tr("Enter search term")
-            style: ActionBarStyle {
-               backgroundColor: "#D3D3D3"
-            }
             onAccepted: startSearch()
          }
          Button {
