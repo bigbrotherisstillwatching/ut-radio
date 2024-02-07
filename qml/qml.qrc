@@ -16,6 +16,6 @@
         <file>util/ThemedHeader.qml</file>
         <file>pages/SettingsPage.qml</file>
         <file>util/ScrollableText.qml</file>
-<!--        <file>pages/HelpPage.qml</file>
+<!--        <file>pages/HelpPage.qml</file> -->
     </qresource>
 </RCC>
