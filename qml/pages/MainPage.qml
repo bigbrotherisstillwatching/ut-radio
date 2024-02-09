@@ -257,14 +257,14 @@ Rectangle {
             color: "transparent"
          }
 
-/*         Button {
+         Button {
             id: helpButton
             text: i18n.tr("Help")
             color: Colors.surfaceColor
             onClicked: {
                var p = pageStack.push(Qt.resolvedUrl("./HelpPage.qml"))
             }
-         }*/
+         }
 
          Icon {
             id: settingsIcon
