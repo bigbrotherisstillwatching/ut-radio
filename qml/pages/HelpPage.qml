@@ -10,13 +10,18 @@ import "../util"
 import "../colors"
 
 Rectangle {
-    id: helpPage
-    anchors.fill: parent
+   id: helpPage
+   anchors.fill: parent
 
-    color: Colors.backgroundColor
+   color: Colors.backgroundColor
 
-    ThemedHeader {
-       id: header
-       title: i18n.tr("Help")
-    }
+   ThemedHeader {
+      id: header
+      title: i18n.tr("Help")
+   }
+   Text {
+      text: "Coming soon ..."
+      font.pointSize: 25
+      anchors.centerIn: parent
+   }
 }
