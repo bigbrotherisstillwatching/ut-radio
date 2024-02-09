@@ -33,5 +33,5 @@ Licensed under the MIT license
 ## Download
 
 -you can try this artifact from Actions:    
-(https://github.com/bigbrotherisstillwatching/ut-radio_metadata/actions/runs/7847062182/artifacts/1233914430) if you are logged in    
--when you have no github-account, go to (https://nightly.link) and paste (https://github.com/bigbrotherisstillwatching/ut-radio_metadata/actions/runs/7847062182) to "Get links" to get a download link    
+https://github.com/bigbrotherisstillwatching/ut-radio_metadata/actions/runs/7847175680/artifacts/1233943171 if you are logged in    
+-when you have no github-account, go to https://nightly.link and paste https://github.com/bigbrotherisstillwatching/ut-radio_metadata/actions/runs/7847175680 to "Get links" to get a download link    
