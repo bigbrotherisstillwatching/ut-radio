@@ -20,8 +20,9 @@ Rectangle {
       title: i18n.tr("Help")
    }
    Text {
-      text: "Coming soon ..."
+      text: i18n.tr("Coming soon ...")
       font.pointSize: 25
       anchors.centerIn: parent
+      color: Colors.mainText
    }
 }
