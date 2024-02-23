@@ -4,6 +4,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
+import QtQuick.Controls 2.7 as qqc
 
 import "../net"
 import "../util"
@@ -86,6 +87,17 @@ Rectangle {
                      }
                   }
               }
+          }
+          Row {
+             anchors.horizontalCenter: parent.horizontalCenter
+             spacing: 1
+             qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
           }
        }
     }
