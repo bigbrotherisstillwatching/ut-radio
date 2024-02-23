@@ -187,6 +187,15 @@ Rectangle {
                 stepSize: 0.1
              }
           }
+          Row {
+             anchors.horizontalCenter: parent.horizontalCenter
+             spacing: 1
+             Text {
+                text: "31 Hz"
+                color: Colors.mainText
+                font.bold: true
+             }
+          }
           Button {
             id: eqaButton
             anchors.horizontalCenter: parent.horizontalCenter
