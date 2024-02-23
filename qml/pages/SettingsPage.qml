@@ -117,6 +117,7 @@ Rectangle {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: 1
              Qqc.Slider {
+                id: slide1
                 from: -48.0
                 to: 24.0
                 live: true
@@ -124,6 +125,7 @@ Rectangle {
                 stepSize: 0.1
              }
              Qqc.Slider {
+                id: slide2
                 from: -48.0
                 to: 24.0
                 live: true
@@ -193,51 +195,63 @@ Rectangle {
              Text {
                 text: "31Hz"
                 color: Colors.mainText
+                font.pointSize: 15
+                anchors.horizontalCenter: slide1.horizontalCenter
 //                font.bold: true
              }
              Text {
                 text: "63Hz"
                 color: Colors.mainText
+                font.pointSize: 15
+                anchors.horizontalCenter: slide2.horizontalCenter
 //                font.bold: true
              }
              Text {
                 text: "125Hz"
                 color: Colors.mainText
+                font.pointSize: 15
 //                font.bold: true
              }
              Text {
                 text: "250Hz"
                 color: Colors.mainText
+                font.pointSize: 15
 //                font.bold: true
              }
              Text {
                 text: "500Hz"
                 color: Colors.mainText
+                font.pointSize: 15
 //                font.bold: true
              }
              Text {
                 text: "1kHz"
                 color: Colors.mainText
+                font.pointSize: 15
 //                font.bold: true
              }
              Text {
                 text: "2kHz"
                 color: Colors.mainText
+                font.pointSize: 15
 //                font.bold: true
              }
              Text {
                 text: "4kHz"
                 color: Colors.mainText
+                font.pointSize: 15
 //                font.bold: true
              }
              Text {
                 text: "8kHz"
                 color: Colors.mainText
+                font.pointSize: 15
 //                font.bold: true
              }
              Text {
                 text: "16kHz"
                 color: Colors.mainText
+                font.pointSize: 15
 //                font.bold: true
              }
           }
