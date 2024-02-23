@@ -189,56 +189,56 @@ Rectangle {
           }
           Row {
              anchors.horizontalCenter: parent.horizontalCenter
-             spacing: 1
+             spacing: 10
              Text {
                 text: "31Hz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
              Text {
                 text: "63Hz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
              Text {
                 text: "125Hz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
              Text {
                 text: "250Hz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
              Text {
                 text: "500Hz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
              Text {
                 text: "1kHz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
              Text {
                 text: "2kHz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
              Text {
                 text: "4kHz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
              Text {
                 text: "8kHz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
              Text {
                 text: "16kHz"
                 color: Colors.mainText
-                font.bold: true
+//                font.bold: true
              }
           }
           Button {
