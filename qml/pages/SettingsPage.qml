@@ -191,52 +191,52 @@ Rectangle {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: 1
              Text {
-                text: "31 Hz"
+                text: "31Hz"
                 color: Colors.mainText
                 font.bold: true
              }
              Text {
-                text: "63 Hz"
+                text: "63Hz"
                 color: Colors.mainText
                 font.bold: true
              }
              Text {
-                text: "125 Hz"
+                text: "125Hz"
                 color: Colors.mainText
                 font.bold: true
              }
              Text {
-                text: "250 Hz"
+                text: "250Hz"
                 color: Colors.mainText
                 font.bold: true
              }
              Text {
-                text: "500 Hz"
+                text: "500Hz"
                 color: Colors.mainText
                 font.bold: true
              }
              Text {
-                text: "1 kHz"
+                text: "1kHz"
                 color: Colors.mainText
                 font.bold: true
              }
              Text {
-                text: "2 kHz"
+                text: "2kHz"
                 color: Colors.mainText
                 font.bold: true
              }
              Text {
-                text: "4 kHz"
+                text: "4kHz"
                 color: Colors.mainText
                 font.bold: true
              }
              Text {
-                text: "8 kHz"
+                text: "8kHz"
                 color: Colors.mainText
                 font.bold: true
              }
              Text {
-                text: "16 kHz"
+                text: "16kHz"
                 color: Colors.mainText
                 font.bold: true
              }
