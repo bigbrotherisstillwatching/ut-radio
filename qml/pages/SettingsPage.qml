@@ -195,6 +195,51 @@ Rectangle {
                 color: Colors.mainText
                 font.bold: true
              }
+             Text {
+                text: "63 Hz"
+                color: Colors.mainText
+                font.bold: true
+             }
+             Text {
+                text: "125 Hz"
+                color: Colors.mainText
+                font.bold: true
+             }
+             Text {
+                text: "250 Hz"
+                color: Colors.mainText
+                font.bold: true
+             }
+             Text {
+                text: "500 Hz"
+                color: Colors.mainText
+                font.bold: true
+             }
+             Text {
+                text: "1 kHz"
+                color: Colors.mainText
+                font.bold: true
+             }
+             Text {
+                text: "2 kHz"
+                color: Colors.mainText
+                font.bold: true
+             }
+             Text {
+                text: "4 kHz"
+                color: Colors.mainText
+                font.bold: true
+             }
+             Text {
+                text: "8 kHz"
+                color: Colors.mainText
+                font.bold: true
+             }
+             Text {
+                text: "16 kHz"
+                color: Colors.mainText
+                font.bold: true
+             }
           }
           Button {
             id: eqaButton
