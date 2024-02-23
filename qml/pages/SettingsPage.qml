@@ -96,7 +96,7 @@ Rectangle {
              highlightColor: Colors.highlightColor
 
              ListItemLayout {
-                id: l1
+                id: l3
                 title.text: i1n.tr("Equalizer")
                 title.font.bold: true
                 title.color: Colors.mainText
