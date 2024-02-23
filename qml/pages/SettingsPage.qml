@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import QtQuick.Controls 2.7 as Qqc
+import Process 1.0
 
 import "../net"
 import "../util"
@@ -16,6 +17,13 @@ Rectangle {
     signal stationChanged(var station)
 
     color: Colors.backgroundColor
+
+    Process {
+      id: process
+//      onFinished: {
+//         txt.text = readAll();
+//      }
+    }
 
     Settings {
        id: settings
@@ -178,6 +186,13 @@ Rectangle {
                 orientation: Qt.Vertical
                 stepSize: 0.1
              }
+          }
+          Button {
+            id: eqaButton
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: i18n.tr("Activate")
+            color: Colors.surfaceColor
+//            onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
           }
        }
     }
