@@ -115,6 +115,69 @@ Rectangle {
                 orientation: Qt.Vertical
                 stepSize: 0.1
              }
+             Qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
+             Qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
+             Qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
+             Qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
+             Qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
+             Qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
+             Qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
+             Qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
+             Qqc.Slider {
+                from: -48.0
+                to: 24.0
+                live: true
+                orientation: Qt.Vertical
+                stepSize: 0.1
+             }
           }
        }
     }
