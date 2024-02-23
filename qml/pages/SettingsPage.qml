@@ -88,6 +88,23 @@ Rectangle {
                   }
               }
           }
+          ListItem {
+             height: l1.height + (divider.visible ? divider.height : 0)
+             color: Colors.surfaceColor
+             divider.colorFrom: Colors.borderColor
+             divider.colorTo: Colors.borderColor
+             highlightColor: Colors.highlightColor
+
+             ListItemLayout {
+                id: l1
+                title.text: i1n.tr("Equalizer")
+                title.font.bold: true
+                title.color: Colors.mainText
+//                subtitle.text: i18n.tr("Restart the app after changing dark mode option")
+//                subtitle.color: "red"
+//                subtitle.visible: false
+             }
+          }
           Row {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: 1
