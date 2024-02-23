@@ -89,7 +89,7 @@ Rectangle {
               }
           }
           ListItem {
-             height: l3.height + (divider.visible ? divider.height : 0)
+             height: l1.height + (divider.visible ? divider.height : 0)
              color: Colors.surfaceColor
              divider.colorFrom: Colors.borderColor
              divider.colorTo: Colors.borderColor
@@ -97,7 +97,7 @@ Rectangle {
 
              ListItemLayout {
                 id: l3
-                title.text: i1n.tr("Equalizer")
+                title.text: i18n.tr("Equalizer")
                 title.font.bold: true
                 title.color: Colors.mainText
 //                subtitle.text: i18n.tr("Restart the app after changing dark mode option")
