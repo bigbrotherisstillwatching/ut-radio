@@ -89,7 +89,7 @@ Rectangle {
               }
           }
           ListItem {
-             height: l1.height + (divider.visible ? divider.height : 0)
+             height: l3.height + (divider.visible ? divider.height : 0)
              color: Colors.surfaceColor
              divider.colorFrom: Colors.borderColor
              divider.colorTo: Colors.borderColor
