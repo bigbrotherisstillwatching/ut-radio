@@ -174,12 +174,19 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide2
+                   id: slide2
                    from: -48.0
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide2.value
+                   color: Colors.mainText
+                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
@@ -191,12 +198,19 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide3
+                   id: slide3
                    from: -48.0
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide3.value
+                   color: Colors.mainText
+                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
@@ -208,12 +222,19 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide4
+                   id: slide4
                    from: -48.0
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide4.value
+                   color: Colors.mainText
+                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
@@ -225,12 +246,19 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide5
+                   id: slide5
                    from: -48.0
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide5.value
+                   color: Colors.mainText
+                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
@@ -242,12 +270,19 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide6
+                   id: slide6
                    from: -48.0
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide6.value
+                   color: Colors.mainText
+                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
@@ -259,12 +294,19 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide7
+                   id: slide7
                    from: -48.0
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide7.value
+                   color: Colors.mainText
+                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
@@ -276,12 +318,19 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide8
+                   id: slide8
                    from: -48.0
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide8.value
+                   color: Colors.mainText
+                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
@@ -293,12 +342,19 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide9
+                   id: slide9
                    from: -48.0
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide9.value
+                   color: Colors.mainText
+                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
@@ -310,12 +366,19 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide10
+                   id: slide10
                    from: -48.0
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide10.value
+                   color: Colors.mainText
+                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
