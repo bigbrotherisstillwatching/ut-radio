@@ -231,19 +231,19 @@ Rectangle {
 //                font.bold: true
              }
              Text {
-                text: " 2kHz"
+                text: "2kHz"
                 color: Colors.mainText
                 font.pointSize: 20
 //                font.bold: true
              }
              Text {
-                text: " 4kHz"
+                text: "4kHz"
                 color: Colors.mainText
                 font.pointSize: 20
 //                font.bold: true
              }
              Text {
-                text: " 8kHz"
+                text: "8kHz"
                 color: Colors.mainText
                 font.pointSize: 20
 //                font.bold: true
