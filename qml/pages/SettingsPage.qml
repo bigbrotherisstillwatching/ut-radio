@@ -150,7 +150,7 @@ Rectangle {
              spacing: 1
              Column {
                 Qqc.Slider {
-//                   id: slide1
+                   id: slide1
                    from: -48.0
                    to: 24.0
                    live: true
