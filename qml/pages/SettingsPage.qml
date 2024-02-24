@@ -19,7 +19,7 @@ Rectangle {
 
     color: Colors.backgroundColor
 
-    property var padding: units.gu(3)
+//    property var padding: units.gu(3)
 
     Process {
       id: process
@@ -148,13 +148,22 @@ Rectangle {
           Row {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: 1
-             Qqc.Slider {
-//                id: slide1
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: " 31Hz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
              }
              Qqc.Slider {
 //                id: slide2
@@ -221,7 +230,7 @@ Rectangle {
                 stepSize: 0.1
              }
           }
-          Row {
+/*          Row {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: 35
              Text {
@@ -286,7 +295,7 @@ Rectangle {
                 font.pointSize: 20
 //                font.bold: true
              }
-          }
+          }*/
 /*          Row {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: settingsPage.padding
