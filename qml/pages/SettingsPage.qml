@@ -225,7 +225,7 @@ Rectangle {
 //                font.bold: true
              }
              Text {
-                text: " 1kHz"
+                text: "1kHz"
                 color: Colors.mainText
                 font.pointSize: 20
 //                font.bold: true
