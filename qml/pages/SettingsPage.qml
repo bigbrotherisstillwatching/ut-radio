@@ -99,7 +99,7 @@ Rectangle {
                   }
               }
           }
-          ListItem {
+/*          ListItem {
              height: l1.height + (divider.visible ? divider.height : 0)
              color: Colors.surfaceColor
              divider.colorFrom: Colors.borderColor
@@ -115,6 +115,35 @@ Rectangle {
 //                subtitle.color: "red"
 //                subtitle.visible: false
              }
+          }*/
+          ListItem {
+              anchors.left: parent.left
+              anchors.right: parent.right
+              color: Colors.surfaceColor
+              divider.colorFrom: Colors.borderColor
+              divider.colorTo: Colors.borderColor
+              highlightColor: Colors.highlightColor
+
+              height: l1.height + (divider.visible ? divider.height : 0)
+
+              SlotsLayout {
+                  id: l3
+                  mainSlot: Text {
+                     anchors.verticalCenter: parent.verticalCenter
+                     text: i18n.tr("Equalizer")
+                     color: Colors.mainText
+                     font.bold: true
+                  }
+                  Switch {
+//                     checked: settings.darkMode
+                     SlotsLayout.position: SlotsLayout.Trailing
+
+                     onClicked: {
+//                        settings.darkMode = checked
+//                        l1.subtitle.visible = true
+                     }
+                  }
+              }
           }
           Row {
              anchors.horizontalCenter: parent.horizontalCenter
@@ -258,7 +287,7 @@ Rectangle {
 //                font.bold: true
              }
           }
-          Row {
+/*          Row {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: settingsPage.padding
              Button {
@@ -275,7 +304,7 @@ Rectangle {
                 color: Colors.surfaceColor
 //                onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
              }
-          }
+          }*/
        }
     }
 }
