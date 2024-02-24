@@ -149,6 +149,13 @@ Rectangle {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: 1
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide1.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide1
                    from: -48.0
@@ -160,19 +167,19 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: slide1.value
-                   color: Colors.mainText
-                   font.pointSize: 20
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
                    text: "31Hz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide2.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide2
                    from: -48.0
@@ -184,19 +191,19 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: slide2.value
-                   color: Colors.mainText
-                   font.pointSize: 20
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
                    text: "63Hz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide3.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide3
                    from: -48.0
@@ -208,19 +215,19 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: slide3.value
-                   color: Colors.mainText
-                   font.pointSize: 20
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
                    text: "125Hz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide4.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide4
                    from: -48.0
@@ -232,19 +239,19 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: slide4.value
-                   color: Colors.mainText
-                   font.pointSize: 20
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
                    text: "250Hz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide5.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide5
                    from: -48.0
@@ -256,19 +263,19 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: slide5.value
-                   color: Colors.mainText
-                   font.pointSize: 20
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
                    text: "500Hz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide6.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide6
                    from: -48.0
@@ -280,19 +287,19 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: slide6.value
-                   color: Colors.mainText
-                   font.pointSize: 20
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
                    text: "1kHz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide7.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide7
                    from: -48.0
@@ -304,19 +311,19 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: slide7.value
-                   color: Colors.mainText
-                   font.pointSize: 20
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
                    text: "2kHz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide8.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide8
                    from: -48.0
@@ -328,19 +335,19 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: slide8.value
-                   color: Colors.mainText
-                   font.pointSize: 20
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
                    text: "4kHz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide9.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide9
                    from: -48.0
@@ -352,19 +359,19 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: slide9.value
-                   color: Colors.mainText
-                   font.pointSize: 20
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
                    text: "8kHz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
              Column {
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: slide10.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
                 Qqc.Slider {
                    id: slide10
                    from: -48.0
@@ -372,13 +379,6 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                }
-                Label {
-                   width: parent.width
-                   horizontalAlignment: Text.AlignHCenter
-                   text: slide10.value
-                   color: Colors.mainText
-                   font.pointSize: 20
                 }
                 Label {
                    width: parent.width
