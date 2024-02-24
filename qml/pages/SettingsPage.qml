@@ -12,11 +12,14 @@ import "../util"
 import "../colors"
 
 Rectangle {
-    id: urlPage
+    id: settingsPage
+//    id: urlPage
     anchors.fill: parent
     signal stationChanged(var station)
 
     color: Colors.backgroundColor
+
+    property var padding: units.gu(3)
 
     Process {
       id: process
@@ -255,12 +258,23 @@ Rectangle {
 //                font.bold: true
              }
           }
-          Button {
-            id: eqaButton
-            anchors.horizontalCenter: parent.horizontalCenter
-            text: i18n.tr("Activate")
-            color: Colors.surfaceColor
-//            onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
+          Row {
+             anchors.horizontalCenter: parent.horizontalCenter
+             spacing: settingsPage.padding
+             Button {
+                id: eqaButton
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: i18n.tr("Activate")
+                color: Colors.surfaceColor
+//                onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
+             }
+             Button {
+                id: eqdButton
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: i18n.tr("Deactivate")
+                color: Colors.surfaceColor
+//                onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
+             }
           }
        }
     }
