@@ -19,7 +19,7 @@ Rectangle {
 
     color: Colors.backgroundColor
 
-//    property var padding: units.gu(3)
+    property var padding: units.gu(3)
 
     Process {
       id: process
@@ -99,7 +99,7 @@ Rectangle {
                   }
               }
           }
-/*          ListItem {
+          ListItem {
              height: l1.height + (divider.visible ? divider.height : 0)
              color: Colors.surfaceColor
              divider.colorFrom: Colors.borderColor
@@ -115,8 +115,8 @@ Rectangle {
 //                subtitle.color: "red"
 //                subtitle.visible: false
              }
-          }*/
-          ListItem {
+          }
+/*          ListItem {
               anchors.left: parent.left
               anchors.right: parent.right
               color: Colors.surfaceColor
@@ -144,7 +144,7 @@ Rectangle {
                      }
                   }
               }
-          }
+          }*/
           Row {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: 1
@@ -160,6 +160,13 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
+                   text: slide1.value
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
                    text: "31Hz"
                    color: Colors.mainText
                    font.pointSize: 20
@@ -167,7 +174,7 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide1
+//                   id: slide2
                    from: -48.0
                    to: 24.0
                    live: true
@@ -184,7 +191,7 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide1
+//                   id: slide3
                    from: -48.0
                    to: 24.0
                    live: true
@@ -201,7 +208,7 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide1
+//                   id: slide4
                    from: -48.0
                    to: 24.0
                    live: true
@@ -218,7 +225,7 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide1
+//                   id: slide5
                    from: -48.0
                    to: 24.0
                    live: true
@@ -235,7 +242,7 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide1
+//                   id: slide6
                    from: -48.0
                    to: 24.0
                    live: true
@@ -252,7 +259,7 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide1
+//                   id: slide7
                    from: -48.0
                    to: 24.0
                    live: true
@@ -269,7 +276,7 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide1
+//                   id: slide8
                    from: -48.0
                    to: 24.0
                    live: true
@@ -286,7 +293,7 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide1
+//                   id: slide9
                    from: -48.0
                    to: 24.0
                    live: true
@@ -303,7 +310,7 @@ Rectangle {
              }
              Column {
                 Qqc.Slider {
-//                   id: slide1
+//                   id: slide10
                    from: -48.0
                    to: 24.0
                    live: true
@@ -449,7 +456,7 @@ Rectangle {
 //                font.bold: true
              }
           }*/
-/*          Row {
+          Row {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: settingsPage.padding
              Button {
@@ -466,7 +473,7 @@ Rectangle {
                 color: Colors.surfaceColor
 //                onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
              }
-          }*/
+          }
        }
     }
 }
