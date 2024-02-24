@@ -191,7 +191,7 @@ Rectangle {
           }
           Row {
              anchors.horizontalCenter: parent.horizontalCenter
-             spacing: 50
+             spacing: 30
              Text {
                 text: " 31Hz"
                 color: Colors.mainText
