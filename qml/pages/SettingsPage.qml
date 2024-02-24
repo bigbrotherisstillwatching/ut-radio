@@ -160,12 +160,165 @@ Rectangle {
                 Label {
                    width: parent.width
                    horizontalAlignment: Text.AlignHCenter
-                   text: " 31Hz"
+                   text: "31Hz"
                    color: Colors.mainText
                    font.pointSize: 20
                 }
              }
-             Qqc.Slider {
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: "63Hz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+             }
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: "125Hz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+             }
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: "250Hz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+             }
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: "500Hz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+             }
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: "1kHz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+             }
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: "2kHz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+             }
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: "4kHz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+             }
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: "8kHz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+             }
+             Column {
+                Qqc.Slider {
+//                   id: slide1
+                   from: -48.0
+                   to: 24.0
+                   live: true
+                   orientation: Qt.Vertical
+                   stepSize: 0.1
+                }
+                Label {
+                   width: parent.width
+                   horizontalAlignment: Text.AlignHCenter
+                   text: "16kHz"
+                   color: Colors.mainText
+                   font.pointSize: 20
+                }
+             }
+/*             Qqc.Slider {
 //                id: slide2
                 from: -48.0
                 to: 24.0
@@ -228,7 +381,7 @@ Rectangle {
                 live: true
                 orientation: Qt.Vertical
                 stepSize: 0.1
-             }
+             }*/
           }
 /*          Row {
              anchors.horizontalCenter: parent.horizontalCenter
