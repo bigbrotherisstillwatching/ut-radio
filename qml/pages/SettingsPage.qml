@@ -155,7 +155,7 @@ Rectangle {
                    to: 24.0
                    live: true
                    orientation: Qt.Vertical
-                   stepSize: 0.1
+                   stepSize: 0.5
                 }
                 Label {
                    width: parent.width
