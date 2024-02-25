@@ -551,6 +551,7 @@ Rectangle {
                    settings.equalizerControls10 = slide10.value.toFixed(1)
                    process.start("/bin/bash",["-c", "pactl set-default-sink sink.primary_output"])
                    process.start("/bin/bash",["-c", "pactl unload-module $(head -1 /home/phablet/.config/radio.s710/radio.s710.oldsink.txt)"])
+                   process.start("/bin/bash",["-c", ""])
                 }
              }
              Button {
