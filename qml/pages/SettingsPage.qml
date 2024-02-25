@@ -31,6 +31,7 @@ Rectangle {
     Settings {
        id: settings
        property bool darkMode: true
+       property string equalizerControls: "{}"
     }
 
     ThemedHeader {
