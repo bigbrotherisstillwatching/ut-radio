@@ -21,6 +21,8 @@ Rectangle {
 
     property var padding: units.gu(3)
 
+    property var eq1: slide1.value
+
     Process {
       id: process
 //      onFinished: {
@@ -527,7 +529,7 @@ Rectangle {
 //                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Activate")
                 color: Colors.surfaceColor
-                onClicked: process.start("/bin/bash",["-c", "echo slide1.value >> /home/phablet/Downloads/equalizer/sink.txt"]);
+                onClicked: process.start("/bin/bash",["-c", "echo eq1 >> /home/phablet/Downloads/equalizer/sink.txt"]);
              }
              Button {
                 id: eqdButton
