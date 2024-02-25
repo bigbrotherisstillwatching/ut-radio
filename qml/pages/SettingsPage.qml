@@ -539,16 +539,16 @@ Rectangle {
                 color: Colors.surfaceColor
 //                onClicked: process.start("/bin/bash",["-c", "echo slide1.value >> /home/phablet/Downloads/equalizer/sink.txt"]);
                 onClicked: {
-                   settings.equalizerControls1 = slide1.value
-                   settings.equalizerControls2 = slide2.value
-                   settings.equalizerControls3 = slide3.value
-                   settings.equalizerControls4 = slide4.value
-                   settings.equalizerControls5 = slide5.value
-                   settings.equalizerControls6 = slide6.value
-                   settings.equalizerControls7 = slide7.value
-                   settings.equalizerControls8 = slide8.value
-                   settings.equalizerControls9 = slide9.value
-                   settings.equalizerControls10 = slide10.value
+                   settings.equalizerControls1 = slide1.value.toFixed(1)
+                   settings.equalizerControls2 = slide2.value.toFixed(1)
+                   settings.equalizerControls3 = slide3.value.toFixed(1)
+                   settings.equalizerControls4 = slide4.value.toFixed(1)
+                   settings.equalizerControls5 = slide5.value.toFixed(1)
+                   settings.equalizerControls6 = slide6.value.toFixed(1)
+                   settings.equalizerControls7 = slide7.value.toFixed(1)
+                   settings.equalizerControls8 = slide8.value.toFixed(1)
+                   settings.equalizerControls9 = slide9.value.toFixed(1)
+                   settings.equalizerControls10 = slide10.value.toFixed(1)
                 }
              }
              Button {
