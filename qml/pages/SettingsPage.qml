@@ -528,7 +528,8 @@ Rectangle {
 //                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Activate")
                 color: Colors.surfaceColor
-                onClicked: process.start("/bin/bash",["-c", "echo slide1.value >> /home/phablet/Downloads/equalizer/sink.txt"]);
+//                onClicked: process.start("/bin/bash",["-c", "echo slide1.value >> /home/phablet/Downloads/equalizer/sink.txt"]);
+                onClicked: settings.equalizerControls = 1
              }
              Button {
                 id: eqdButton
