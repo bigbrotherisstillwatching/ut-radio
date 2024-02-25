@@ -31,7 +31,16 @@ Rectangle {
     Settings {
        id: settings
        property bool darkMode: true
-       property string equalizerControls: ""
+       property string equalizerControls1: ""
+       property string equalizerControls2: ""
+       property string equalizerControls3: ""
+       property string equalizerControls4: ""
+       property string equalizerControls5: ""
+       property string equalizerControls6: ""
+       property string equalizerControls7: ""
+       property string equalizerControls8: ""
+       property string equalizerControls9: ""
+       property string equalizerControls10: ""
     }
 
     ThemedHeader {
@@ -529,7 +538,18 @@ Rectangle {
                 text: i18n.tr("Activate")
                 color: Colors.surfaceColor
 //                onClicked: process.start("/bin/bash",["-c", "echo slide1.value >> /home/phablet/Downloads/equalizer/sink.txt"]);
-                onClicked: settings.equalizerControls = [slide1.value, slide2.value]
+                onClicked: {
+                   settings.equalizerControls1 = slide1.value
+                   settings.equalizerControls2 = slide2.value
+                   settings.equalizerControls3 = slide3.value
+                   settings.equalizerControls4 = slide4.value
+                   settings.equalizerControls5 = slide5.value
+                   settings.equalizerControls6 = slide6.value
+                   settings.equalizerControls7 = slide7.value
+                   settings.equalizerControls8 = slide8.value
+                   settings.equalizerControls9 = slide9.value
+                   settings.equalizerControls10 = slide10.value
+                }
              }
              Button {
                 id: eqdButton
