@@ -529,7 +529,7 @@ Rectangle {
                 text: i18n.tr("Activate")
                 color: Colors.surfaceColor
 //                onClicked: process.start("/bin/bash",["-c", "echo slide1.value >> /home/phablet/Downloads/equalizer/sink.txt"]);
-                onClicked: settings.equalizerControls = 1
+                onClicked: settings.equalizerControls = slide1.value, slide2.value
              }
              Button {
                 id: eqdButton
