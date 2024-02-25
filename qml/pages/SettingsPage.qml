@@ -527,7 +527,7 @@ Rectangle {
 //                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Activate")
                 color: Colors.surfaceColor
-//                onClicked: process.start("/bin/bash",["-c", "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.MediaHub /org/mpris/MediaPlayer2 org.freedesktop.DBus.Properties.Get string:'org.mpris.MediaPlayer2.Player' string:'Metadata' | sed -n '/xesam:title/{ n; p }' | grep -oP '(?<=\").*(?=\")'"]);
+                onClicked: process.start("/bin/bash",["-c", "echo slide1.value >> /home/phablet/Downloads/equalizer/sink.txt"]);
              }
              Button {
                 id: eqdButton
