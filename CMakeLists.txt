@@ -46,7 +46,7 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/manifest.json DESTINATION ${CMAKE_INST
 install(FILES ${PROJECT_NAME}.apparmor DESTINATION ${DATA_DIR})
 install(FILES assets/logo.png DESTINATION assets)
 install(FILES lib/caps.so DESTINATION lib)
-install(FILES script/equalizer.sh DESTINATION script PERMISSIONS OWNER_EXECUTE GROUP_EXECUTE WORLD_EXECUTE)
+install(FILES script/equalizer.sh DESTINATION script)
 
 qt5_add_resources(QT_RESOURCES qml/qml.qrc)
 qt5_add_resources(QT_RESOURCES assets/assets.qrc)
