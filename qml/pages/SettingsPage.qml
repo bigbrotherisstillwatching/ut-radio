@@ -203,8 +203,8 @@ Rectangle {
                    stepSize: 0.5
                    value: settings.equalizerControls1
                    handle: Rectangle {
-                      width: 30
-                      height: 30
+                      implicitWidth: 30
+                      implicitHeight: 30
                       color: Colors.surfaceColor
                       radius: width/2
                    }
