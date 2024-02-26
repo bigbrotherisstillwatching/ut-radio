@@ -201,7 +201,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls1")
+                   value: settings.equalizerControls1
                 }
                 Label {
                    width: parent.width
@@ -226,7 +226,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls2")
+                   value: settings.equalizerControls2
                 }
                 Label {
                    width: parent.width
@@ -251,7 +251,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls3")
+                   value: settings.equalizerControls3
                 }
                 Label {
                    width: parent.width
@@ -276,7 +276,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls4")
+                   value: settings.equalizerControls4
                 }
                 Label {
                    width: parent.width
@@ -301,7 +301,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls5")
+                   value: settings.equalizerControls5
                 }
                 Label {
                    width: parent.width
@@ -326,7 +326,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls6")
+                   value: settings.equalizerControls6
                 }
                 Label {
                    width: parent.width
@@ -351,7 +351,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls7")
+                   value: settings.equalizerControls7
                 }
                 Label {
                    width: parent.width
@@ -376,7 +376,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls8")
+                   value: settings.equalizerControls8
                 }
                 Label {
                    width: parent.width
@@ -401,7 +401,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls9")
+                   value: settings.equalizerControls9
                 }
                 Label {
                    width: parent.width
@@ -426,7 +426,7 @@ Rectangle {
                    live: true
                    orientation: Qt.Vertical
                    stepSize: 0.5
-                   value: settings.getValue("equalizerControls10")
+                   value: settings.equalizerControls10
                 }
                 Label {
                    width: parent.width
