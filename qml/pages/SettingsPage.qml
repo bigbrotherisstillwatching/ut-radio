@@ -35,12 +35,12 @@ Rectangle {
 //      }
     }
 
-    Process {
+/*    Process {
       id: process3
 //      onFinished: {
 //         txt.text = readAll();
 //      }
-    }
+    }*/
 
 /*    Process {
       id: process4
@@ -591,7 +591,7 @@ Rectangle {
                 color: Colors.surfaceColor
                 onClicked: process2.start("/bin/bash",["-c", "pactl set-default-sink sink.primary_output"])
              }
-             Button {
+/*             Button {
                 id: scrButton
 //                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Activate script")
@@ -599,7 +599,7 @@ Rectangle {
                 onClicked: {
                    process3.start("/bin/bash",["-c", "chmod +x /opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer.sh"])
                 }
-             }
+             }*/
           }
        }
     }
