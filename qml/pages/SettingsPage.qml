@@ -206,7 +206,7 @@ Rectangle {
                       width: 30
                       height: 30
                       color: Colors.surfaceColor
-                      radius: 180
+                      radius: width/2
                    }
                 }
                 Label {
