@@ -202,6 +202,12 @@ Rectangle {
                    orientation: Qt.Vertical
                    stepSize: 0.5
                    value: settings.equalizerControls1
+                   handle: Rectangle {
+                      width: 30
+                      height: 30
+                      color: Colors.surfaceColor
+                      radius: 180
+                   }
                 }
                 Label {
                    width: parent.width
