@@ -601,15 +601,25 @@ Rectangle {
                 color: Colors.surfaceColor
                 onClicked: process2.start("/bin/bash",["-c", "pactl set-default-sink sink.primary_output"])
              }
-/*             Button {
+             Button {
                 id: scrButton
 //                anchors.horizontalCenter: parent.horizontalCenter
-                text: i18n.tr("Activate script")
+                text: i18n.tr("Reset")
                 color: Colors.surfaceColor
                 onClicked: {
-                   process3.start("/bin/bash",["-c", "chmod +x /opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer.sh"])
+//                   process3.start("/bin/bash",["-c", "chmod +x /opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer.sh"])
+                   slide1.value = 0.0
+                   slide2.value = 0.0
+                   slide3.value = 0.0
+                   slide4.value = 0.0
+                   slide5.value = 0.0
+                   slide6.value = 0.0
+                   slide7.value = 0.0
+                   slide8.value = 0.0
+                   slide9.value = 0.0
+                   slide10.value = 0.0
                 }
-             }*/
+             }
           }
        }
     }
