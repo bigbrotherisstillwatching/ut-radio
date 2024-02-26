@@ -35,19 +35,19 @@ Rectangle {
 //      }
     }
 
-/*    Process {
+    Process {
       id: process3
 //      onFinished: {
 //         txt.text = readAll();
 //      }
-    }*/
+    }
 
-/*    Process {
+    Process {
       id: process4
 //      onFinished: {
 //         txt.text = readAll();
 //      }
-    }*/
+    }
 
 /*    Process {
       id: process5
@@ -577,7 +577,7 @@ Rectangle {
                    settings.equalizerControls8 = slide8.value.toFixed(1)
                    settings.equalizerControls9 = slide9.value.toFixed(1)
                    settings.equalizerControls10 = slide10.value.toFixed(1)
-                   process.start("/bin/bash",["-c", "/home/phablet/Downloads/equalizer/equalizer.sh"])
+                   process.start("/bin/bash",["-c", "/home/phablet/.config/radio.s710/equalizer.sh"]);
 //                   process.start("/bin/bash",["-c", "pactl set-default-sink sink.primary_output"])
 //                   process2.start("/bin/bash",["-c", "pactl unload-module $(head -1 /home/phablet/.config/radio.s710/radio.s710.oldsink.txt)"])
 //                   process3.start("/bin/bash",["-c", "pactl load-module module-ladspa-sink sink_name=equalizer sink_master=sink.primary_output plugin=/opt/click.ubuntu.com/radio.s710/1.4.5/lib/caps.so label=Eq10X2 control=$(sed -n '3p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '5p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '6p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '7p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '8p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '9p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '10p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '11p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '12p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '4p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//') > /home/phablet/.config/radio.s710/radio.s710.oldsink.txt"])
@@ -590,6 +590,16 @@ Rectangle {
                 text: i18n.tr("Deactivate")
                 color: Colors.surfaceColor
                 onClicked: process2.start("/bin/bash",["-c", "pactl set-default-sink sink.primary_output"]);
+             }
+             Button {
+                id: scrButton
+//                anchors.horizontalCenter: parent.horizontalCenter
+                text: i18n.tr("Create script")
+                color: Colors.surfaceColor
+                onClicked: {
+                   process3.start("/bin/bash",["-c", "echo -e "#! /bin/bash\npactl set-default-sink sink.primary_output\noldsink=$(head -1 /home/phablet/.config/radio.s710/radio.s710.oldsink.txt)\npactl unload-module $oldsink\npactl load-module module-ladspa-sink sink_name=equalizer sink_master=sink.primary_output plugin=/opt/click.ubuntu.com/radio.s710/1.4.5/lib/caps.so label=Eq10X2 control=$(sed -n '3p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '5p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '6p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '7p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '8p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '9p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '10p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '11p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '12p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '4p' /home/phablet/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//') > /home/phablet/.config/radio.s710/radio.s710.oldsink.txt\npactl set-default-sink equalizer\n" >> /home/phablet/.config/radio.s710/equalizer.sh"]);
+                   process4.start("/bin/bash",["-c", "chmod +x /home/phablet/.config/radio.s710/equalizer.sh"]);
+                }
              }
           }
        }
