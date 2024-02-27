@@ -599,7 +599,7 @@ Rectangle {
 //                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Deactivate")
                 color: Colors.surfaceColor
-                onClicked: process2.start("/bin/bash",["-c", "pactl set-default-sink sink.primary_output"])
+                onClicked: process2.start("/bin/bash",["-c", "pactl set-default-sink $(pacmd list-sinks | grep -A1 '* index:' | sed 's/.*<//; s/>.*//' | grep -v '* index:')"])
              }
              Button {
                 id: scrButton
