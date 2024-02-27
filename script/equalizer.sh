@@ -2,9 +2,9 @@
 
 pacmd list-sinks | grep -A1 '* index:' | sed 's/.*<//; s/>.*//' | grep -v '* index:' > /home/phablet/.config/radio.s710/radio.s710.defaultsink.txt
 
-pactl set-default-sink sink.primary_output
+#pactl set-default-sink sink.primary_output
 #pactl set-default-sink $(pacmd list-sinks | grep -A1 '* index:' | sed 's/.*<//; s/>.*//' | grep -v '* index:')
-#pactl set-default-sink $(head -1 /home/phablet/.config/radio.s710/radio.s710.defaultsink.txt)
+pactl set-default-sink $(head -1 /home/phablet/.config/radio.s710/radio.s710.defaultsink.txt)
 
 oldsink=$(head -1 /home/phablet/.config/radio.s710/radio.s710.oldsink.txt)
 pactl unload-module $oldsink
