@@ -1,5 +1,7 @@
 #! /bin/bash
 
+sleep 0.5
+
 pacmd list-sinks | grep -A1 '* index:' | sed 's/.*<//; s/>.*//' | grep -v '* index:' > /home/phablet/.config/radio.s710/radio.s710.defaultsink.txt
 
 #pactl set-default-sink sink.primary_output
