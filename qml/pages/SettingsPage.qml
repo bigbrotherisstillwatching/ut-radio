@@ -606,7 +606,19 @@ Rectangle {
 //                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Change")
                 color: Colors.surfaceColor
-                onClicked: process3.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer_change.sh"])
+                onClicked: {
+                   settings.equalizerControls1 = slide1.value.toFixed(1)
+                   settings.equalizerControls2 = slide2.value.toFixed(1)
+                   settings.equalizerControls3 = slide3.value.toFixed(1)
+                   settings.equalizerControls4 = slide4.value.toFixed(1)
+                   settings.equalizerControls5 = slide5.value.toFixed(1)
+                   settings.equalizerControls6 = slide6.value.toFixed(1)
+                   settings.equalizerControls7 = slide7.value.toFixed(1)
+                   settings.equalizerControls8 = slide8.value.toFixed(1)
+                   settings.equalizerControls9 = slide9.value.toFixed(1)
+                   settings.equalizerControls10 = slide10.value.toFixed(1)
+                   process3.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer_change.sh"])
+                }
              }
              Button {
                 id: resButton
