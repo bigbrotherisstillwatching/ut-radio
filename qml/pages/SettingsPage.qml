@@ -35,12 +35,12 @@ Rectangle {
 //      }
     }
 
-/*    Process {
+    Process {
       id: process3
 //      onFinished: {
 //         txt.text = readAll();
 //      }
-    }*/
+    }
 
 /*    Process {
       id: process4
@@ -599,15 +599,22 @@ Rectangle {
 //                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Deactivate")
                 color: Colors.surfaceColor
-                onClicked: process2.start("/bin/bash",["-c", "pactl set-default-sink $(head -1 /home/phablet/.config/radio.s710/radio.s710.defaultsink.txt)"])
+                onClicked: process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer_stop.sh"])
              }
              Button {
-                id: scrButton
+                id: chaButton
+//                anchors.horizontalCenter: parent.horizontalCenter
+                text: i18n.tr("Change")
+                color: Colors.surfaceColor
+                onClicked: process3.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer_change.sh"])
+             }
+             Button {
+                id: resButton
 //                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Reset")
                 color: Colors.surfaceColor
                 onClicked: {
-//                   process3.start("/bin/bash",["-c", "chmod +x /opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer.sh"])
+//                   process4.start("/bin/bash",["-c", "chmod +x /opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer.sh"])
                    slide1.value = 0.0
                    slide2.value = 0.0
                    slide3.value = 0.0
