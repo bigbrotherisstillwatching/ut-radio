@@ -13,7 +13,6 @@ import "../colors"
 
 Rectangle {
     id: settingsPage
-//    id: urlPage
     anchors.fill: parent
     signal stationChanged(var station)
 
@@ -23,38 +22,15 @@ Rectangle {
 
     Process {
       id: process
-//      onFinished: {
-//         txt.text = readAll();
-//      }
     }
 
     Process {
       id: process2
-//      onFinished: {
-//         txt.text = readAll();
-//      }
     }
 
     Process {
       id: process3
-//      onFinished: {
-//         txt.text = readAll();
-//      }
     }
-
-/*    Process {
-      id: process4
-//      onFinished: {
-//         txt.text = readAll();
-//      }
-    }*/
-
-/*    Process {
-      id: process5
-//      onFinished: {
-//         txt.text = readAll();
-//      }
-    }*/
 
     Settings {
        id: settings
@@ -149,40 +125,8 @@ Rectangle {
                 title.text: i18n.tr("Equalizer")
                 title.font.bold: true
                 title.color: Colors.mainText
-//                subtitle.text: i18n.tr("Restart the app after changing dark mode option")
-//                subtitle.color: "red"
-//                subtitle.visible: false
              }
           }
-/*          ListItem {
-              anchors.left: parent.left
-              anchors.right: parent.right
-              color: Colors.surfaceColor
-              divider.colorFrom: Colors.borderColor
-              divider.colorTo: Colors.borderColor
-              highlightColor: Colors.highlightColor
-
-              height: l1.height + (divider.visible ? divider.height : 0)
-
-              SlotsLayout {
-                  id: l3
-                  mainSlot: Text {
-                     anchors.verticalCenter: parent.verticalCenter
-                     text: i18n.tr("Equalizer")
-                     color: Colors.mainText
-                     font.bold: true
-                  }
-                  Switch {
-//                     checked: settings.darkMode
-                     SlotsLayout.position: SlotsLayout.Trailing
-
-                     onClicked: {
-//                        settings.darkMode = checked
-//                        l1.subtitle.visible = true
-                     }
-                  }
-              }
-          }*/
           Row {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: 1
@@ -436,146 +380,14 @@ Rectangle {
                    font.pointSize: 20
                 }
              }
-/*             Qqc.Slider {
-//                id: slide2
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
-             }
-             Qqc.Slider {
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
-             }
-             Qqc.Slider {
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
-             }
-             Qqc.Slider {
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
-             }
-             Qqc.Slider {
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
-             }
-             Qqc.Slider {
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
-             }
-             Qqc.Slider {
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
-             }
-             Qqc.Slider {
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
-             }
-             Qqc.Slider {
-                from: -48.0
-                to: 24.0
-                live: true
-                orientation: Qt.Vertical
-                stepSize: 0.1
-             }*/
           }
-/*          Row {
-             anchors.horizontalCenter: parent.horizontalCenter
-             spacing: 35
-             Text {
-                text: " 31Hz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                anchors.horizontalCenter: slide1.horizontalCenter
-//                font.bold: true
-             }
-             Text {
-                text: " 63Hz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                anchors.horizontalCenter: slide2.horizontalCenter
-//                font.bold: true
-             }
-             Text {
-                text: "125Hz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                font.bold: true
-             }
-             Text {
-                text: "250Hz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                font.bold: true
-             }
-             Text {
-                text: "500Hz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                font.bold: true
-             }
-             Text {
-                text: "1kHz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                font.bold: true
-             }
-             Text {
-                text: "  2kHz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                font.bold: true
-             }
-             Text {
-                text: " 4kHz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                font.bold: true
-             }
-             Text {
-                text: " 8kHz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                font.bold: true
-             }
-             Text {
-                text: "16kHz"
-                color: Colors.mainText
-                font.pointSize: 20
-//                font.bold: true
-             }
-          }*/
           Row {
              anchors.horizontalCenter: parent.horizontalCenter
              spacing: settingsPage.padding
              Button {
                 id: eqaButton
-//                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Activate")
                 color: Colors.surfaceColor
-//                onClicked: process.start("/bin/bash",["-c", "echo slide1.value >> /home/phablet/Downloads/equalizer/sink.txt"]);
                 onClicked: {
                    settings.equalizerControls1 = slide1.value.toFixed(1)
                    settings.equalizerControls2 = slide2.value.toFixed(1)
@@ -587,23 +399,17 @@ Rectangle {
                    settings.equalizerControls8 = slide8.value.toFixed(1)
                    settings.equalizerControls9 = slide9.value.toFixed(1)
                    settings.equalizerControls10 = slide10.value.toFixed(1)
-                   process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer.sh"])
-//                   process.start("/bin/bash",["-c", "pactl set-default-sink sink.primary_output"])
-//                   process2.start("/bin/bash",["-c", "pactl unload-module $(head -1 /home/phablet/.config/radio.s710/radio.s710.oldsink.txt)"])
-//                   process3.start("/bin/bash",["-c", "pactl load-module module-ladspa-sink sink_name=equalizer sink_master=sink.primary_output plugin=/opt/click.ubuntu.com/radio.s710/1.4.5/lib/caps.so label=Eq10X2 control=$(sed -n '3p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '5p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '6p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '7p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '8p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '9p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '10p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '11p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '12p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//'),$(sed -n '4p' ~/.config/radio.s710/radio.s710.conf | sed 's/.*[=] *//') > /home/phablet/.config/radio.s710/radio.s710.oldsink.txt"])
-//                   process4.start("/bin/bash",["-c", "pactl set-default-sink equalizer"]) 
+                   process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer.sh"])
                 }
              }
              Button {
                 id: eqdButton
-//                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Deactivate")
                 color: Colors.surfaceColor
-                onClicked: process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer_stop.sh"])
+                onClicked: process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
              }
              Button {
                 id: chaButton
-//                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Change")
                 color: Colors.surfaceColor
                 onClicked: {
@@ -617,16 +423,14 @@ Rectangle {
                    settings.equalizerControls8 = slide8.value.toFixed(1)
                    settings.equalizerControls9 = slide9.value.toFixed(1)
                    settings.equalizerControls10 = slide10.value.toFixed(1)
-                   process3.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer_change.sh"])
+                   process3.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_change.sh"])
                 }
              }
              Button {
                 id: resButton
-//                anchors.horizontalCenter: parent.horizontalCenter
                 text: i18n.tr("Reset")
                 color: Colors.surfaceColor
                 onClicked: {
-//                   process4.start("/bin/bash",["-c", "chmod +x /opt/click.ubuntu.com/radio.s710/1.4.5/script/equalizer.sh"])
                    slide1.value = 0.0
                    slide2.value = 0.0
                    slide3.value = 0.0
