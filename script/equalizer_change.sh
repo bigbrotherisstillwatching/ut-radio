@@ -1,5 +1,7 @@
 #! /bin/bash
 
+sleep 0.5
+
 pactl set-default-sink $(head -1 /home/phablet/.config/radio.s710/radio.s710.defaultsink.txt)
 
 pactl unload-module $(head -1 /home/phablet/.config/radio.s710/radio.s710.oldsink.txt)
