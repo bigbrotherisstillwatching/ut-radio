@@ -309,15 +309,6 @@ Rectangle {
 
       model: favouriteModel
 
-      style: ListItemStyle {
-            dragPanel: Icon {
-               name: "sort-listitem"
-//               SlotsLayout.position: SlotsLayout.Last;
-               width: units.gu(3)
-//            visible: ListView.view.ViewItems.dragMode
-            }
-      }
-
       delegate: ListItem {
          height: layout.height + (divider.visible ? divider.height : 0)
          color: Colors.surfaceColor
@@ -435,14 +426,15 @@ Rectangle {
             id: modelLayout
          }*/
 
-/*         style: ListItemStyle {
+         style: ListItemStyle {
+            flickable: favList
             dragPanel: Icon {
                name: "sort-listitem"
 //               SlotsLayout.position: SlotsLayout.Last;
                width: units.gu(3)
 //            visible: ListView.view.ViewItems.dragMode
             }
-         }*/
+         }
 
          onPressAndHold: ListView.view.ViewItems.dragMode =
             !ListView.view.ViewItems.dragMode
