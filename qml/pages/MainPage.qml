@@ -415,24 +415,15 @@ Rectangle {
                height: units.gu(4)
                asynchronous: true
             }
-/*            Icon {
-               name: "sort-listitem"
-               SlotsLayout.position: SlotsLayout.Last;
-               width: units.gu(3)
-               visible: ListView.view.ViewItems.dragMode
-            }*/
          }
 /*         ListItemLayout {
             id: modelLayout
          }*/
 
          style: ListItemStyle {
-            flickable: favList
             dragPanel: Icon {
                name: "sort-listitem"
-//               SlotsLayout.position: SlotsLayout.Last;
                width: units.gu(3)
-//            visible: ListView.view.ViewItems.dragMode
             }
          }
 
