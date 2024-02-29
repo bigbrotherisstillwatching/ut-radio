@@ -419,7 +419,7 @@ Rectangle {
                name: "sort-listitem"
                SlotsLayout.position: SlotsLayout.Last;
                width: units.gu(3)
-//               visible: ListView.view.ViewItems.dragMode
+               visible: parent.Drag.active
             }
          }
 /*         ListItemLayout {
