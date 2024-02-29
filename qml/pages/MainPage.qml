@@ -424,16 +424,8 @@ Rectangle {
 /*         ListItemLayout {
             id: modelLayout
          }*/
-//         onPressAndHold: ListView.view.ViewItems.dragMode =
-//            !ListView.view.ViewItems.dragMode
-         onPressAndHold: {
-            ListView.view.ViewItems.dragMode = !ListView.view.ViewItems.dragMode
-            Icon {
-               name: "sort-listitem"
-               SlotsLayout.position: SlotsLayout.Trailing;
-//               width: units.gu(2)
-            }
-         }
+         onPressAndHold: ListView.view.ViewItems.dragMode =
+            !ListView.view.ViewItems.dragMode
       }
       ViewItems.onDragUpdated: {
          if (event.status == ListItemDrag.Moving) {
