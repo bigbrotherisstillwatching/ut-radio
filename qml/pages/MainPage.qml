@@ -415,17 +415,25 @@ Rectangle {
                height: units.gu(4)
                asynchronous: true
             }
-            Icon {
+/*            Icon {
                name: "sort-listitem"
-               SlotsLayout.position: SlotsLayout.Leading;
+               SlotsLayout.position: SlotsLayout.Trailing;
                width: units.gu(2)
-            }
+            }*/
          }
 /*         ListItemLayout {
             id: modelLayout
          }*/
-         onPressAndHold: ListView.view.ViewItems.dragMode =
-            !ListView.view.ViewItems.dragMode
+//         onPressAndHold: ListView.view.ViewItems.dragMode =
+//            !ListView.view.ViewItems.dragMode
+         onPressAndHold: {
+            ListView.view.ViewItems.dragMode = !ListView.view.ViewItems.dragMode
+            Icon {
+               name: "sort-listitem"
+               SlotsLayout.position: SlotsLayout.Trailing;
+//               width: units.gu(2)
+            }
+         }
       }
       ViewItems.onDragUpdated: {
          if (event.status == ListItemDrag.Moving) {
