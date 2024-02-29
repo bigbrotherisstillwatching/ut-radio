@@ -426,14 +426,14 @@ Rectangle {
             id: modelLayout
          }*/
 
-         style: ListItemStyle {
+/*         style: ListItemStyle {
             dragPanel: Icon {
                name: "sort-listitem"
 //               SlotsLayout.position: SlotsLayout.Last;
                width: units.gu(3)
 //            visible: ListView.view.ViewItems.dragMode
             }
-         }
+         }*/
 
          onPressAndHold: ListView.view.ViewItems.dragMode =
             !ListView.view.ViewItems.dragMode
@@ -467,6 +467,14 @@ Rectangle {
             text: i18n.tr("Favourites") + " (" + favouriteModel.count + ")"
             color: Colors.mainText
             font.bold: true
+         }
+      }
+      style: ListItemStyle {
+         dragPanel: Icon {
+            name: "sort-listitem"
+//            SlotsLayout.position: SlotsLayout.Last;
+            width: units.gu(3)
+//            visible: ListView.view.ViewItems.dragMode
          }
       }
    }
