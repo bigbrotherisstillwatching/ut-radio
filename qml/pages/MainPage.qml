@@ -298,6 +298,11 @@ Rectangle {
       }
    }
 
+   DragHandler {
+      id: handler
+      target: favList
+   }
+
    ListView {
       id: favList
       anchors.top: playerControls.bottom
@@ -419,13 +424,6 @@ Rectangle {
 /*         ListItemLayout {
             id: modelLayout
          }*/
-
-         style: ListItemStyle {
-            dragPanel: Icon {
-               name: "sort-listitem"
-               width: units.gu(3)
-            }
-         }
 
          onPressAndHold: ListView.view.ViewItems.dragMode =
             !ListView.view.ViewItems.dragMode
