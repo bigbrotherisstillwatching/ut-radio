@@ -298,11 +298,6 @@ Rectangle {
       }
    }
 
-   DragHandler {
-      id: handler
-      target: favList
-   }
-
    ListView {
       id: favList
       anchors.top: playerControls.bottom
@@ -459,6 +454,9 @@ Rectangle {
             font.bold: true
          }
       }
+
+      DragHandler { }
+
    }
 
    // *******************************************************************
