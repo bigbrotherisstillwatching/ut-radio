@@ -18,7 +18,8 @@ Rectangle {
 
     color: Colors.backgroundColor
 
-    property var padding: units.gu(3)
+//    property var padding: units.gu(3)
+    property var padding: units.gu(1)
 
     Process {
       id: process
