@@ -415,12 +415,12 @@ Rectangle {
                height: units.gu(4)
                asynchronous: true
             }
-            Icon {
+/*            Icon {
                name: "sort-listitem"
                SlotsLayout.position: SlotsLayout.Last;
                width: units.gu(3)
                visible: ListView.view.ViewItems.dragMode
-            }
+            }*/
          }
 /*         ListItemLayout {
             id: modelLayout
@@ -443,6 +443,13 @@ Rectangle {
          LomiriNumberAnimation {
             property: "y"
          }
+      }
+
+      dragPanel: Icon {
+         name: "sort-listitem"
+         SlotsLayout.position: SlotsLayout.Last;
+         width: units.gu(3)
+//         visible: ListView.view.ViewItems.dragMode
       }
 
       header: Rectangle {
