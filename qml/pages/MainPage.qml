@@ -417,8 +417,8 @@ Rectangle {
             }
             Icon {
                name: "sort-listitem"
-               SlotsLayout.position: SlotsLayout.Trailing;
-//               width: units.gu(2)
+               SlotsLayout.position: SlotsLayout.Last;
+               width: units.gu(3)
 //               visible: ListView.view.ViewItems.dragMode
             }
          }
