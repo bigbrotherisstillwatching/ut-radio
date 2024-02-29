@@ -415,11 +415,12 @@ Rectangle {
                height: units.gu(4)
                asynchronous: true
             }
-/*            Icon {
+            Icon {
                name: "sort-listitem"
                SlotsLayout.position: SlotsLayout.Trailing;
-               width: units.gu(2)
-            }*/
+//               width: units.gu(2)
+//               visible: ListView.view.ViewItems.dragMode
+            }
          }
 /*         ListItemLayout {
             id: modelLayout
