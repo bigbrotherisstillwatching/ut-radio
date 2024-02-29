@@ -426,12 +426,14 @@ Rectangle {
             id: modelLayout
          }*/
 
-         dragPanel: Icon {
-            name: "sort-listitem"
-            SlotsLayout.position: SlotsLayout.Last;
-            width: units.gu(3)
+         ListItemStyle {
+            dragPanel: Icon {
+               name: "sort-listitem"
+//               SlotsLayout.position: SlotsLayout.Last;
+               width: units.gu(3)
 //            visible: ListView.view.ViewItems.dragMode
-      }
+            }
+         }
 
          onPressAndHold: ListView.view.ViewItems.dragMode =
             !ListView.view.ViewItems.dragMode
@@ -452,13 +454,6 @@ Rectangle {
             property: "y"
          }
       }
-
-/*      dragPanel: Icon {
-         name: "sort-listitem"
-         SlotsLayout.position: SlotsLayout.Last;
-         width: units.gu(3)
-//         visible: ListView.view.ViewItems.dragMode
-      }*/
 
       header: Rectangle {
          id: headerItem
