@@ -268,8 +268,8 @@ Rectangle {
 
          Icon {
             id: settingsIcon
-            height: units.gu(3)
-            width: units.gu(3)
+            height: units.gu(2.5)
+            width: units.gu(2.5)
             anchors.verticalCenter: parent.verticalCenter
 
 //            name: "settings"
