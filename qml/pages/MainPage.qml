@@ -266,31 +266,20 @@ Rectangle {
             }
          }
 
-/*         Icon {
+         Icon {
             id: settingsIcon
             height: units.gu(2)
             width: units.gu(2)
             anchors.verticalCenter: parent.verticalCenter
 
-            name: "settings"
+//            name: "settings"
+            name: "properties"
 
             MouseArea {
                anchors.fill: parent
                onClicked: {
                   var p = pageStack.push(Qt.resolvedUrl("./SettingsPage.qml"))
                }
-            }
-         }*/
-
-         Button {
-            id: settingsButton
-            width: units.gu(2)
-            height: units.gu(2)
-//            text: i18n.tr("What's playing?")
-            color: Colors.surfaceColor
-            iconName: "settings"
-            onClicked: {
-               var p = pageStack.push(Qt.resolvedUrl("./SettingsPage.qml"))
             }
          }
 
