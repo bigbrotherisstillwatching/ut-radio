@@ -284,6 +284,8 @@ Rectangle {
 
          Button {
             id: settingsButton
+            width: units.gu(4)
+            height: units.gu(4)
 //            text: i18n.tr("What's playing?")
             color: Colors.surfaceColor
             iconName: "settings"
