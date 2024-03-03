@@ -32,6 +32,6 @@ Rectangle {
       source: "../assets/1.png"
       height: 1170
       width: 540
-      horizontalAlignment: parent.AlignHCenter
+      anchors.horizontalCenter: parent
    }
 }
