@@ -11,7 +11,7 @@ import "../colors"
 
 Rectangle {
    id: helpPage
-   anchors.fill: parent
+//   anchors.fill: parent
 
    color: Colors.backgroundColor
 
