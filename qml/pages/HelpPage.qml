@@ -19,10 +19,12 @@ Rectangle {
       id: header
       title: i18n.tr("Help")
    }
-   Text {
+/*   Text {
       text: i18n.tr("Coming soon ...")
       font.pointSize: 25
       anchors.centerIn: parent
       color: Colors.mainText
-   }
+   }*/
+   Image {
+      source: "assets/1.png"
 }
