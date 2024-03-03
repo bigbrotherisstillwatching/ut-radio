@@ -22,8 +22,8 @@ Rectangle {
    ScrollView {
       id: scrollView
       anchors.top: header.bottom
-      contentHeight: image1.height+image2.height+text1.height
-      contentWidth: helpPage.width
+      height: image1.height+image2.height+text1.height
+      width: helpPage.width
       anchors.horizontalCenter: parent.horizontalCenter
 //      anchors.fill: parent
 //      anchors.margins: 15
