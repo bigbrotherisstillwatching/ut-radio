@@ -27,4 +27,5 @@ Rectangle {
    }*/
    Image {
       source: "assets/1.png"
+   }
 }
