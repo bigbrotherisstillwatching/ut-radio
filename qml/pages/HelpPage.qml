@@ -25,7 +25,7 @@ Rectangle {
       anchors.centerIn: parent
       color: Colors.mainText
    }*/
-   ScrollView {
+   Flickable {
       Image {
          id: image1
          anchors.topMargin: units.gu(3)
@@ -49,6 +49,7 @@ Rectangle {
          anchors.horizontalCenter: parent.horizontalCenter
       }
       Text {
+         id: text1
          text: i18n.tr("Coming soon ...")
          font.pointSize: 25
 //         anchors.centerIn: parent
