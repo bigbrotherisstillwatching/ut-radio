@@ -29,7 +29,7 @@ Rectangle {
       Image {
          id: image1
          anchors.topMargin: units.gu(3)
-         anchors.top: header.bottom
+//         anchors.top: header.bottom
          sourceSize.width: 1080
          sourceSize.height: 2340
          source: "../assets/1.png"
@@ -40,7 +40,7 @@ Rectangle {
       Image {
          id: image2
          anchors.topMargin: units.gu(3)
-         anchors.top: image1.bottom
+//         anchors.top: image1.bottom
          sourceSize.width: 1080
          sourceSize.height: 2340
          source: "../assets/2.png"
@@ -54,7 +54,7 @@ Rectangle {
 //         anchors.centerIn: parent
          color: Colors.mainText
          anchors.topMargin: units.gu(3)
-         anchors.top: image2.bottom
+//         anchors.top: image2.bottom
          anchors.horizontalCenter: parent.horizontalCenter
       }
    }
