@@ -27,7 +27,7 @@ Rectangle {
    }*/
    Flickable {
       id: flick1
-      contentHeight: image1.height+image2.height+text1.height
+      contentHeight: image1.height + image2.height + text1.height
       contentWidth: image1.width
       anchors.topMargin: units.gu(3)
       anchors.top: header.bottom
