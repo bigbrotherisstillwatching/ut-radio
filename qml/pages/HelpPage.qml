@@ -26,12 +26,13 @@ Rectangle {
       color: Colors.mainText
    }*/
    Image {
+      anchors.topMargin: units.gu(3)
       anchors.top: header.bottom
       sourceSize.width: 1080
       sourceSize.height: 2340
       source: "../assets/1.png"
-      height: 1170
-      width: 540
+      height: 1755
+      width: 810
       anchors.horizontalCenter: parent.horizontalCenter
    }
 }
