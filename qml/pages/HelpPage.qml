@@ -26,6 +26,6 @@ Rectangle {
       color: Colors.mainText
    }*/
    Image {
-      source: "/opt/click.ubuntu.com/radio.s710/1.4.6/assets/1.png"
+      source: "assets/1.png"
    }
 }
