@@ -442,6 +442,16 @@ Rectangle {
                    slide8.value = 0.0
                    slide9.value = 0.0
                    slide10.value = 0.0
+                   settings.equalizerControls1 = slide1.value.toFixed(1)
+                   settings.equalizerControls2 = slide2.value.toFixed(1)
+                   settings.equalizerControls3 = slide3.value.toFixed(1)
+                   settings.equalizerControls4 = slide4.value.toFixed(1)
+                   settings.equalizerControls5 = slide5.value.toFixed(1)
+                   settings.equalizerControls6 = slide6.value.toFixed(1)
+                   settings.equalizerControls7 = slide7.value.toFixed(1)
+                   settings.equalizerControls8 = slide8.value.toFixed(1)
+                   settings.equalizerControls9 = slide9.value.toFixed(1)
+                   settings.equalizerControls10 = slide10.value.toFixed(1)
                 }
              }
           }
