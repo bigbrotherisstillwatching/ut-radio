@@ -9,35 +9,22 @@ import "../net"
 import "../util"
 import "../colors"
 
-Rectangle {
-   id: helpPage
+ScrollView {
+   id: scrollView
    anchors.fill: parent
+   anchors.margins: 15
 
-   color: Colors.backgroundColor
-
-   ThemedHeader {
-      id: header
-      title: i18n.tr("Help")
-   }
-/*   Text {
-      text: i18n.tr("Coming soon ...")
-      font.pointSize: 25
-      anchors.centerIn: parent
-      color: Colors.mainText
-   }*/
-/*   Flickable {
-      id: flick1
-      contentHeight: image1.height+image2.height+text1.height
-      contentWidth: image1.width
-      height: helpPage.height
-      width: helpPage.width
-      anchors.topMargin: units.gu(3)
-      anchors.top: header.bottom
-      anchors.horizontalCenter: parent.horizontalCenter*/
-   ScrollView {
-      id: scrollView
+   Rectangle {
+      id: helpPage
       anchors.fill: parent
-      anchors.margins: 15
+
+      color: Colors.backgroundColor
+
+      ThemedHeader {
+         id: header
+         title: i18n.tr("Help")
+      }
+
       Image {
          id: image1
 //         anchors.topMargin: units.gu(3)
@@ -49,6 +36,7 @@ Rectangle {
          width: 810
 //         anchors.horizontalCenter: parent.horizontalCenter
       }
+      
       Image {
          id: image2
 //         anchors.topMargin: units.gu(3)
@@ -60,6 +48,7 @@ Rectangle {
          width: 810
 //         anchors.horizontalCenter: parent.horizontalCenter
       }
+      
       Text {
          id: text1
          text: i18n.tr("Coming soon ...")
