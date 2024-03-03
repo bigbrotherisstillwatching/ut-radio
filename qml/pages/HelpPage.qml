@@ -22,7 +22,7 @@ Rectangle {
    ScrollView {
       id: scrollView
       anchors.top: header.bottom
-      height: image1.height+image2.height+text1.height
+      height: column1.height
       width: helpPage.width
       anchors.horizontalCenter: helpPage.horizontalCenter
       anchors.topMargin: units.gu(3)
@@ -30,6 +30,7 @@ Rectangle {
 //      anchors.margins: 15
 
       Column {
+         id: column1
          anchors.top: scrollView.top
          anchors.horizontalCenter: scrollView.horizontalCenter
          
@@ -42,7 +43,7 @@ Rectangle {
             source: "../assets/1.png"
             height: 1755
             width: 810
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.horizontalCenter: column1.horizontalCenter
          }
       
          Image {
@@ -54,7 +55,7 @@ Rectangle {
             source: "../assets/2.png"
             height: 1755
             width: 810
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.horizontalCenter: column1.horizontalCenter
          }
       
          Text {
@@ -65,7 +66,7 @@ Rectangle {
             color: Colors.mainText
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.horizontalCenter: column1.horizontalCenter
          }
       }
    }
