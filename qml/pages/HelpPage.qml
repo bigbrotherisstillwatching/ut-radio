@@ -30,10 +30,13 @@ Rectangle {
 //      anchors.margins: 15
 
       Column {
+         anchors.top: scrollView.top
+         anchors.horizontalCenter: scrollView.horizontalCenter
+         
          Image {
             id: image1
-            anchors.topMargin: units.gu(3)
-            anchors.top: scrollView.top
+//            anchors.topMargin: units.gu(3)
+//            anchors.top: scrollView.top
             sourceSize.width: 1080
             sourceSize.height: 2340
             source: "../assets/1.png"
