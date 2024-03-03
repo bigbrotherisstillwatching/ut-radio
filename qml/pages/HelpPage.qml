@@ -25,42 +25,45 @@ Rectangle {
       height: image1.height+image2.height+text1.height
       width: helpPage.width
       anchors.horizontalCenter: helpPage.horizontalCenter
+      anchors.topMargin: units.gu(3)
 //      anchors.fill: parent
 //      anchors.margins: 15
 
-      Image {
-         id: image1
-//         anchors.topMargin: units.gu(3)
-//         anchors.top: flick1.top
-         sourceSize.width: 1080
-         sourceSize.height: 2340
-         source: "../assets/1.png"
-         height: 1755
-         width: 810
-         anchors.horizontalCenter: parent.horizontalCenter
-      }
+      Column {
+         Image {
+            id: image1
+            anchors.topMargin: units.gu(3)
+            anchors.top: scrollView.top
+            sourceSize.width: 1080
+            sourceSize.height: 2340
+            source: "../assets/1.png"
+            height: 1755
+            width: 810
+            anchors.horizontalCenter: parent.horizontalCenter
+         }
       
-      Image {
-         id: image2
-//         anchors.topMargin: units.gu(3)
-         anchors.top: image1.bottom
-         sourceSize.width: 1080
-         sourceSize.height: 2340
-         source: "../assets/2.png"
-         height: 1755
-         width: 810
-         anchors.horizontalCenter: parent.horizontalCenter
-      }
+         Image {
+            id: image2
+//            anchors.topMargin: units.gu(3)
+//            anchors.top: image1.bottom
+            sourceSize.width: 1080
+            sourceSize.height: 2340
+            source: "../assets/2.png"
+            height: 1755
+            width: 810
+            anchors.horizontalCenter: parent.horizontalCenter
+         }
       
-      Text {
-         id: text1
-         text: i18n.tr("Coming soon ...")
-         font.pointSize: 25
-//         anchors.centerIn: parent
-         color: Colors.mainText
-//         anchors.topMargin: units.gu(3)
-         anchors.top: image2.bottom
-         anchors.horizontalCenter: parent.horizontalCenter
+         Text {
+            id: text1
+            text: i18n.tr("Coming soon ...")
+            font.pointSize: 25
+//            anchors.centerIn: parent
+            color: Colors.mainText
+//            anchors.topMargin: units.gu(3)
+//            anchors.top: image2.bottom
+            anchors.horizontalCenter: parent.horizontalCenter
+         }
       }
    }
 }
