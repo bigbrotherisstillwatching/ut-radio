@@ -26,6 +26,6 @@ Rectangle {
       color: Colors.mainText
    }*/
    Image {
-      source: "assets/1.png"
+      source: "../assets/1.png"
    }
 }
