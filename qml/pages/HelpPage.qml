@@ -9,21 +9,20 @@ import "../net"
 import "../util"
 import "../colors"
 
-ScrollView {
-   id: scrollView
+Rectangle {
+   id: helpPage
    anchors.fill: parent
-   anchors.margins: 15
+   color: Colors.backgroundColor
 
-   Rectangle {
-      id: helpPage
+   ThemedHeader {
+      id: header
+      title: i18n.tr("Help")
+   }
+
+   ScrollView {
+      id: scrollView
       anchors.fill: parent
-
-      color: Colors.backgroundColor
-
-      ThemedHeader {
-         id: header
-         title: i18n.tr("Help")
-      }
+//      anchors.margins: 15
 
       Image {
          id: image1
