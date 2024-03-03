@@ -11,7 +11,7 @@ import "../colors"
 
 Rectangle {
    id: helpPage
-//   anchors.fill: parent
+   anchors.fill: parent
 
    color: Colors.backgroundColor
 
@@ -25,35 +25,37 @@ Rectangle {
       anchors.centerIn: parent
       color: Colors.mainText
    }*/
-   Image {
-      id: image1
-      anchors.topMargin: units.gu(3)
-      anchors.top: header.bottom
-      sourceSize.width: 1080
-      sourceSize.height: 2340
-      source: "../assets/1.png"
-      height: 1755
-      width: 810
-      anchors.horizontalCenter: parent.horizontalCenter
-   }
-   Image {
-      id: image2
-      anchors.topMargin: units.gu(3)
-      anchors.top: image1.bottom
-      sourceSize.width: 1080
-      sourceSize.height: 2340
-      source: "../assets/2.png"
-      height: 1755
-      width: 810
-      anchors.horizontalCenter: parent.horizontalCenter
-   }
-   Text {
-      text: i18n.tr("Coming soon ...")
-      font.pointSize: 25
-//      anchors.centerIn: parent
-      color: Colors.mainText
-      anchors.topMargin: units.gu(3)
-      anchors.top: image2.bottom
-      anchors.horizontalCenter: parent.horizontalCenter
+   ScrollView {
+      Image {
+         id: image1
+         anchors.topMargin: units.gu(3)
+         anchors.top: header.bottom
+         sourceSize.width: 1080
+         sourceSize.height: 2340
+         source: "../assets/1.png"
+         height: 1755
+         width: 810
+         anchors.horizontalCenter: parent.horizontalCenter
+      }
+      Image {
+         id: image2
+         anchors.topMargin: units.gu(3)
+         anchors.top: image1.bottom
+         sourceSize.width: 1080
+         sourceSize.height: 2340
+         source: "../assets/2.png"
+         height: 1755
+         width: 810
+         anchors.horizontalCenter: parent.horizontalCenter
+      }
+      Text {
+         text: i18n.tr("Coming soon ...")
+         font.pointSize: 25
+//         anchors.centerIn: parent
+         color: Colors.mainText
+         anchors.topMargin: units.gu(3)
+         anchors.top: image2.bottom
+         anchors.horizontalCenter: parent.horizontalCenter
+      }
    }
 }
