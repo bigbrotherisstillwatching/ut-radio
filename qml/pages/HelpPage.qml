@@ -56,7 +56,8 @@ Rectangle {
 //         anchors.centerIn: parent
          color: Colors.mainText
 //         anchors.topMargin: units.gu(3)
-         anchors.top: image2.bottom         anchors.horizontalCenter: parent.horizontalCenter
+         anchors.top: image2.bottom
+//         anchors.horizontalCenter: parent.horizontalCenter
       }
    }
 }
