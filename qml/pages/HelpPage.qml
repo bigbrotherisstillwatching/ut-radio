@@ -26,6 +26,11 @@ Rectangle {
       color: Colors.mainText
    }*/
    Image {
+      anchors.top: header.bottom
+      sourceSize.width: 1080
+      sourceSize.height: 2340
       source: "../assets/1.png"
+      height: 1170
+      width: 540
    }
 }
