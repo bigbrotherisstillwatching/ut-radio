@@ -24,7 +24,7 @@ Rectangle {
       anchors.top: header.bottom
       height: image1.height+image2.height+text1.height
       width: helpPage.width
-      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.horizontalCenter: helpPage.horizontalCenter
 //      anchors.fill: parent
 //      anchors.margins: 15
 
@@ -37,7 +37,7 @@ Rectangle {
          source: "../assets/1.png"
          height: 1755
          width: 810
-//         anchors.horizontalCenter: parent.horizontalCenter
+         anchors.horizontalCenter: parent.horizontalCenter
       }
       
       Image {
@@ -49,7 +49,7 @@ Rectangle {
          source: "../assets/2.png"
          height: 1755
          width: 810
-//         anchors.horizontalCenter: parent.horizontalCenter
+         anchors.horizontalCenter: parent.horizontalCenter
       }
       
       Text {
@@ -60,7 +60,7 @@ Rectangle {
          color: Colors.mainText
 //         anchors.topMargin: units.gu(3)
          anchors.top: image2.bottom
-//         anchors.horizontalCenter: parent.horizontalCenter
+         anchors.horizontalCenter: parent.horizontalCenter
       }
    }
 }
