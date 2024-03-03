@@ -26,6 +26,10 @@ Rectangle {
       color: Colors.mainText
    }*/
    Flickable {
+      id: flick1
+      anchors.topMargin: units.gu(3)
+      anchors.top: header.bottom
+      anchors.horizontalCenter: parent.horizontalCenter
       Image {
          id: image1
          anchors.topMargin: units.gu(3)
