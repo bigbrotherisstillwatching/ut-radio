@@ -74,7 +74,7 @@ Rectangle {
       
          Text {
             id: text1
-            text: i18n.tr("<font color=\"#FF0000\">(1)</font> Metadata is shown here. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+            text: i18n.tr("<font color=\"#FF0000\">(1)</font> Metadata is shown here. aaaaaa aaaaaaaa aaaa aaaaaa aaa aaaaaaaa aaaaaaaaaaa aaaaaa aaaaa aaaaaaa aaaa aaaaa aaaaaa aaaaaaaaaaaa aaaaaaaa")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
