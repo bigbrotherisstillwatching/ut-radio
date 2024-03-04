@@ -50,7 +50,7 @@ Rectangle {
          
          Image {
             id: image1
-            anchors.topMargin: units.gu(3)
+//            anchors.topMargin: units.gu(3)
 //            anchors.top: scrollView.top
             sourceSize.width: 1080
             sourceSize.height: 2340
@@ -74,7 +74,7 @@ Rectangle {
       
          Text {
             id: text1
-            text: i18n.tr("Coming soon ...")
+            text: i18n.tr("<font color=\"#FF0000\">(1)</font>Coming soon ...")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
