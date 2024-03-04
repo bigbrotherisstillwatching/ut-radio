@@ -66,23 +66,22 @@ Flickable {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image1.bottom
             sourceSize.width: 1080
-               sourceSize.height: 2340
-               source: "../assets/2.png"
-               height: 1755
-               width: 810
-               anchors.horizontalCenter: column1.horizontalCenter
-            }
+            sourceSize.height: 2340
+            source: "../assets/2.png"
+            height: 1755
+            width: 810
+            anchors.horizontalCenter: column1.horizontalCenter
+         }
       
-            Text {
-               id: text1
-               text: i18n.tr("Coming soon ...")
-               font.pointSize: 25
-//               anchors.centerIn: parent
-               color: Colors.mainText
-//               anchors.topMargin: units.gu(3)
-//               anchors.top: image2.bottom
-               anchors.horizontalCenter: column1.horizontalCenter
-            }
+         Text {
+            id: text1
+            text: i18n.tr("Coming soon ...")
+            font.pointSize: 25
+//            anchors.centerIn: parent
+            color: Colors.mainText
+//            anchors.topMargin: units.gu(3)
+//            anchors.top: image2.bottom
+            anchors.horizontalCenter: column1.horizontalCenter
          }
       }
       ScrollIndicator.vertical: ScrollIndicator { }
