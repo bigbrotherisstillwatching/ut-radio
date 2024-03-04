@@ -84,6 +84,6 @@ Flickable {
             anchors.horizontalCenter: column1.horizontalCenter
          }*/
       }
-      ScrollIndicator.vertical: ScrollIndicator { }
    }
+   ScrollIndicator.vertical: ScrollIndicator { }
 }
