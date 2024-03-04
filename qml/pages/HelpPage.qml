@@ -210,7 +210,7 @@ Rectangle {
 
          Text {
             id: text9
-            text: i18n.tr("<font color=\"#FF0000\">[1]</font> Thanks to Patrick for this wonderful app.")
+            text: i18n.tr("Thanks to Patrick for this wonderful app.")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
@@ -222,12 +222,13 @@ Rectangle {
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
-            horizontalAlignment: Text.AlignLeft
+            horizontalAlignment: Text.AlignHCenter
+            font.bold: true
          }
 
          Text {
             id: text10
-            text: i18n.tr("<font color=\"#FF0000\">[1]</font> The caps plugin for the equalizer is published under the GNU Public License, version 3 by Tim Goetze. More information under http://quitte.de/dsp/caps.html")
+            text: i18n.tr("The caps plugin for the equalizer is published under the GNU Public License, version 3 by Tim Goetze. More information under http://quitte.de/dsp/caps.html")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
@@ -239,7 +240,8 @@ Rectangle {
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
-            horizontalAlignment: Text.AlignLeft
+            horizontalAlignment: Text.AlignHCenter
+            font.bold: true
          }
 
       }
