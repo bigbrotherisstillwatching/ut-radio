@@ -85,7 +85,7 @@ Rectangle {
             topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
-            lineHeight: 1.5
+            lineHeight: 1.2
             horizontalAlignment: Text.AlignLeft
          }
       }
