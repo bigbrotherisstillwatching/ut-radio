@@ -38,7 +38,7 @@ Rectangle {
 //      contentWidth: image1.width
 //      width: helpPage.width
 //      height: 500
-      contentHeight: column1.height
+      contentHeight: column1.height * 1.25
       contentWidth: image1.width
       width: helpPage.width
       height: helpPage.height
