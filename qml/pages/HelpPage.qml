@@ -19,7 +19,7 @@ Rectangle {
       title: i18n.tr("Help")
    }
 
-   ScrollView {
+/*   ScrollView {
       id: scrollView
       anchors.top: header.bottom
       height: column1.height
@@ -27,12 +27,21 @@ Rectangle {
       anchors.horizontalCenter: helpPage.horizontalCenter
       anchors.topMargin: units.gu(3)
 //      anchors.fill: parent
-//      anchors.margins: 15
+//      anchors.margins: 15*/
+
+   Flickable {
+      id: flick
+      anchors.top: header.bottom
+      contentHeight: column1.height
+      contentWidth: helpPage.width
+//      width:
 
       Column {
          id: column1
-         anchors.top: scrollView.top
-         anchors.horizontalCenter: scrollView.horizontalCenter
+//         anchors.top: scrollView.top
+//         anchors.horizontalCenter: scrollView.horizontalCenter
+         spacing: units.gu(3)
+         width: parent.width
          
          Image {
             id: image1
