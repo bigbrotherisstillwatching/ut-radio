@@ -36,7 +36,7 @@ Rectangle {
 //      contentHeight: image1.height+image2.height+text1.height
 //      contentWidth: image1.width
       width: helpPage.width
-      height: helpPage.height * 3
+      height: 200
       anchors.horizontalCenter: helpPage.horizontalCenter
 
       Column {
