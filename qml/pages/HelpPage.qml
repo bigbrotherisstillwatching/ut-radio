@@ -10,7 +10,7 @@ import "../net"
 import "../util"
 import "../colors"
 
-Rectangle {
+/*Rectangle {
    id: helpPage
    anchors.fill: parent
    color: Colors.backgroundColor
@@ -18,7 +18,7 @@ Rectangle {
    ThemedHeader {
       id: header
       title: i18n.tr("Help")
-   }
+   }*/
 
 /*   ScrollView {
       id: scrollView
@@ -30,42 +30,42 @@ Rectangle {
 //      anchors.fill: parent
 //      anchors.margins: 15*/
 
-   Flickable {
-      id: flick1
-      anchors.top: header.bottom
-      contentHeight: pane.height
-//      contentWidth: helpPage.width
-//      width:
+Flickable {
+   id: flick1
+//   anchors.top: header.bottom
+   contentHeight: pane.height
+//   contentWidth: helpPage.width
+//   width:
 
-      Pane {
-         id: pane
-         width: flick1.width
-         height: flick1.height * 1.25
+   Pane {
+      id: pane
+      width: flick1.width
+      height: flick1.height * 1.25
 
-         Column {
-            id: column1
+      Column {
+         id: column1
 //         anchors.top: scrollView.top
 //         anchors.horizontalCenter: scrollView.horizontalCenter
-            spacing: units.gu(3)
-            width: parent.width
+         spacing: units.gu(3)
+         width: parent.width
          
-            Image {
-               id: image1
-//               anchors.topMargin: units.gu(3)
-//               anchors.top: scrollView.top
-               sourceSize.width: 1080
-               sourceSize.height: 2340
-               source: "../assets/1.png"
-               height: 1755
-               width: 810
-               anchors.horizontalCenter: column1.horizontalCenter
-            }
+         Image {
+            id: image1
+//            anchors.topMargin: units.gu(3)
+//            anchors.top: scrollView.top
+            sourceSize.width: 1080
+            sourceSize.height: 2340
+            source: "../assets/1.png"
+            height: 1755
+            width: 810
+            anchors.horizontalCenter: column1.horizontalCenter
+         }
       
-            Image {
-               id: image2
-//               anchors.topMargin: units.gu(3)
-//               anchors.top: image1.bottom
-               sourceSize.width: 1080
+         Image {
+            id: image2
+//            anchors.topMargin: units.gu(3)
+//            anchors.top: image1.bottom
+            sourceSize.width: 1080
                sourceSize.height: 2340
                source: "../assets/2.png"
                height: 1755
