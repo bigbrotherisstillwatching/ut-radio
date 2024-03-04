@@ -74,7 +74,7 @@ Rectangle {
       
          Text {
             id: text1
-            text: i18n.tr("<font color=\"#0000FF\">(1)</font>Coming soon ...")
+            text: i18n.tr("<font color=\"#0000FF\">(1)</font> Coming soon ...")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
