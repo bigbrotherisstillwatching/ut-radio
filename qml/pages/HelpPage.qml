@@ -85,6 +85,8 @@ Rectangle {
             topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
+            lineHeight: 1.5
+            horizontalAlignment: Text.AlignLeft
          }
       }
 /*      ScrollBar.vertical: ScrollBar {
