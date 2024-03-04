@@ -49,7 +49,7 @@ Flickable {
          spacing: units.gu(3)
          width: parent.width
          
-         Image {
+/*         Image {
             id: image1
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: scrollView.top
@@ -59,7 +59,7 @@ Flickable {
             height: 1755
             width: 810
             anchors.horizontalCenter: parent.horizontalCenter
-         }
+         }*/
       
 /*         Image {
             id: image2
@@ -71,7 +71,7 @@ Flickable {
             height: 1755
             width: 810
             anchors.horizontalCenter: column1.horizontalCenter
-         }
+         }*/
       
          Text {
             id: text1
@@ -81,8 +81,8 @@ Flickable {
             color: Colors.mainText
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
-            anchors.horizontalCenter: column1.horizontalCenter
-         }*/
+            anchors.horizontalCenter: parent.horizontalCenter
+         }
       }
    }
    ScrollIndicator.vertical: ScrollIndicator { }
