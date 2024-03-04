@@ -50,7 +50,7 @@ Rectangle {
          
          Image {
             id: image1
-//            anchors.topMargin: units.gu(3)
+            anchors.topMargin: units.gu(3)
 //            anchors.top: scrollView.top
             sourceSize.width: 1080
             sourceSize.height: 2340
