@@ -1,4 +1,4 @@
-import Lomiri.Components 1.3
+/*import Lomiri.Components 1.3
 import Lomiri.Components.ListItems 1.3
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
@@ -10,7 +10,7 @@ import "../net"
 import "../util"
 import "../colors"
 
-/*Rectangle {
+Rectangle {
    id: helpPage
    anchors.fill: parent
    color: Colors.backgroundColor
@@ -18,9 +18,9 @@ import "../colors"
    ThemedHeader {
       id: header
       title: i18n.tr("Help")
-   }*/
+   }
 
-/*   ScrollView {
+   ScrollView {
       id: scrollView
       anchors.top: header.bottom
       height: column1.height
@@ -28,7 +28,7 @@ import "../colors"
       anchors.horizontalCenter: helpPage.horizontalCenter
       anchors.topMargin: units.gu(3)
 //      anchors.fill: parent
-//      anchors.margins: 15*/
+//      anchors.margins: 15
 
 Flickable {
    id: flick1
@@ -59,9 +59,9 @@ Flickable {
             height: 1755
             width: 810
             anchors.horizontalCenter: parent.horizontalCenter
-         }*/
+         }
       
-/*         Image {
+         Image {
             id: image2
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image1.bottom
@@ -71,7 +71,7 @@ Flickable {
             height: 1755
             width: 810
             anchors.horizontalCenter: column1.horizontalCenter
-         }*/
+         }
       
          Text {
             id: text1
@@ -86,4 +86,43 @@ Flickable {
       }
    }
    ScrollIndicator.vertical: ScrollIndicator { }
+}*/
+
+import QtQuick 2.7
+import QtQuick.Controls 2.7
+
+Flickable {
+    id: flickable
+
+    contentHeight: pane.height
+
+    Pane {
+        id: pane
+        width: flickable.width
+        height: flickable.height * 1.25
+
+        Column {
+            id: column
+            spacing: 40
+            width: parent.width
+
+            Label {
+                width: parent.width
+                wrapMode: Label.Wrap
+                horizontalAlignment: Qt.AlignHCenter
+                text: "ScrollIndicator is a non-interactive indicator that indicates the current scroll position. "
+                    + "A scroll indicator can be either vertical or horizontal, and can be attached to any Flickable, "
+                    + "such as ListView and GridView."
+            }
+
+            Image {
+                rotation: 90
+                source: "../images/arrows.png"
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+        }
+    }
+
+    ScrollIndicator.vertical: ScrollIndicator { }
 }
+
