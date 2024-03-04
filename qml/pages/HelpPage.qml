@@ -33,10 +33,10 @@ Rectangle {
    Flickable {
       id: flick1
       anchors.top: header.bottom
-//      contentHeight: image1.height+image2.height+text1.height
-//      contentWidth: image1.width
+      contentHeight: image1.height
+      contentWidth: image1.width
       width: helpPage.width
-      height: 200
+      height: 500
       anchors.horizontalCenter: helpPage.horizontalCenter
 
       Column {
