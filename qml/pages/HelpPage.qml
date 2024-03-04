@@ -18,6 +18,7 @@ Rectangle {
    ThemedHeader {
       id: header
       title: i18n.tr("Help")
+      z: 1
    }
 
 /*   ScrollView {
@@ -33,10 +34,14 @@ Rectangle {
    Flickable {
       id: flick1
       anchors.top: header.bottom
-      contentHeight: image1.height
+//      contentHeight: image1.height
+//      contentWidth: image1.width
+//      width: helpPage.width
+//      height: 500
+      contentHeight: column1.height
       contentWidth: image1.width
       width: helpPage.width
-      height: 500
+      height: helpPage.height
       anchors.horizontalCenter: helpPage.horizontalCenter
 
       Column {
