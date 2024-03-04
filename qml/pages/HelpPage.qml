@@ -40,7 +40,7 @@ Rectangle {
 
       Column {
          id: column1
-         anchors.top: flick1.top
+//         anchors.top: flick1.top
 //         anchors.horizontalCenter: flick1.horizontalCenter
          spacing: units.gu(3)
          width: flick1.width
