@@ -82,8 +82,6 @@ Rectangle {
          }
       }
       ScrollBar.vertical: ScrollBar {
-         width: 40
-         anchors.left: flick1.right // adjust the anchor as suggested by derM
          policy: ScrollBar.AlwaysOn
     }
    }
