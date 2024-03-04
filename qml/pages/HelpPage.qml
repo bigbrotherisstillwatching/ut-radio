@@ -84,6 +84,7 @@ Rectangle {
             bottomPadding: units.gu(3)
             topPadding: units.gu(3)
             wrapMode: Text.WordWrap
+            width: column1.width
          }
       }
 /*      ScrollBar.vertical: ScrollBar {
