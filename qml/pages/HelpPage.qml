@@ -74,7 +74,7 @@ Rectangle {
       
          Text {
             id: text1
-            text: i18n.tr("<font color=\"#FF0000\">(1)</font> Metadata is shown here. You can also show, edit & save station name & URL as well as the image URL by swiping to the left in the favourite list.")
+            text: i18n.tr("<font color=\"#FF0000\">(1)</font> Metadata is shown here. aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
@@ -84,7 +84,7 @@ Rectangle {
             bottomPadding: units.gu(3)
             topPadding: units.gu(3)
             wrapMode: Text.WordWrap
-            width: column1.width
+            width: image2.width
          }
       }
 /*      ScrollBar.vertical: ScrollBar {
