@@ -33,17 +33,17 @@ Rectangle {
    Flickable {
       id: flick1
       anchors.top: header.bottom
-//      contentHeight: pane.height
+      contentHeight: column1.height
       contentWidth: helpPage.width
 //      width:
-      anchors.horizontalCenter: parent.horizontalCenter
+      anchors.horizontalCenter: helpPage.horizontalCenter
 
       Column {
          id: column1
          anchors.top: flick1.top
-         anchors.horizontalCenter: parent.horizontalCenter
+         anchors.horizontalCenter: flick1.horizontalCenter
          spacing: units.gu(3)
-         width: parent.width
+         width: flick1.width
          
          Image {
             id: image1
@@ -54,7 +54,7 @@ Rectangle {
             source: "../assets/1.png"
             height: 1755
             width: 810
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.horizontalCenter: column1.horizontalCenter
          }
       
          Image {
@@ -77,7 +77,7 @@ Rectangle {
             color: Colors.mainText
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors.horizontalCenter: column1.horizontalCenter
          }
       }
       ScrollIndicator.vertical: ScrollIndicator { }
