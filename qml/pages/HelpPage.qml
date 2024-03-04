@@ -61,7 +61,7 @@ Flickable {
             anchors.horizontalCenter: column1.horizontalCenter
          }
       
-         Image {
+/*         Image {
             id: image2
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image1.bottom
@@ -82,7 +82,7 @@ Flickable {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-         }
+         }*/
       }
       ScrollIndicator.vertical: ScrollIndicator { }
    }
