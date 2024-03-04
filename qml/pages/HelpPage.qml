@@ -1,4 +1,4 @@
-/*import Lomiri.Components 1.3
+import Lomiri.Components 1.3
 import Lomiri.Components.ListItems 1.3
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
@@ -20,7 +20,7 @@ Rectangle {
       title: i18n.tr("Help")
    }
 
-   ScrollView {
+/*   ScrollView {
       id: scrollView
       anchors.top: header.bottom
       height: column1.height
@@ -28,28 +28,24 @@ Rectangle {
       anchors.horizontalCenter: helpPage.horizontalCenter
       anchors.topMargin: units.gu(3)
 //      anchors.fill: parent
-//      anchors.margins: 15
+//      anchors.margins: 15*/
 
-Flickable {
-   id: flick1
-//   anchors.top: header.bottom
-   contentHeight: pane.height
-//   contentWidth: helpPage.width
-//   width:
-
-   Pane {
-      id: pane
-      width: flick1.width
-      height: flick1.height * 1.25
+   Flickable {
+      id: flick1
+      anchors.top: header.bottom
+//      contentHeight: pane.height
+      contentWidth: helpPage.width
+//      width:
+      anchors.horizontalCenter: parent.horizontalCenter
 
       Column {
          id: column1
-//         anchors.top: scrollView.top
-//         anchors.horizontalCenter: scrollView.horizontalCenter
+         anchors.top: flick1.top
+         anchors.horizontalCenter: parent.horizontalCenter
          spacing: units.gu(3)
          width: parent.width
          
-/*         Image {
+         Image {
             id: image1
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: scrollView.top
@@ -84,11 +80,11 @@ Flickable {
             anchors.horizontalCenter: parent.horizontalCenter
          }
       }
+      ScrollIndicator.vertical: ScrollIndicator { }
    }
-   ScrollIndicator.vertical: ScrollIndicator { }
-}*/
+}
 
-import QtQuick 2.6
+/*import QtQuick 2.6
 import QtQuick.Controls 2.1
 
 Flickable {
@@ -124,5 +120,4 @@ Flickable {
     }
 
     ScrollIndicator.vertical: ScrollIndicator { }
-}
-
+}*/
