@@ -58,7 +58,7 @@ Flickable {
             source: "../assets/1.png"
             height: 1755
             width: 810
-            anchors.horizontalCenter: column1.horizontalCenter
+            anchors.horizontalCenter: parent.horizontalCenter
          }
       
 /*         Image {
