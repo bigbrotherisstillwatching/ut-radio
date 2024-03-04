@@ -74,13 +74,16 @@ Rectangle {
       
          Text {
             id: text1
-            text: i18n.tr("<font color=\"#0000FF\">(1)</font> Coming soon ...")
+            text: i18n.tr("<font color=\"#FF0000\">(1)</font> Metadata is shown here. You can also show, edit & save station name & URL as well as the image URL by swiping to the left in the favourite list.")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
+            bottomPadding: units.gu(3)
+            topPadding: units.gu(3)
+            wrapMode: Text.WordWrap
          }
       }
 /*      ScrollBar.vertical: ScrollBar {
