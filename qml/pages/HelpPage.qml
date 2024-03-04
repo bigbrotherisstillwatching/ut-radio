@@ -159,7 +159,7 @@ Rectangle {
 
          Text {
             id: text6
-            text: i18n.tr("<font color=\"#FF0000\">[6]</font> Play station by clicking on it. You can remove the station after swiping to the right. When swiping to the left, you have different options. When clicking "Show name", "Show stream URL or "Show image URL" name, stream URL or image URL are shown under <font color=\"#FF0000\">[1]</font>. You can edit them there by clicking on the text. Change them to what you want and save them by swiping to the right at <font color=\"#FF0000\">[6]</font> and then save it with "Save name", "Save stream URL" or "Save image URL". Sort mode gets (de)activated by long-pressing on a favourite. Change their order by tapping the handler on the right and drop them where you want.")
+            text: i18n.tr("<font color=\"#FF0000\">[6]</font> Play stations by clicking on them here. You can remove the station after swiping to the right. When swiping to the left, you have different options. When clicking 'Show name', 'Show stream URL' or 'Show image URL' name, stream URL or image URL are shown under <font color=\"#FF0000\">[1]</font>. You can edit them there by clicking on the text. Change them to what you want and save them by swiping to the right at <font color=\"#FF0000\">[6]</font> and then save it with 'Save name', 'Save stream URL' or 'Save image URL'. Sort mode gets (de)activated by long-pressing on a favourite. Change their order by tapping the handler on the right and drop them where you want.")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
