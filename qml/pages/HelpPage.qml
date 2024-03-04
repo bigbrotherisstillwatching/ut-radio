@@ -4,6 +4,7 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
+import QtQuick.Controls 2.7
 
 import "../net"
 import "../util"
