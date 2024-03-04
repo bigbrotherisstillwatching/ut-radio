@@ -21,16 +21,6 @@ Rectangle {
       z: 1
    }
 
-/*   ScrollView {
-      id: scrollView
-      anchors.top: header.bottom
-      height: column1.height
-      width: helpPage.width
-      anchors.horizontalCenter: helpPage.horizontalCenter
-      anchors.topMargin: units.gu(3)
-//      anchors.fill: parent
-//      anchors.margins: 15*/
-
    Flickable {
       id: flick1
       anchors.top: header.bottom
@@ -93,46 +83,8 @@ Rectangle {
             anchors.horizontalCenter: column1.horizontalCenter
          }
       }
-      ScrollBar.vertical: ScrollBar {
+/*      ScrollBar.vertical: ScrollBar {
          policy: ScrollBar.AlwaysOn
-    }
+      }*/
    }
 }
-
-/*import QtQuick 2.6
-import QtQuick.Controls 2.1
-
-Flickable {
-    id: flickable
-
-    contentHeight: pane.height
-
-    Pane {
-        id: pane
-        width: flickable.width
-        height: flickable.height * 1.25
-
-        Column {
-            id: column
-            spacing: 40
-            width: parent.width
-
-            Label {
-                width: parent.width
-                wrapMode: Label.Wrap
-                horizontalAlignment: Qt.AlignHCenter
-                text: "ScrollIndicator is a non-interactive indicator that indicates the current scroll position. "
-                    + "A scroll indicator can be either vertical or horizontal, and can be attached to any Flickable, "
-                    + "such as ListView and GridView."
-            }
-
-            Image {
-                rotation: 90
-                source: "../images/arrows.png"
-                anchors.horizontalCenter: parent.horizontalCenter
-            }
-        }
-    }
-
-    ScrollIndicator.vertical: ScrollIndicator { }
-}*/
