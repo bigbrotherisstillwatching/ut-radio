@@ -81,7 +81,7 @@ Rectangle {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-            bottomPadding: units.gu(3)
+//            bottomPadding: units.gu(3)
             topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
@@ -98,8 +98,8 @@ Rectangle {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-            bottomPadding: units.gu(3)
-            topPadding: units.gu(3)
+//            bottomPadding: units.gu(3)
+//            topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
@@ -115,8 +115,8 @@ Rectangle {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-            bottomPadding: units.gu(3)
-            topPadding: units.gu(3)
+//            bottomPadding: units.gu(3)
+//            topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
@@ -132,8 +132,8 @@ Rectangle {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-            bottomPadding: units.gu(3)
-            topPadding: units.gu(3)
+//            bottomPadding: units.gu(3)
+//            topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
@@ -149,8 +149,8 @@ Rectangle {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-            bottomPadding: units.gu(3)
-            topPadding: units.gu(3)
+//            bottomPadding: units.gu(3)
+//            topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
@@ -166,8 +166,8 @@ Rectangle {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-            bottomPadding: units.gu(3)
-            topPadding: units.gu(3)
+//            bottomPadding: units.gu(3)
+//            topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
@@ -183,8 +183,8 @@ Rectangle {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-            bottomPadding: units.gu(3)
-            topPadding: units.gu(3)
+//            bottomPadding: units.gu(3)
+//            topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
@@ -200,8 +200,8 @@ Rectangle {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-            bottomPadding: units.gu(3)
-            topPadding: units.gu(3)
+//            bottomPadding: units.gu(3)
+//            topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
@@ -217,8 +217,8 @@ Rectangle {
 //            anchors.topMargin: units.gu(3)
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
-            bottomPadding: units.gu(3)
-            topPadding: units.gu(3)
+//            bottomPadding: units.gu(3)
+//            topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
@@ -236,7 +236,7 @@ Rectangle {
 //            anchors.top: image2.bottom
             anchors.horizontalCenter: column1.horizontalCenter
             bottomPadding: units.gu(3)
-            topPadding: units.gu(3)
+//            topPadding: units.gu(3)
             wrapMode: Text.WordWrap
             width: image2.width
             lineHeight: 1.2
