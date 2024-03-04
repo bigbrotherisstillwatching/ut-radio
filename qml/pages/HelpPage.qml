@@ -78,5 +78,6 @@ Rectangle {
             anchors.horizontalCenter: column1.horizontalCenter
          }
       }
+      ScrollIndicator.vertical: ScrollIndicator { }
    }
 }
