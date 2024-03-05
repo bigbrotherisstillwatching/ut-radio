@@ -229,7 +229,7 @@ Rectangle {
 
          Text {
             id: text10
-            text: i18n.tr("The caps plugin for the equalizer is published under the GNU Public License (version 3) by Tim Goetze. More information under <html><style type="text/css"></style><a href="http://quitte.de/dsp/caps.html">quitte.de</a></html>")
+            text: i18n.tr("The caps plugin for the equalizer is published under the GNU Public License (version 3) by Tim Goetze. More information at <html><style type="text/css"></style><a href="http://quitte.de/dsp/caps.html">quitte.de</a></html>")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
