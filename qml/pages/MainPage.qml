@@ -135,7 +135,6 @@ Rectangle {
             style: ActionBarStyle {
                backgroundColor: "transparent"
             }
-//            text: i18n.tr("Metadata is shown here. You can also show, edit & save station name & URL as well as the image URL by swiping to the left in the favourite list. Sort mode gets (de)activated by long-pressing on a favourite.")
          }
       }
 
@@ -180,9 +179,6 @@ Rectangle {
                var p = pageStack.push(Qt.resolvedUrl("./SearchPage.qml"))
                p.stationChanged.connect(setLastStation)
             }
-
-            Tltp.ToolTip.visible: pressed
-            Tltp.ToolTip.text: i18n.tr("Search station")
          }
 
          Button {
@@ -214,9 +210,6 @@ Rectangle {
                else
                   Functions.saveFavourite(lastStation)
             }
-
-            Tltp.ToolTip.visible: pressed
-            Tltp.ToolTip.text: i18n.tr("Set/Unset favourite")
          }
 
          Button {
@@ -241,9 +234,6 @@ Rectangle {
                var p = pageStack.push(Qt.resolvedUrl("./UrlPage.qml"))
                p.stationChanged.connect(mainPage.setLastStation)
             }
-
-            Tltp.ToolTip.visible: pressed
-            Tltp.ToolTip.text: i18n.tr("Add station")
          }
       }
 
@@ -272,7 +262,6 @@ Rectangle {
             width: units.gu(2.5)
             anchors.verticalCenter: parent.verticalCenter
 
-//            name: "settings"
             name: "properties"
 
             MouseArea {
@@ -292,7 +281,6 @@ Rectangle {
 
          Rectangle {
             height: units.gu(2)
-//            width: favText.contentWidth
             width: helpButton.width
             color: "transparent"
          }
@@ -417,9 +405,6 @@ Rectangle {
                asynchronous: true
             }
          }
-/*         ListItemLayout {
-            id: modelLayout
-         }*/
 
          onPressAndHold: ListView.view.ViewItems.dragMode =
             !ListView.view.ViewItems.dragMode
