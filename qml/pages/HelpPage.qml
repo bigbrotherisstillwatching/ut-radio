@@ -210,7 +210,7 @@ Rectangle {
 
          Text {
             id: text9
-            text: i18n.tr("Thanks to Patrick for this wonderful app.")
+            text: i18n.tr("Thanks to <html><style type="text/css"></style><a href="https://github.com/patrickjane">Patrick Fial</a></html> for this wonderful app.")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
@@ -224,11 +224,12 @@ Rectangle {
             lineHeight: 1.2
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
+            onLinkActivated: Qt.openUrlExternally(link)
          }
 
          Text {
             id: text10
-            text: i18n.tr("The caps plugin for the equalizer is published under the GNU Public License, version 3 by Tim Goetze. More information under http://quitte.de/dsp/caps.html")
+            text: i18n.tr("The caps plugin for the equalizer is published under the GNU Public License (version 3) by Tim Goetze. More information under <html><style type="text/css"></style><a href="http://quitte.de/dsp/caps.html">quitte.de</a></html>")
             font.pointSize: 25
 //            anchors.centerIn: parent
             color: Colors.mainText
@@ -242,6 +243,7 @@ Rectangle {
             lineHeight: 1.2
             horizontalAlignment: Text.AlignHCenter
             font.bold: true
+            onLinkActivated: Qt.openUrlExternally(link)
          }
 
       }
