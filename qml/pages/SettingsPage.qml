@@ -386,7 +386,7 @@ Rectangle {
              spacing: settingsPage.padding
              Button {
                 id: eqaButton
-                text: i18n.tr("Activate")
+                text: i18n.tr("On")
                 color: Colors.surfaceColor
                 onClicked: {
                    settings.equalizerControls1 = slide1.value.toFixed(1)
@@ -404,7 +404,7 @@ Rectangle {
              }
              Button {
                 id: eqdButton
-                text: i18n.tr("Deactivate")
+                text: i18n.tr("Off")
                 color: Colors.surfaceColor
                 onClicked: process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
              }
