@@ -30,4 +30,5 @@ The caps plugin for the equalizer is published under the GNU Public License (ver
   
 -it is an unconfined app with full access to the system    
 -only for arm64     
--better backup ~/.config/radio.s710/radio.s710.conf just in case something goes wrong        
+-better backup ~/.config/radio.s710/radio.s710.conf just in case something goes wrong      
+-for now, when the equalizer is activated and you change sound output from e.g. bluetooth speakers to internal speakers you better turn off the equalizer before changing output and restart the app...
