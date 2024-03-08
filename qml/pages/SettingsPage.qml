@@ -129,6 +129,18 @@ Rectangle {
                 subtitle.text: i18n.tr("Equalizer on. Restart app after changing sound output!")
                 subtitle.color: "red"
                 subtitle.visible: false
+
+                Rectangle {
+                   id: statusrec
+                   SlotsLayout.position: SlotsLayout.Trailing;
+                   width: units.gu(2)
+                   height: units.gu(2)
+                   if (settings.equalizerStatus == On) {
+                      color: "green"
+                   } else if (settings.equalizerStatus == Off) {
+                      color: "red"
+                   }
+                }
              }
           }
           Row {
@@ -406,6 +418,7 @@ Rectangle {
                    process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer.sh"])
                    l3.subtitle.visible = true
                    settings.equalizerStatus = "On"
+                   statusrec.color = "green"
                 }
              }
              Button {
@@ -413,8 +426,10 @@ Rectangle {
                 text: i18n.tr("Off")
                 color: Colors.surfaceColor
                 onClicked: {
-                    process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
-                    l3.subtitle.visible = false
+                   process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
+                   l3.subtitle.visible = false
+                   settings.equalizerStatus = "Off"
+                   statusrec.color = "red"
                 }
              }
              Button {
