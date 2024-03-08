@@ -150,6 +150,7 @@ Rectangle {
                 }*/
                 Text {
                    id: statustxt
+                   color: Colors.mainText
                    font.bold: true
                    text: settings.value("equalizerStatus")
                 }
