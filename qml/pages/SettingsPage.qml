@@ -149,6 +149,8 @@ Rectangle {
                    radius: units.gu(1)
                 }*/
                 Text {
+                   id: statustxt
+                   font.bold: true
                    text: settings.value("equalizerStatus")
                 }
              }
@@ -428,6 +430,7 @@ Rectangle {
                    process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer.sh"])
                    l3.subtitle.visible = true
                    settings.equalizerStatus = "On"
+                   statustxt.text = On
 //                   statusrec1.visible = true
 //                   statusrec2.visible = false
                 }
@@ -440,6 +443,7 @@ Rectangle {
                    process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
                    l3.subtitle.visible = false
                    settings.equalizerStatus = "Off"
+                   statustxt.text = Off
 //                   statusrec2.visible = true
 //                   statusrec1.visible = false
                 }
