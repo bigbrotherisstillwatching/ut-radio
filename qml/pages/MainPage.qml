@@ -74,6 +74,13 @@ Rectangle {
       }
    }
 
+   Process {
+      id: process2
+/*      onFinished: {
+         txt.text = readAll();
+      }*/
+   }
+
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
@@ -589,5 +596,9 @@ Rectangle {
 
    function isPlaying() {
       return audioPlayer.playbackState == MediaPlayer.PlayingState
+   }
+
+   Component.onDestruction: {
+      process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
    }
 }
