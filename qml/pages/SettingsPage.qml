@@ -125,6 +125,9 @@ Rectangle {
                 title.text: i18n.tr("Equalizer")
                 title.font.bold: true
                 title.color: Colors.mainText
+                subtitle.text: i18n.tr("Equalizer is enabled. Please restart the app after changing sound output!")
+                subtitle.color: "red"
+                subtitle.visible: false
              }
           }
           Row {
@@ -400,6 +403,7 @@ Rectangle {
                    settings.equalizerControls9 = slide9.value.toFixed(1)
                    settings.equalizerControls10 = slide10.value.toFixed(1)
                    process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer.sh"])
+                   l3.subtitle.visible = true
                 }
              }
              Button {
