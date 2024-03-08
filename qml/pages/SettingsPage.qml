@@ -125,11 +125,9 @@ Rectangle {
                 title.text: i18n.tr("Equalizer")
                 title.font.bold: true
                 title.color: Colors.mainText
-                subtitle.text: i18n.tr("Equalizer is enabled. Please restart the app after changing sound output!")
+                subtitle.text: i18n.tr("Restart app after changing sound output!")
                 subtitle.color: "red"
                 subtitle.visible: false
-                subtitle.wrapMode: Text.WordWrap
-                subtitle.width: settingsPage.width
              }
           }
           Row {
