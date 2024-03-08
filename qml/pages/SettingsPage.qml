@@ -150,6 +150,7 @@ Rectangle {
                 }*/
                 Text {
                    text: settings.value("equalizerStatus")
+                }
              }
           }
           Row {
