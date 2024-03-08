@@ -428,8 +428,8 @@ Rectangle {
                    process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer.sh"])
                    l3.subtitle.visible = true
                    settings.equalizerStatus = "On"
-                   statusrec1.visible = true
-                   statusrec2.visible = false
+//                   statusrec1.visible = true
+//                   statusrec2.visible = false
                 }
              }
              Button {
@@ -440,8 +440,8 @@ Rectangle {
                    process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
                    l3.subtitle.visible = false
                    settings.equalizerStatus = "Off"
-                   statusrec2.visible = true
-                   statusrec1.visible = false
+//                   statusrec2.visible = true
+//                   statusrec1.visible = false
                 }
              }
              Button {
