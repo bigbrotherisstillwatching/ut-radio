@@ -222,4 +222,15 @@ Item {
 
       settings.setValue("favouriteStations", JSON.stringify(renamedObj))
    }
+
+   function equalizerStatus() {
+
+      if (settings.equalizerStatus == On) {
+         statusrec1.visible = true
+         statusrec2.visible= false
+      } else if (settings.equalizerStatus == Off) {
+         statusrec1.visible = false
+         statusrec2.visible= true
+      }
+   }
 }
