@@ -410,8 +410,10 @@ Rectangle {
                 id: eqdButton
                 text: i18n.tr("Off")
                 color: Colors.surfaceColor
-                onClicked: process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
-                l3.subtitle.visible = false
+                onClicked: {
+                    process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
+                    l3.subtitle.visible = false
+                }
              }
              Button {
                 id: chaButton
