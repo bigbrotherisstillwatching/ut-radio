@@ -489,4 +489,7 @@ Rectangle {
           }
        }
     }
+    Component.onCompleted: {
+       Functions.equalizerStatus ()
+    }
 }
