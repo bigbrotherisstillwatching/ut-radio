@@ -594,15 +594,4 @@ Rectangle {
    function isPlaying() {
       return audioPlayer.playbackState == MediaPlayer.PlayingState
    }
-
-/*   Component.onDestruction: {
-      process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
-   }*/
-   Connections {
-      target: Qt.application
-      onAboutToQuit: {
-         process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
-      }
-   }
-
 }
