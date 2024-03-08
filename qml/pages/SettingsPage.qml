@@ -126,7 +126,7 @@ Rectangle {
                 title.text: i18n.tr("Equalizer")
                 title.font.bold: true
                 title.color: Colors.mainText
-                subtitle.text: i18n.tr("Equalizer on. Restart app after changing sound output!")
+                subtitle.text: i18n.tr("Turn off equalizer before changing audio output!")
                 subtitle.color: "red"
                 subtitle.visible: false
 
