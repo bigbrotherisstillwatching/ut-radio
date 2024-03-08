@@ -74,10 +74,6 @@ Rectangle {
       }
    }
 
-   Process {
-      id: process2
-   }
-
    MediaPlayer {
       id: audioPlayer
       audioRole: MediaPlayer.MusicRole
