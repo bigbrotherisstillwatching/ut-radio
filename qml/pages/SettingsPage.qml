@@ -128,7 +128,7 @@ Rectangle {
                 subtitle.text: i18n.tr("Equalizer is enabled. Please restart the app after changing sound output!")
                 subtitle.color: "red"
                 subtitle.visible: false
-                subtitle.text.wrapMode: Text.WordWrap
+                subtitle.wrapMode: Text.WordWrap
              }
           }
           Row {
