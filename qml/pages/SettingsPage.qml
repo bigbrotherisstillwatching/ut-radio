@@ -137,6 +137,7 @@ Rectangle {
                    height: units.gu(2)
                    color: "green"
                    visible: false
+                   radius: units.gu(1)
                 }
                 Rectangle {
                    id: statusrec2
@@ -145,6 +146,7 @@ Rectangle {
                    height: units.gu(2)
                    color: "red"
                    visible: false
+                   radius: units.gu(1)
                 }
              }
           }
