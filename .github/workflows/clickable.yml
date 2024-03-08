@@ -2,11 +2,11 @@ name: Build Artifacts
 
 on:
   push:
-    branches: [ test12 ]
+    branches: [ test13 ]
 #  create: 
 #    tags: releases/[1-9]+.[0-9]+.[0-9]+
   pull_request:
-    branches: [ test12 ]
+    branches: [ test13 ]
   workflow_dispatch:
 
 jobs:
