@@ -45,6 +45,7 @@ Rectangle {
        property string equalizerControls8: ""
        property string equalizerControls9: ""
        property string equalizerControls10: ""
+       property string equalizerStatus: ""
     }
 
     ThemedHeader {
@@ -404,6 +405,7 @@ Rectangle {
                    settings.equalizerControls10 = slide10.value.toFixed(1)
                    process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer.sh"])
                    l3.subtitle.visible = true
+                   settings.equalizerStatus = "On"
                 }
              }
              Button {
