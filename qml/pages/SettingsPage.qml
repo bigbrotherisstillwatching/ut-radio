@@ -119,6 +119,7 @@ Rectangle {
              divider.colorFrom: Colors.borderColor
              divider.colorTo: Colors.borderColor
              highlightColor: Colors.highlightColor
+             width: settingsPage.width
 
              ListItemLayout {
                 id: l3
