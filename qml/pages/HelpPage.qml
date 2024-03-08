@@ -29,6 +29,7 @@ Rectangle {
       width: helpPage.width
       height: helpPage.height - header.height
       anchors.horizontalCenter: helpPage.horizontalCenter
+      flickableDirection: Flickable.VerticalFlick
 
       Column {
          id: column1
