@@ -130,7 +130,7 @@ Rectangle {
                 subtitle.color: "red"
                 subtitle.visible: false
 
-                Rectangle {
+/*                Rectangle {
                    id: statusrec1
                    SlotsLayout.position: SlotsLayout.Trailing;
                    width: units.gu(2)
@@ -147,7 +147,9 @@ Rectangle {
                    color: "red"
                    visible: false
                    radius: units.gu(1)
-                }
+                }*/
+                Text {
+                   text: settings.value("equalizerStatus")
              }
           }
           Row {
@@ -488,8 +490,5 @@ Rectangle {
              }
           }
        }
-    }
-    Component.onCompleted: {
-       Functions.equalizerStatus ()
     }
 }
