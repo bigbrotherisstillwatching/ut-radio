@@ -225,10 +225,10 @@ Item {
 
    function equalizerStatus() {
 
-      if (settings.value("equalizerStatus") == On) {
+      if (settings.value("equalizerStatus") == "On") {
          statusrec1.visible = true
          statusrec2.visible= false
-      } else if (settings.value("equalizerStatus") == Off) {
+      } else if (settings.value("equalizerStatus") == "Off") {
          statusrec1.visible = false
          statusrec2.visible= true
       }
