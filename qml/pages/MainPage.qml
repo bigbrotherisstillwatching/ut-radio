@@ -49,7 +49,10 @@ Rectangle {
       target: Qt.application
 
       onAboutToQuit: {
+         process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
+         settings.equalizerStatus = "Off"
          audioPlayer.stop()
+         console.log("Goodbye!")
       }
 
       onStateChanged: {
@@ -72,6 +75,10 @@ Rectangle {
       onFinished: {
          txt.text = readAll();
       }
+   }
+
+   Process {
+      id: process2
    }
 
    MediaPlayer {
@@ -593,10 +600,12 @@ Rectangle {
 /*   Component.onDestruction: {
       console.log("Goodbye!")
    }*/
-   Connections {
+/*   Connections {
       target: Qt.application
       onAboutToQuit: {
+         process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
+         settings.equalizerStatus = "Off"
          console.log("Goodbye!")
       }
-   }
+   }*/
 }
