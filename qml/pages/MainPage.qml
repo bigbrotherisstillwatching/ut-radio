@@ -590,7 +590,13 @@ Rectangle {
    function isPlaying() {
       return audioPlayer.playbackState == MediaPlayer.PlayingState
    }
-   Component.onDestruction: {
+/*   Component.onDestruction: {
       console.log("Goodbye!")
+   }*/
+   Connections {
+      target: Qt.application
+      onAboutToQuit: {
+         console.log("Goodbye!")
+      }
    }
 }
