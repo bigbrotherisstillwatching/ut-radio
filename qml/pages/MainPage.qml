@@ -590,4 +590,7 @@ Rectangle {
    function isPlaying() {
       return audioPlayer.playbackState == MediaPlayer.PlayingState
    }
+   Component.onDestruction: {
+      console.log("Goodbye!")
+   }
 }
