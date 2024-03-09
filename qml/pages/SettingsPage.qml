@@ -129,6 +129,7 @@ Rectangle {
                 summary.text: i18n.tr("Turn off equalizer <u>before</u> changing audio output, closing the app or rebooting the phone!")
                 summary.color: "red"
                 summary.visible: false
+                summary.wrapMode: Text.WordWrap
 
 /*                Rectangle {
                    id: statusrec1
