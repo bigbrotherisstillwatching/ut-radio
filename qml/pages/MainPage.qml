@@ -50,7 +50,7 @@ Rectangle {
       target: Qt.application
 
       onAboutToQuit: {
-         process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
+//         process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
          settings.equalizerStatus = "Off"
          audioPlayer.stop()
          console.log("Goodbye!")
