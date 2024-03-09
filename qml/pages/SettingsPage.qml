@@ -126,9 +126,9 @@ Rectangle {
                 title.text: i18n.tr("Equalizer")
                 title.font.bold: true
                 title.color: Colors.mainText
-                subtitle.text: i18n.tr("Turn off equalizer <u>before</u> changing audio output!")
-                subtitle.color: "red"
-                subtitle.visible: false
+                summary.text: i18n.tr("Turn off equalizer <u>before</u> changing audio output, closing the app or rebooting the phone!")
+                summary.color: "red"
+                summary.visible: false
 
 /*                Rectangle {
                    id: statusrec1
@@ -429,7 +429,7 @@ Rectangle {
                    settings.equalizerControls9 = slide9.value.toFixed(1)
                    settings.equalizerControls10 = slide10.value.toFixed(1)
                    process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer.sh"])
-                   l3.subtitle.visible = true
+                   l3.summary.visible = true
                    settings.equalizerStatus = "On"
                    statustxt.text = "On"
 //                   statusrec1.visible = true
@@ -442,7 +442,7 @@ Rectangle {
                 color: Colors.surfaceColor
                 onClicked: {
                    process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
-                   l3.subtitle.visible = false
+                   l3.summary.visible = false
                    settings.equalizerStatus = "Off"
                    statustxt.text = "Off"
 //                   statusrec2.visible = true
