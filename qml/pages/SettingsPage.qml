@@ -126,29 +126,11 @@ Rectangle {
                 title.text: i18n.tr("Equalizer")
                 title.font.bold: true
                 title.color: Colors.mainText
-                summary.text: i18n.tr("Turn off equalizer <u>before</u> changing audio output, closing the app or rebooting the phone!")
+                summary.text: i18n.tr("Please turn off equalizer <u>before</u> changing audio output, closing the app or rebooting the phone!")
                 summary.color: "red"
                 summary.visible: false
                 summary.wrapMode: Text.WordWrap
 
-/*                Rectangle {
-                   id: statusrec1
-                   SlotsLayout.position: SlotsLayout.Trailing;
-                   width: units.gu(2)
-                   height: units.gu(2)
-                   color: "green"
-                   visible: false
-                   radius: units.gu(1)
-                }
-                Rectangle {
-                   id: statusrec2
-                   SlotsLayout.position: SlotsLayout.Trailing;
-                   width: units.gu(2)
-                   height: units.gu(2)
-                   color: "red"
-                   visible: false
-                   radius: units.gu(1)
-                }*/
                 Text {
                    id: statustxt
                    color: Colors.mainText
@@ -433,8 +415,6 @@ Rectangle {
                    l3.summary.visible = true
                    settings.equalizerStatus = "On"
                    statustxt.text = "On"
-//                   statusrec1.visible = true
-//                   statusrec2.visible = false
                 }
              }
              Button {
@@ -446,8 +426,6 @@ Rectangle {
                    l3.summary.visible = false
                    settings.equalizerStatus = "Off"
                    statustxt.text = "Off"
-//                   statusrec2.visible = true
-//                   statusrec1.visible = false
                 }
              }
              Button {
