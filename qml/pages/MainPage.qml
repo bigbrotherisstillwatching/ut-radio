@@ -34,6 +34,7 @@ Rectangle {
    Settings {
       id: settings
       property string lastStation: "{}"
+      property string equalizerStatus: ""
    }
 
    Timer {
