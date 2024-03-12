@@ -142,7 +142,7 @@ Rectangle {
                    SlotsLayout.position: SlotsLayout.Trailing;
                    width: units.gu(2)
                    height: units.gu(2)
-                   color: "settings.value("equalizerStatus")"
+                   color: settings.value("equalizerStatus")
                    visible: true
                    radius: units.gu(1)
                 }
