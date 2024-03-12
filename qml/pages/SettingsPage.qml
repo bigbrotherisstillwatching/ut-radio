@@ -142,7 +142,7 @@ Rectangle {
                    SlotsLayout.position: SlotsLayout.Trailing;
                    width: units.gu(2)
                    height: units.gu(2)
-                   color: settings.value("equalizerStatus")
+                   color: "settings.value("equalizerStatus")"
                    visible: true
                    radius: units.gu(1)
                 }
@@ -424,7 +424,7 @@ Rectangle {
                    l3.summary.visible = true
 //                   settings.equalizerStatus = "On"
 //                   statustxt.text = "On"
-                   settings.equalizerStatus = ""green""
+                   settings.equalizerStatus = "green"
                    statusrec1.color = "green"
                 }
              }
@@ -437,7 +437,7 @@ Rectangle {
                    l3.summary.visible = false
 //                   settings.equalizerStatus = "Off"
 //                   statustxt.text = "Off"
-                   settings.equalizerStatus = ""red""
+                   settings.equalizerStatus = "red"
                    statusrec1.color = "red"
                 }
              }
