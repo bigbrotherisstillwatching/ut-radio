@@ -131,12 +131,6 @@ Rectangle {
                 summary.visible: false
                 summary.wrapMode: Text.WordWrap
 
-/*                Text {
-                   id: statustxt
-                   color: Colors.mainText
-                   font.bold: true
-                   text: settings.value("equalizerStatus")
-                }*/
                 Rectangle {
                    id: statusrec1
                    SlotsLayout.position: SlotsLayout.Trailing;
@@ -422,8 +416,6 @@ Rectangle {
                    settings.equalizerControls10 = slide10.value.toFixed(1)
                    process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer.sh"])
                    l3.summary.visible = true
-//                   settings.equalizerStatus = "On"
-//                   statustxt.text = "On"
                    settings.equalizerStatus = "green"
                    statusrec1.color = "green"
                 }
@@ -435,8 +427,6 @@ Rectangle {
                 onClicked: {
                    process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
                    l3.summary.visible = false
-//                   settings.equalizerStatus = "Off"
-//                   statustxt.text = "Off"
                    settings.equalizerStatus = "red"
                    statusrec1.color = "red"
                 }
