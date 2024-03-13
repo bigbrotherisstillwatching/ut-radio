@@ -252,6 +252,15 @@ Rectangle {
                 return `${m}:${ms.padStart(4, 0)}`
             }
          }
+         Qqc.Slider {
+            id: mediaSlider
+//            Layout.fillWidth: true
+            enabled: audioPlayer.seekable
+            to: 1.0
+            value: audioPlayer.position / audioPlayer.duration
+
+            onMoved: audioPlayer.setPosition(value * audioPlayer.duration)
+         }
       }
 
       Row {
