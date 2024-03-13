@@ -76,6 +76,7 @@ Rectangle {
 
    MediaPlayer {
       id: audioPlayer
+      seekable: true
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
 
@@ -255,7 +256,7 @@ Rectangle {
          Qqc.Slider {
             id: mediaSlider
 //            Layout.fillWidth: true
-//            enabled: audioPlayer.seekable
+            enabled: audioPlayer.seekable
             to: 1.0
             value: audioPlayer.position / audioPlayer.duration
 
