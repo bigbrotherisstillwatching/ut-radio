@@ -76,7 +76,6 @@ Rectangle {
 
    MediaPlayer {
       id: audioPlayer
-      seekable: true
       audioRole: MediaPlayer.MusicRole
       source: lastStation && lastStation.url || ""
 
