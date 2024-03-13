@@ -292,7 +292,7 @@ Rectangle {
 
          Rectangle {
             height: units.gu(2)
-            width: helpButton.width
+            width: helpButton.width + pauseButton.width
             color: "transparent"
          }
       }
