@@ -414,7 +414,7 @@ Rectangle {
                    settings.equalizerControls8 = slide8.value.toFixed(1)
                    settings.equalizerControls9 = slide9.value.toFixed(1)
                    settings.equalizerControls10 = slide10.value.toFixed(1)
-                   process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer.sh"])
+                   process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.7/script/equalizer.sh"])
                    l3.summary.visible = true
                    settings.equalizerStatus = "green"
                    statusrec1.color = "green"
@@ -425,7 +425,7 @@ Rectangle {
                 text: i18n.tr("Off")
                 color: Colors.surfaceColor
                 onClicked: {
-                   process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_stop.sh"])
+                   process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.7/script/equalizer_stop.sh"])
                    l3.summary.visible = false
                    settings.equalizerStatus = "red"
                    statusrec1.color = "red"
@@ -446,7 +446,7 @@ Rectangle {
                    settings.equalizerControls8 = slide8.value.toFixed(1)
                    settings.equalizerControls9 = slide9.value.toFixed(1)
                    settings.equalizerControls10 = slide10.value.toFixed(1)
-                   process3.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.6/script/equalizer_change.sh"])
+                   process3.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.7/script/equalizer_change.sh"])
                 }
              }
              Button {
