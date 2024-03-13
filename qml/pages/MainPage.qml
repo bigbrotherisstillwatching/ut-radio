@@ -251,7 +251,8 @@ Rectangle {
                 var ms = (audioPlayer.position / 1000 - m * 60).toFixed(1)
                 return `${m}:${ms.padStart(4, 0)}`
             }
-        }
+         }
+      }
 
       Row {
          anchors.horizontalCenter: parent.horizontalCenter
