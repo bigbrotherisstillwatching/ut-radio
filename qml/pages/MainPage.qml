@@ -241,47 +241,10 @@ Rectangle {
          anchors.horizontalCenter: parent.horizontalCenter
          spacing: mainPage.padding
 
-         Text {
-            id: mediaTime
-//            Layout.minimumWidth: 50
-//            Layout.minimumHeight: 18
-            horizontalAlignment: Text.AlignRight
-            text: {
-                var m = Math.floor(audioPlayer.position / 60000)
-                var ms = (audioPlayer.position / 1000 - m * 60).toFixed(1)
-                return `${m}:${ms.padStart(4, 0)}`
-            }
-         }
-         Qqc.Slider {
-            id: mediaSlider
-//            Layout.fillWidth: true
-            enabled: audioPlayer.seekable
-            to: 1.0
-            value: audioPlayer.position / audioPlayer.duration
-
-            onMoved: audioPlayer.setPosition(value * audioPlayer.duration)
-         }
-      }
-
-      Row {
-         anchors.horizontalCenter: parent.horizontalCenter
-         spacing: mainPage.padding
-
          Rectangle {
             height: units.gu(2)
             width: metaButton.width
             color: "transparent"
-         }
-
-         Button {
-            id: pauseButton
-            width: units.gu(4)
-            height: units.gu(4)
-            iconName: "media-playback-pause"
-            color: Colors.surfaceColor
-            onClicked: {
-               audioPlayer.pause()
-            }
          }
 
          Button {
@@ -318,7 +281,7 @@ Rectangle {
 
          Rectangle {
             height: units.gu(2)
-            width: helpButton.width + pauseButton.width + mainPage.padding
+            width: helpButton.width
             color: "transparent"
          }
       }
