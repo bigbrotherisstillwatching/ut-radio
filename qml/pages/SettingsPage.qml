@@ -496,6 +496,8 @@ Rectangle {
             lineHeight: 1.2
             horizontalAlignment: Text.AlignHCenter
             visible: false
+            leftPadding: units.gu(3)
+            rightPadding: units.gu(3)
          }
        }
     }
