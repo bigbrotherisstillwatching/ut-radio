@@ -154,6 +154,18 @@ Rectangle {
          }
 
          Text {
+            id: text11
+            text: i18n.tr("You can play local files by copying them to /home/phablet/.cache/radio.s710 and than add them like you would manually add a station with the URL: file:///home/phablet/.cache/radio.s710/1.mp3")
+            font.pointSize: 25
+            color: Colors.mainText
+            anchors.horizontalCenter: column1.horizontalCenter
+            wrapMode: Text.WordWrap
+            width: image2.width
+            lineHeight: 1.2
+            horizontalAlignment: Text.AlignLeft
+         }
+
+         Text {
             id: text9
             text: i18n.tr("Thanks to <a href=\"https://github.com/patrickjane\">Patrick Fial</a> for this wonderful app. It's published under the MIT License. Copyright (C) 2021-2022 Patrick Fial")
             font.pointSize: 25
