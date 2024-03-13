@@ -5,7 +5,7 @@ import QtQuick.Layouts 1.3
 import QtMultimedia 5.12
 import Qt.labs.settings 1.0
 import Process 1.0
-import QtQuick.Controls 2.7 as Tltp
+import QtQuick.Controls 2.7 as Qqc
 import Lomiri.Components.Styles 1.3
 
 import "../net"
@@ -236,6 +236,22 @@ Rectangle {
             }
          }
       }
+
+      Row {
+         anchors.horizontalCenter: parent.horizontalCenter
+         spacing: mainPage.padding
+
+         Text {
+            id: mediaTime
+//            Layout.minimumWidth: 50
+//            Layout.minimumHeight: 18
+            horizontalAlignment: Text.AlignRight
+            text: {
+                var m = Math.floor(audioPlayer.position / 60000)
+                var ms = (audioPlayer.position / 1000 - m * 60).toFixed(1)
+                return `${m}:${ms.padStart(4, 0)}`
+            }
+        }
 
       Row {
          anchors.horizontalCenter: parent.horizontalCenter
