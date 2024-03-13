@@ -248,6 +248,17 @@ Rectangle {
          }
 
          Button {
+            id: pauseButton
+            width: units.gu(4)
+            height: units.gu(4)
+            iconName: "media-playback-pause"
+            color: Colors.surfaceColor
+            onClicked: {
+               audioPlayer.pause()
+            }
+         }
+
+         Button {
             id: helpButton
             text: i18n.tr("Help")
             color: Colors.surfaceColor
