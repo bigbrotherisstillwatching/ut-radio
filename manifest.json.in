@@ -9,7 +9,7 @@
             "desktop":  "Radio.desktop"
         }
     },
-    "version": "1.4.6",
+    "version": "1.4.7",
     "maintainer": "bbisw",
     "framework" : "@CLICK_FRAMEWORK@"
 }
