@@ -80,9 +80,6 @@ Rectangle {
                 title.text: i18n.tr("Appearance")
                 title.font.bold: true
                 title.color: Colors.mainText
-//                subtitle.text: i18n.tr("Restart the app after changing dark mode option")
-//                subtitle.color: "red"
-//                subtitle.visible: false
                 summary.text: i18n.tr("Restart the app after changing dark mode option")
                 summary.color: "red"
                 summary.visible: false
@@ -113,7 +110,6 @@ Rectangle {
 
                      onClicked: {
                         settings.darkMode = checked
-//                        l1.subtitle.visible = true
                         l1.summary.visible = true
                      }
                   }
@@ -131,10 +127,6 @@ Rectangle {
                 title.text: i18n.tr("Equalizer")
                 title.font.bold: true
                 title.color: Colors.mainText
-//                summary.text: i18n.tr("Please turn off equalizer <u>before</u> changing audio output, closing the app or rebooting the phone!")
-//                summary.color: "red"
-//                summary.visible: false
-//                summary.wrapMode: Text.WordWrap
 
                 Rectangle {
                    id: statusrec1
@@ -420,7 +412,6 @@ Rectangle {
                    settings.equalizerControls9 = slide9.value.toFixed(1)
                    settings.equalizerControls10 = slide10.value.toFixed(1)
                    process.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.7/script/equalizer.sh"])
-//                   l3.summary.visible = true
                    text1.visible = true
                    settings.equalizerStatus = "green"
                    statusrec1.color = "green"
@@ -432,7 +423,6 @@ Rectangle {
                 color: Colors.surfaceColor
                 onClicked: {
                    process2.start("/bin/bash",["-c", "/opt/click.ubuntu.com/radio.s710/1.4.7/script/equalizer_stop.sh"])
-//                   l3.summary.visible = false
                    text1.visible = false
                    settings.equalizerStatus = "red"
                    statusrec1.color = "red"
@@ -487,7 +477,6 @@ Rectangle {
           Text {
             id: text1
             text: i18n.tr("Please turn off equalizer <u>before</u> changing audio output, closing the app or rebooting the phone!")
-//            font.pointSize: 25
             color: "red"
             anchors.horizontalCenter: settingsPage.horizontalCenter
             topPadding: units.gu(3)
