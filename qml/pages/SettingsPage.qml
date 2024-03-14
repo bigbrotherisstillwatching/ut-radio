@@ -475,19 +475,19 @@ Rectangle {
              }
           }
           Text {
-            id: text1
-            text: i18n.tr("Please turn off equalizer <u>before</u> changing audio output, closing the app or rebooting the phone!")
-            color: "red"
-            anchors.horizontalCenter: settingsPage.horizontalCenter
-            topPadding: units.gu(3)
-            wrapMode: Text.WordWrap
-            width: settingsPage.width
-            lineHeight: 1.2
-            horizontalAlignment: Text.AlignHCenter
-            visible: false
-            leftPadding: units.gu(3)
-            rightPadding: units.gu(3)
-         }
+             id: text1
+             text: i18n.tr("Please turn off equalizer <u>before</u> changing audio output, closing the app or rebooting the phone!")
+             color: "red"
+             anchors.horizontalCenter: settingsPage.horizontalCenter
+             topPadding: units.gu(3)
+             wrapMode: Text.WordWrap
+             width: settingsPage.width
+             lineHeight: 1.2
+             horizontalAlignment: Text.AlignHCenter
+             visible: false
+             leftPadding: units.gu(3)
+             rightPadding: units.gu(3)
+          }
        }
     }
 }
